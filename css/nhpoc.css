@@ -17,7 +17,7 @@ aside.menu .menu_list li button {position:relative; height:54px; padding:15px 24
 aside.menu .menu_list li button span {position:relative; padding-left:28px; color:#9A9A9A; font-size:20px; font-weight:500; font-family:'Pretendard';}
 aside.menu .menu_list li button.active {background-color:#fff;}
 aside.menu .menu_list li button.active span {color:#005EB8; font-weight:bold;}
-aside.menu .menu_list li button.active span::before {content:""; display:block; position:absolute; top:50%; left:0; width:10px; height:10px; background-color:#005EB8; transform: translateY(-50%);}
+aside.menu .menu_list li button.active span::before {content:""; display:block; position:absolute; top:50%; left:0; width:16px; height:16px; background:url('../images/ico_nav.png') no-repeat center / contain; transform: translateY(-50%);}
 /* // 메뉴 */
 
 
