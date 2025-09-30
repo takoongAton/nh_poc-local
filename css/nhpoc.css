@@ -47,6 +47,7 @@ table.form_table th {padding:6px 10px; background:#ebf5ff; border:1px solid #ddd
 table.form_table th span {color:#000; font-size:16px; line-height:19px; font-weight:400;}
 table.form_table th:first-of-type {border-left:0 none;}
 table.form_table td {padding:6px; border:1px solid #ddd; background-color:#fff; vertical-align:middle;}
+table.form_table .tac {text-align:center;}
 table.form_table tr td:last-of-type {border-right:none;}
 table.form_table tr > td:first-child {border-left:none;}
 /* // 기본 입력폼 테이블 */
@@ -65,7 +66,7 @@ table.table_list th {padding:10px 6px; background:#ebf5ff; border:1px solid #ddd
 table.table_list th span {color:#000; font-size:16px; line-height:19px; font-weight:400;}
 table.table_list th:first-of-type {border-left:0 none;}
 table.table_list td:first-of-type {border-left:0 none;}
-table.table_list td {padding:10px; border:1px solid #ddd; background-color:#fff; vertical-align:middle; text-align:center;}
+table.table_list td {padding:10px; border:1px solid #ddd; background-color:#fff; vertical-align:middle; text-align:center; word-break:break-all;}
 table.table_list td button {background-color:transparent; text-align:center;}
 table.table_list td button span {color:#005EB8;}
 table.table_list tr td:last-of-type {border-right:none;}
@@ -151,6 +152,12 @@ label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; 
 .custom-input-date input[type='date'] {height:32px; padding:0 12px; border:1px solid #ddd; border-radius:6px; background-color:#fff; font-size:16px;}
 .custom-input-date input[type='date']:required {background-color:#FFF2B5;}
 /* // custom-input-date */
+
+/* 주민번호용 입력 창 */
+.custom-input-rrn {display:inline-flex; align-items: center; border:1px solid #ddd; border-radius:6px; background-color:#fff;}
+.custom-input-rrn input[type='text'],
+.custom-input-rrn input[type='password']  {width:120px; border:0 none; background-color:transparent; text-align:center;}
+/* 주민번호용 입력 창 */
 
 
 /* custom-select */
@@ -248,3 +255,17 @@ button {cursor:pointer;}
 .filter_wrap .input input {height:32px; border:0 none; border-radius:0;}
 .filter_wrap .btn_txt {width:auto; height:26px;}
 /*  // 필터링 REF-NO */
+
+
+
+
+/* tag tab */
+.tag_tab_wrap {display:flex; align-items:center; position:relative; gap:14px; width:100%; margin-bottom:8px;}
+.tag_tab_wrap .tag_group {display:flex; position:relative;}
+.tag_tab_wrap .tag_group + .tag_group::before {content:""; display:block; position:absolute; top:50%; left:-7px; width:1px; height:10px; background-color:#333; transform: translateY(-50%);}
+.tag_tab_wrap button {width:auto; padding:0.25em 0.75em; border-radius:4px;}
+.tag_tab_wrap button.btn_tag {background-color:#eee;}
+.tag_tab_wrap button.btn_tag span {font-size:14px; font-weight:bold;}
+.tag_tab_wrap button.btn_tag.active {background-color:#005EB8;}
+.tag_tab_wrap button.btn_tag.active span {color:#fff;}
+/* // tag tab */
