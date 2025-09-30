@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>농협 해외송금 POC</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<style>
+	* {vertical-align:top;}
+	</style>
+	<!-- font -->
+	<link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin>
+	</noscript>
+
+	<!-- font-family : 'Noto Sans KR' -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..900&display=swap" />
+
+	<!-- font-family : 'Pretendard' -->
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+	
+	
+</head>
+<body>
+<style>
+	div {margin:20px 0;}
+.btn_group_test {display:flex; gap:2px;}
+
+.btn {display:inline-flex; align-items:center; gap:0 6px; width:auto; margin:0; padding:0; background-color:#fff; border-style:solid; border-color:transparent; border-radius:6px; font-family : 'Pretendard'}
+.btn span.ico {display:inline-block; width:24px; height:24px; background-color:#ddd; overflow:hidden; font-family:inherit;}
+.btn span.txt {display:inline-block; font-family:inherit; white-space:nowrap;}
+
+.btn.btn_sm {height:32px; padding:0 12px; border-width:1px;}
+.btn.btn_sm span.txt {font-size:16px; line-height:19px; font-weight:400;}
+.btn.btn_sm.btn_line {border-color:#4A4A4A;}
+
+.btn.btn_md {height:40px; padding:0 16px; border-width:2px;}
+.btn.btn_md span.ico {width:20px; height:20px;}
+.btn.btn_md span.ico img {max-width:100%;}
+.btn.btn_md span.txt {font-size:20px; line-height:1.2em; font-weight:500;}
+
+.btn.btn_md.btn_line {border-color:#005EB8;}
+
+.btn_fill {border-color:#005EB8; background-color:#D1E4F6;}
+.btn_fill span.txt {color:#005EB8;}
+
+.btn_ico {display:inline-flex; justify-content:center; align-items:center; width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; background-color:#fff;}
+.btn_ico span.ico {display:inline-block; width:20px; height:20px;}
+.btn_ico span.ico img {width:20px; height:20px;}
+
+button {cursor:pointer;}
+</style>
+
+<div class="btn_group_ico">
+	<button type="button" class="btn_ico">
+		<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+	</button>
+	
+	<button type="button" class="btn_ico">
+		<span class="ico"><img src="../../images/ico_search_doc.png" alt="문서 검색"></span>
+	</button>
+
+	<button type="button" class="btn_ico">
+		<span class="ico"><img src="../../images/ico_cheque.png" alt="수표 검색"></span>
+	</button>
+</div>
+<!-- // btn_group_ico -->
+
+
+<div class="btn_group_test">
+
+	<button type="button" class="btn btn_sm">
+		<!-- <span class="ico">아이콘</span> -->
+		<span class="txt">텍스트</span>
+	</button>
+
+	<button type="button" class="btn btn_sm btn_line">
+		<span class="ico">아이콘</span>
+		<span class="txt">텍스트</span>
+	</button>
+
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">텍스트</span>
+	</button>
+
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">텍스트</span>
+	</button>
+
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">텍스트</span>
+	</button>
+</div>
+
+
+<div class="btn_group_test">
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">BPR CP 작성</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">고객확인</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">실행</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">전문 인쇄</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">신청서 인쇄</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">따라하기</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">초기화</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">닫기</span>
+	</button>
+</div>
+<!-- // btn_group_test -->
+
+
+<div class="btn_group_test">
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">정정/취소</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">전문보류</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">송금수표처리</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">송금방식수출입</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">원화기준산출</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">현지통화기준산출</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">환율조회</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">국가별휴일조회</span>
+	</button>
+</div>
+
+
+<style>
+label.ipt_chk {display:inline-flex; align-items:center; gap:0 4px; position:relative; user-select:none; cursor:pointer;}
+label.ipt_chk input[type='checkbox'] {position:absolute; width:0; height:0; opacity:0;}
+label.ipt_chk span.checkmark {display:inline-block; position:relative; width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; box-shadow: inset 3px 3px 2px rgba(0,0,0,0.16); background:url('../../images/ico_chk.png') no-repeat 50% -400% / 20px 20px;}
+label.ipt_chk span.checkmark::before {content:""; display:block; position:absolute; top:0; left:0; width:100%; height:100%; background-color:#fff; opacity:1; transition:all 0.04s ease-in-out; border-radius:4px; box-shadow: inset 3px 3px 2px rgba(0,0,0,0.16);}
+label.ipt_chk input[type='checkbox']:checked ~ span.checkmark {background-position:50% 50%;}
+label.ipt_chk input[type='checkbox']:checked ~ span.checkmark::before {opacity:0;}
+label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; font-family :'Pretendard'}
+</style>
+
+
+<div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<label class="ipt_chk">
+		<input type="checkbox">
+		<span class="checkmark"></span>
+		<span class="txt">EDI송신</span>
+	</label>
+
+
+
+	<label class="ipt_chk">
+		<input type="checkbox">
+		<span class="txt">권유직원</span>
+		<span class="checkmark"></span>
+	</label>
+
+
+
+	<label class="ipt_chk">
+		<input type="checkbox">
+		<span class="txt">조직자</span>
+		<span class="checkmark"></span>
+	</label>
+
+
+
+	<label class="ipt_chk">
+		<input type="checkbox">
+		<span class="checkmark"></span>
+		<span class="txt">송금인명 수표인자</span>
+	</label>
+</div>
+
+
+
+
+<style>
+.ipt_sel_wrap {display:inline-flex; align-items:center; position:relative;}
+.ipt_sel_wrap .ipt_sel {width:auto; width:203px; height:32px; border:1px solid #D3D3D3; border-radius:6px; background-color:#FFF1B5;}
+.ipt_sel_wrap button.btn_sel {position:absolute; top:50%; right:3px; width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; background-color:#fff; transform:translateY(-50%);}
+.sel_options {position:absolute; top:32px;}
+</style>
+<div class="ipt_sel_wrap">
+	<select name="" id="" class="ipt_sel">
+		<option value="1.개인">1.개인</option>
+		<option value="2.기업">2.기업</option>
+	</select>
+	<button class="btn_sel"><span class="ico"><img src="../../images/ico_arrow_down.png" alt="메뉴선택 아이콘"></span></button>
+	<ul class="sel_options">
+		<li>1.개인</li>
+		<li>2.기업</li>
+	</ul>
+</div>
+
+
+
+<style>
+/* custom-select */
+.custom-select {position:relative; width:auto;}
+
+.custom-select select.custom-select_native {display:none;}
+
+.custom-select button.custom-select_trigger {position:relative; width:auto; min-width:100%; max-width:300px; height:32px;}
+.custom-select button.custom-select_trigger span {display:block;}
+.custom-select button.custom-select_trigger span.custom-select_label {display:flex; justify-content:flex-start; align-items:center; width:100%; height:32px; padding:0 12px; border:1px solid #D3D3D3; border-radius:6px; background-color:#FFF1B5;}
+.custom-select button.custom-select_trigger span.custom-select_icon {display:inline-flex; justify-content:center; align-items:center; position:absolute; top:50%; right:3px; width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; background-color:#fff; transform:translateY(-50%);}
+.custom-select button.custom-select_trigger span.custom-select_icon img {display:block; width:20px; height:20px;}
+
+.custom-select ul.custom-select_options {display:none; position:absolute; top:34px; left:0; width:100%; max-height:50vh; border:1px solid #D3D3D3; border-radius:6px; background-color:#FFF1B5; overflow-y:auto;}
+.custom-select ul.custom-select_options li.custom-select_option {height:28px; padding:0 12px; background-color:#fff;}
+.custom-select ul.custom-select_options li.custom-select_option:hover {background-color:#f9f9f9;}
+.custom-select ul.custom-select_options.open {display:block; z-index:10;}
+
+.custom-select button.custom-select_trigger.active span.custom-select_icon img {transform:rotate(180deg);}
+/* // custom-select */
+</style>
+<!-- 첫 번째 셀렉트 -->
+<div class="custom-select">
+	<select class="custom-select_native">
+		<option value="1.개인">1.개인</option>
+		<option value="2.기업">2.기업</option>
+	</select>
+
+	<button type="button" class="custom-select_trigger">
+		<span class="custom-select_label">1.개인</span>
+		<span class="custom-select_icon">
+			<img src="../../images/ico_arrow_down.png" alt="메뉴선택 아이콘">
+		</span>
+	</button>
+
+	<ul class="custom-select_options">
+		<li class="custom-select_option" data-value="1.개인">1.개인</li>
+		<li class="custom-select_option" data-value="2.기업">2.기업</li>
+	</ul>
+</div>
+
+<!-- 두 번째 셀렉트 -->
+<div class="custom-select" style="width:100px;">
+	<select class="custom-select_native">
+		<option value="a">A</option>
+		<option value="b">B</option>
+		<option value="c">C</option>
+	</select>
+
+	<button type="button" class="custom-select_trigger">
+		<span class="custom-select_label">Aasdfasdfsaf</span>
+		<span class="custom-select_icon">
+			<img src="../../images/ico_arrow_down.png" alt="메뉴선택 아이콘">
+		</span>
+	</button>
+
+	<ul class="custom-select_options">
+		<li class="custom-select_option" data-value="a">A</li>
+		<li class="custom-select_option" data-value="b">B</li>
+		<li class="custom-select_option" data-value="c">C</li>
+	</ul>
+</div>
+
+<!-- <script src="../../js/temp.js"></script> -->
+
+
+<script>
+
+
+/* 공지사항, 자주 묻는 질문 */
+let noticeWrap = document.querySelector(".notice_arcodian_wrap")
+if(noticeWrap) {
+	let listItems = document.querySelectorAll(".list .item");
+	listItems.forEach(function(item){
+		item.addEventListener("click", function(){
+			item.classList.toggle("active");
+		})
+	})
+}
+/* // 공지사항, 자주 묻는 질문 */
+
+
+function setSelectFn (){
+	const ipt_sel_wrap = document.querySelector(".ipt_sel_wrap");
+	const ipt_sel = ipt_sel_wrap.querySelector(".ipt_sel");
+	ipt_sel.addEventListener("change", function(){
+		console.log("Asdfasdf");
+		
+	})
+	btn_triger = ipt_sel_wrap.querySelector("button.btn_sel");
+	btn_triger.addEventListener("click", function(item){
+		ipt_sel_wrap.querySelector("select").focus();
+	})
+}
+setSelectFn();
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const allSelects = document.querySelectorAll('.custom-select');
+
+  allSelects.forEach(customSelect => {
+    const nativeSelect = customSelect.querySelector('.custom-select_native');
+    const triggerBtn = customSelect.querySelector('.custom-select_trigger');
+    const labelSpan = customSelect.querySelector('.custom-select_label');
+    const optionsBox = customSelect.querySelector('.custom-select_options');
+    const optionItems = customSelect.querySelectorAll('.custom-select_option');
+
+    // 트리거 버튼 클릭 시 토글
+    triggerBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); // 문서 클릭 차단
+
+      const isOpen = optionsBox.classList.contains('open');
+
+      // 모든 셀렉트 닫고
+      closeAllSelects();
+
+      // 원래 닫혀 있었다면 현재 것만 열기 (== 토글)
+      if (!isOpen) {
+        optionsBox.classList.add('open');
+		triggerBtn.classList.add('active')
+      }
+    });
+
+    // 옵션 선택
+    optionItems.forEach(option => {
+      option.addEventListener('click', () => {
+        const value = option.getAttribute('data-value');
+
+        // native select 업데이트
+        nativeSelect.value = value;
+
+        // 라벨 텍스트 변경
+        labelSpan.textContent = value;
+
+        // 닫기
+        optionsBox.classList.remove('open');
+      });
+    });
+  });
+
+  // 외부 클릭 시 닫기
+  document.addEventListener('click', () => {
+    closeAllSelects();
+  });
+
+  // ESC 키 닫기
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllSelects();
+    }
+  });
+
+  // 모든 드롭다운 닫기
+  function closeAllSelects() {
+    document.querySelectorAll('.custom-select_options.open').forEach(box => {
+      box.classList.remove('open');
+    });
+	document.querySelectorAll('.custom-select_trigger').forEach(triger => {
+		triger.classList.remove('active')
+	})
+  }
+});
+</script>
+
+</body>
+</html>

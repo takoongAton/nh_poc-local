@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>농협 해외송금 POC</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/nhpoc.css" />
+
+	<!-- font -->
+	<link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin>
+	</noscript>
+
+	<!-- font-family : 'Noto Sans KR' -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..900&display=swap" />
+
+	<!-- font-family : 'Pretendard' -->
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+
+<style>
+
+</style>
+</head>
+<body>
+
+	<div class="wrap">
+		<aside class="menu">
+			<div class="menu_tit"><strong>NH POC</strong></div>
+			<ul class="menu_list">
+				<li><button type="button" class="active"><span>계좌관리</span></button></li>
+				<li><button type="button"><span>자금이체(당발-송금은행)</span></button></li>
+				<li><button type="button"><span>자금이체(타발-수취은행)</span></button></li>
+				<li><button type="button"><span>유동성관리</span></button></li>
+			</ul>
+		</aside>
+
+		<section class="container">
+
+			<div class="page_tit_wrap">
+				<div class="page_tit">
+					<div class="tit">
+						<span class="ico"><img src="../../images/tit_icon_01.png" alt="아이콘"></span>
+						<strong class="tit">온체인 계좌 잔액조회</strong>
+					</div>
+				</div>
+				<!-- // page_tit -->
+
+				<div class="btn_group">
+					<button type="button" class="btn btn_md btn_line">
+						<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+						<span class="txt">BPR CP 작성</span>
+					</button>
+					<button type="button" class="btn btn_md btn_line">
+						<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+						<span class="txt">고객확인</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">실행</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">전문 인쇄</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">신청서 인쇄</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">따라하기</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">초기화</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">닫기</span>
+					</button>
+				</div>
+			</div>
+			<!-- // page_tit_wrap -->
+
+			<div class="content_group">
+
+				<div class="table_form_wrap">
+
+					<table class="form_table">
+						<colgroup>
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+						</colgroup>
+						<tr>
+							<th><span>기준일</span></th>
+							<td>
+								<div class="custom-input-date">
+									<input type="date" required />
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+									</button>
+								</div>
+								<!-- // custom-input-date -->
+							</td>
+							<th><span>송금 종류</span></th>
+							<td>
+								<div class="custom-select">
+									<select class="custom-select_native" required>
+										<option value="1.취결">1.취결</option>
+										<option value="2.문구1">2.문구1</option>
+										<option value="3.문구2">3.문구2</option>
+									</select>
+								</div>
+							</td>
+							<!-- <th><span>REF-NO</span></th> -->
+							<td colspan="2">
+								SUMMIT DATA LOAD
+							</td>
+						</tr>
+						<tr>
+							<th><span>거래 구분</span></th>
+							<td colspan="5">
+								<div class="custom_group">
+									<div class="custom-select" style="width:126px;">
+										<select class="custom-select_native" required>
+											<option value="asfasdfa">asdfaefawf_A</option>
+											<option value="asfasdfb">asdfaefawf_B</option>
+											<option value="asfasdfc">asdfaefawf_C</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<!-- // form_table -->
+
+				</div>
+				<!-- // table_form_wrap -->
+
+			</div>
+			<!-- // content_group -->
+
+			<div class="content_group">
+
+				<div class="tab_group">
+					<div class="left">
+						<div class="tab_wrap">
+							<button type="button" class="btn_tab active"><span class="txt">취결정보</span></button>
+							<button type="button" class="btn_tab"><span class="txt">취결기타정보</span></button>
+							<button type="button" class="btn_tab"><span class="txt">계리입력</span></button>
+							<button type="button" class="btn_tab"><span class="txt">취결내역조회</span></button>
+						</div>
+						<!-- // tab_wrap -->
+					</div>
+					<!-- // left -->
+
+					<div class="right">
+						<div>
+							<button type="button" class="btn btn_sm btn_line">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<span class="txt">수익조회</span>
+							</button>
+							<button type="button" class="btn btn_sm btn_line">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<span class="txt">불당마진계산</span>
+							</button>
+							<button type="button" class="btn btn_sm btn_line">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<span class="txt">수수료계산</span>
+							</button>
+							<button type="button" class="btn btn_sm btn_line">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<span class="txt">수수료변경</span>
+							</button>
+						</div>
+						<!-- // tab_wrap -->
+					</div>
+					<!-- // right -->
+				</div>
+				<!-- // tab_group -->
+			</div>
+			<!-- // content_group -->
+
+
+			<div class="content_group">
+				<div class="divide_row">
+					<div class="left">
+						<button type="button" class="btn_print"><span>ACTUAL 내역조회</span></button>
+						<p class="alert_txt">※ DEPO목록을 선택 후 버튼을 눌러주시기 바랍니다.</p>
+					</div>
+					<!-- // left -->
+
+					<div class="right">
+						<button type="button" class="btn_print"><span>DEBIT 내역 대사</span></button>
+					</div>
+					<!-- // right -->
+				</div>
+				<!-- // divide_row -->
+			</div>
+			<!-- // content_group -->
+
+			
+			<div class="content_group">
+
+				<div class="table_list_wrap">
+					<table class="table_list">
+						<tr>
+							<th><strong>순번</strong></th>
+							<th><strong>DEPO CODE</strong></th>
+							<th><strong>온체인</strong></th>
+							<th><strong>CCY</strong></th>
+							<th><strong>마감일</strong></th>
+							<th><strong>전일잔액</strong></th>
+							<th><strong>전일예상잔액</strong></th>
+							<th><strong>CREDIT AMT</strong></th>
+							<th><strong>DEBIT AMT</strong></th>
+							<th><strong>금일잔액</strong></th>
+						</tr>
+						<tr class="active">
+							<td><button class="btn"><span>1</span></button></td>
+							<td>CHASUS33XXX</td>
+							<td></td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">15,000</td>
+							<td class="tar">9,000</td>
+							<td class="tar">4,000</td>
+							<td class="tar">3,000</td>
+							<td class="tar">16,000</td>
+						</tr>
+						<tr class="active">
+							<td><span>1-1</span></td>
+							<td>CHASUS33XXX</td>
+							<td>N</td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">10,000</td>
+							<td class="tar">9,000</td>
+							<td class="tar">3,000</td>
+							<td class="tar">1,000</td>
+							<td class="tar">12,000</td>
+						</tr>
+						<tr class="active">
+							<td><span>1-2</span></td>
+							<td>CHASUS33XXX</td>
+							<td>Y</td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">5,000</td>
+							<td class="tar"></td>
+							<td class="tar">1,000</td>
+							<td class="tar">2,000</td>
+							<td class="tar">4,000</td>
+						</tr>
+						<tr>
+							<td><button class="btn"><span>2</span></button></td>
+							<td>CHASUS33XXX</td>
+							<td></td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">15,000</td>
+							<td class="tar">9,000</td>
+							<td class="tar">4,000</td>
+							<td class="tar">3,000</td>
+							<td class="tar">16,000</td>
+						</tr>
+						<tr>
+							<td><button class="btn"><span>3</span></button></td>
+							<td>CHASUS33XXX</td>
+							<td></td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">15,000</td>
+							<td class="tar">9,000</td>
+							<td class="tar">4,000</td>
+							<td class="tar">3,000</td>
+							<td class="tar">16,000</td>
+						</tr>
+						<tr>
+							<td><button class="btn"><span>4</span></button></td>
+							<td>CHASUS33XXX</td>
+							<td></td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">15,000</td>
+							<td class="tar">9,000</td>
+							<td class="tar">4,000</td>
+							<td class="tar">3,000</td>
+							<td class="tar">16,000</td>
+						</tr>
+						<tr>
+							<td><button class="btn"><span>5</span></button></td>
+							<td>CHASUS33XXX</td>
+							<td></td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">15,000</td>
+							<td class="tar">9,000</td>
+							<td class="tar">4,000</td>
+							<td class="tar">3,000</td>
+							<td class="tar">16,000</td>
+						</tr>
+						<tr>
+							<td><button class="btn"><span>6</span></button></td>
+							<td>CHASUS33XXX</td>
+							<td></td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">15,000</td>
+							<td class="tar">9,000</td>
+							<td class="tar">4,000</td>
+							<td class="tar">3,000</td>
+							<td class="tar">16,000</td>
+						</tr>
+						<tr>
+							<td><button class="btn"><span>7</span></button></td>
+							<td>CHASUS33XXX</td>
+							<td></td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">15,000</td>
+							<td class="tar">9,000</td>
+							<td class="tar">4,000</td>
+							<td class="tar">3,000</td>
+							<td class="tar">16,000</td>
+						</tr>
+						<tr>
+							<td><button class="btn"><span>8</span></button></td>
+							<td>CHASUS33XXX</td>
+							<td></td>
+							<td>USD</td>
+							<td>2025-09-19</td>
+							<td class="tar">15,000</td>
+							<td class="tar">9,000</td>
+							<td class="tar">4,000</td>
+							<td class="tar">3,000</td>
+							<td class="tar">16,000</td>
+						</tr>
+					</table>
+					<!-- // table_list -->
+				</div>
+				<!-- // table_list_wrap -->
+
+
+				<div class="pagination_wrap">
+					<div class="search_count">
+						<span class="txt">조회건수 :</span>
+						<span class="count">00</span>
+					</div>
+					<div class="more_list">
+						<button type="button" class="btn_next"><span>다음</span></button>
+					</div>
+				</div>
+				<!-- // pagination_wrap -->
+			</div>
+			<!-- // content_group -->
+
+<hr> -------------------------------------------------- <hr>
+
+			<div class="content_group">
+
+			</div>
+			<!-- // content_group -->
+
+
+<hr> -------------------------------------------------- <hr>
+
+
+
+
+<hr> -------------------------------------------------- <hr>
+
+
+
+
+<hr> -------------------------------------------------- <hr>
+
+
+
+
+<hr> -------------------------------------------------- <hr>
+
+
+
+
+<hr> -------------------------------------------------- <hr>
+
+		</section>
+		<!-- // container -->
+
+	</div>
+	<!-- // wrap -->
+
+
+<table class="form_table">
+	<colgroup>
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+	</colgroup>
+	<tr>
+		<th><span>거래 구분</span></th>
+		<td>
+			<div class="custom-select">
+				<select class="custom-select_native" required>
+					<option value="1.취결">1.취결</option>
+					<option value="2.문구1">2.문구1</option>
+					<option value="3.문구2">3.문구2</option>
+				</select>
+			</div>
+		</td>
+		<th><span>송금 종류</span></th>
+		<td>
+			<div class="custom-select">
+				<select class="custom-select_native" required>
+					<option value="1.취결">1.취결</option>
+					<option value="2.문구1">2.문구1</option>
+					<option value="3.문구2">3.문구2</option>
+				</select>
+			</div>
+		</td>
+		<th><span>REF-NO</span></th>
+		<td><input type="text"></td>
+	</tr>
+	<tr>
+		<th><span>송금인 실명번호</span></th>
+		<td colspan="5">
+			<div class="custom_group">
+				<div class="custom-select" style="width:126px;">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+				<div class="custom-select">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+				<input type="text" />
+
+				<label class="ipt_chk">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					<span class="txt">송금인명 수표인자</span>
+				</label>
+				<button type="button" class="btn btn_sm btn_line"><span class="txt">미리메모 불러오기</span></button>
+				<button type="button" class="btn btn_sm btn_line">
+					<span class="txt">텍스트</span>
+				</button>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<th><span>송금 금액</span></th>
+		<td colspan="3">
+			<div class="custom_group">
+				<div class="custom-select" style="width:126px;">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+				<div class="set_ipt">
+					<input type="text" required />
+				</div>
+				<button type="button" class="btn btn_sm btn_line"><span class="txt">USD금액</span></button>
+				<div class="set_ipt">
+					<input type="text" />
+				</div>
+			</div>
+		</td>
+		<th><span>거래환율회차</span></th>
+		<td>
+			<input type="text">
+		</td>
+	</tr>
+	<tr>
+		<th><span>중계은행 수수료</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select" style="width:100%;">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+			</div>
+		</td>
+		<th><span>더모아서비스</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select" style="width:100%;">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<th><span>최종환율회차</span></th>
+		<td>
+			<div class="custom_group">
+				<input type="text" />
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<th><span>EDI 관리번호</span></th>
+		<td>
+			<div class="custom_group">
+				<input type="text" />
+
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search_doc.png" alt="문서 검색"></span>
+				</button>
+
+				<label class="ipt_chk">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					<span class="txt">EDI송신</span>
+				</label>
+			</div>
+		</td>
+		<th><span>출금연계통장</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select" style="width:100%;">
+					<select class="custom-select_native" required>
+						<option value="0. 적용제외">0. 적용제외</option>
+						<option value="1. 적용제외">1. 적용제외</option>
+						<option value="2. 적용제외">2. 적용제외</option>
+					</select>
+				</div>
+
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<th><span>송금수표번호</span></th>
+		<td>
+			<div class="custom_group">
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_cheque.png" alt="수표 검색"></span>
+				</button>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<th><span>일중결제한도번호</span></th>
+		<td>
+			<div class="custom_group">
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<th><span>본부승인번호</span></th>
+		<td>
+			<div class="custom_group">
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<th>
+			<label class="ipt_chk">
+				<input type="checkbox">
+				<span class="txt">권유직원</span>
+				<span class="checkmark"></span>
+			</label>
+			<label class="ipt_chk">
+				<input type="checkbox">
+				<span class="txt">조직자</span>
+				<span class="checkmark"></span>
+			</label>
+		</th>
+		<td>
+			<div class="custom_group">
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<table class="form_table">
+	<colgroup>
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 12);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 4);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+	</colgroup>
+	<tr>
+		<th><span>원거래 일련번호</span></th>
+		<td>
+			<div class="custom_group">
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<th><span>재거래 사유</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+				<div>
+					<input type="text" name="" id="">
+				</div>
+			</div>
+		</td>
+		<th><span>패키지협약번호</span></th>
+		<td>
+			<div class="custom_group">
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<style>
+.tab_group {display:flex; justify-content:space-between; align-items:center; padding-top:12px; border-bottom:2px solid #005EB8;}
+/* .tab_group::after {content:""; display:block; height:0; clear:both;;} */
+.tab_group div {margin:0;}
+.tab_group div.left {float:left;}
+.tab_group div.right {float:right;}
+
+.tab_wrap {display:flex; margin:0;}
+/* .tab_wrap button {display:inline-flex; justify-content:center; align-items:center; gap:0 6px; width:auto; min-width:100px; height:40px; padding:0 14px; border:2px solid #005EB8; border-bottom:0 none; border-radius:6px 6px 0 0; font-family:'Pretendard';}
+.tab_wrap button span.ico {display:inline-block; width:20px; height:20px; background-color:#ddd; overflow:hidden; font-family:inherit;}
+.tab_wrap button span.txt {display:inline-block; font-size:20px; line-height:24px; font-weight:500; font-family:inherit; white-space:nowrap;} */
+.tab_wrap button:first-of-type ~ * {margin-left:-2px;}
+
+.tab_wrap button.btn_tab {display:inline-flex; justify-content:center; align-items:center; gap:0 6px; width:auto; min-width:100px; height:40px; padding:0 14px; border:2px solid #005EB8; border-bottom:0 none; border-radius:6px 6px 0 0; background-color:#EBEBEB; font-family:'Pretendard';}
+.tab_wrap button.btn_tab span {display:inline-block;}
+.tab_wrap button.btn_tab span.ico {width:20px; height:20px;}
+.tab_wrap button.btn_tab span.txt {color:#9A9A9A; font-size:20px; line-height:24px; font-weight:500; white-space:nowrap;}
+.tab_wrap button.btn_tab.active {background-color:#005EB8;}
+.tab_wrap button.btn_tab.active span {color:#fff;}
+
+
+/* .btn {   margin:0; padding:0; background-color:#fff; border-style:solid; border-color:transparent; border-radius:6px; font-family : 'Pretendard'}
+.btn span.ico {display:inline-block; width:24px; height:24px; background-color:#ddd; overflow:hidden; font-family:inherit;}
+.btn span.txt {display:inline-block; font-family:inherit; white-space:nowrap;} */
+</style>
+<div class="tab_group">
+	<div class="left">
+		<div class="tab_wrap">
+			<button type="button" class="btn_tab active"><span class="txt">취결정보</span></button>
+			<button type="button" class="btn_tab"><span class="txt">취결기타정보</span></button>
+			<button type="button" class="btn_tab"><span class="txt">계리입력</span></button>
+			<button type="button" class="btn_tab"><span class="txt">취결내역조회</span></button>
+		</div>
+		<!-- // tab_wrap -->
+	</div>
+	<!-- // left -->
+
+	<div class="right">
+		<div>
+			<button type="button" class="btn btn_sm btn_line">
+				<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+				<span class="txt">수익조회</span>
+			</button>
+			<button type="button" class="btn btn_sm btn_line">
+				<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+				<span class="txt">불당마진계산</span>
+			</button>
+			<button type="button" class="btn btn_sm btn_line">
+				<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+				<span class="txt">수수료계산</span>
+			</button>
+			<button type="button" class="btn btn_sm btn_line">
+				<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+				<span class="txt">수수료변경</span>
+			</button>
+		</div>
+		<!-- // tab_wrap -->
+	</div>
+	<!-- // right -->
+</div>
+<!-- // tab_group -->
+
+<style>
+.tit_wrap {display:inline-flex; align-items:center; gap:12px; padding:15px 0 11px; font-family:'Pretendard';}
+.tit_wrap div.tit {display:inline-flex; align-items:center; gap:6px;}
+.tit_wrap div.tit span {display:inline-block;}
+.tit_wrap div.tit span.ico {width:24px; height:24px;}
+.tit_wrap div.tit strong.tit {color:#000; font-size:22px; line-height:26px; font-weight:700;}
+.tit_wrap p.txt {color:#00B140; font-size:16px; line-height:19px; font-weight:500;}
+</style>
+<div class="tit_wrap">
+	<div class="tit">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<strong class="tit">수취인 정보</strong>
+	</div>
+	<p class="txt">※ 수취인 주소 15자 이상 입력 必 (최대한 정확하게) / 국가명, 주(state)명, 도시(city)명 포함하여 입력해 줄 것</p>
+</div>
+
+
+<table class="form_table">
+	<colgroup>
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 3);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 3);" />
+	</colgroup>
+	<tr>
+		<th><span>원거래 일련번호</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<th><span>수취인명</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="" required />
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th><span>수취인 국가</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<td colspan="2">
+			<div>
+				<p>※ [수취인명] 글자 수 제한- [수취인주소1] 에 이어서 입력 가능함</p>
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th><span>수취인 주소1</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="" required />
+				</div>
+			</div>
+		</td>
+		<th><span>수취인 주소2</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="" required />
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th><span>수취인 연락처</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="">
+				</div>
+			</div>
+		</td>
+		<th><span>수취인 E-MAIL</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="">
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th><span>수취인계좌번호</span></th>
+		<td colspan="3">
+			<div class="custom_group">
+				<div>
+					<input type="text" name="" id="" required />
+				</div>
+				<label class="ipt_chk">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					<span class="txt">기존</span>
+				</label>
+			</div>
+		</td>
+	</tr>
+</table>
+
+
+
+
+<div class="tit_wrap">
+	<div class="tit">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<strong class="tit">수취은행 정보</strong>
+	</div>
+	<p class="txt">※ [수취은행고유코드] 또는 ‘BIC(SWIFT CODE)’ 아는 경우 입력 必</p>
+</div>
+
+
+<table class="form_table">
+	<colgroup>
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 3);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 3);" />
+	</colgroup>
+	<tr>
+		<th><span>수취은행 국가</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<th><span>지급이체목적코드</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th><span>수취은행 BIC</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<th><span>수취은행고유코드</span></th>
+		<td>
+			<div class="custom_group">
+				<div class="custom-select">
+					<select class="custom-select_native" required>
+						<option value="asfasdfa">asdfaefawf_A</option>
+						<option value="asfasdfb">asdfaefawf_B</option>
+						<option value="asfasdfc">asdfaefawf_C</option>
+					</select>
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th><span>수취은행명</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="" required />
+				</div>
+			</div>
+		</td>
+		<th><span>수취은행고유코드</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="" required />
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th><span>수취은행 지점등</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="">
+				</div>
+			</div>
+		</td>
+		<th><span>수취은행 국가등</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="">
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th><span>중계은행 BIC</span></th>
+		<td>
+			<div class="custom_group">
+				<div>
+					<input type="text" name="" id="">
+				</div>
+				<button type="button" class="btn_ico">
+					<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색"></span>
+				</button>
+			</div>
+		</td>
+		<th><span>결제은행 BIC</span></th>
+		<td>
+			<div class="custom_group">
+				<div style="width:100%;">
+					<input type="text" name="" id="">
+				</div>
+				<div style="width:100%;">
+					<input type="text" name="" id="">
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+
+
+
+
+<!--
+<table>
+	<colgroup>
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+		<col style="width:calc(100% / 6);" />
+	</colgroup>
+	<tr>
+		<th><span>타이틀</span></th>
+		<td>
+			<div>
+				ㅇㅇㅇ
+			</div>
+		</td>
+		<th><span>타이틀</span></th>
+		<td>
+			<div>
+				ㅇㅇㅇ
+			</div>
+		</td>
+		<th><span>타이틀</span></th>
+		<td>
+			<div>
+				ㅇㅇㅇ
+			</div>
+		</td>
+	</tr>
+</table>
+-->
+
+<style>
+.custom_group {display:flex; align-items:center; gap:0 4px; width:100%;}
+</style>
+
+<style>
+/* div {margin:20px 0;} */
+.btn_group {display:flex; gap:2px;}
+
+.btn {display:inline-flex; align-items:center; gap:0 6px; width:auto; margin:0; padding:0; background-color:#fff; border-style:solid; border-color:transparent; border-radius:6px; font-family : 'Pretendard'}
+.btn span.ico {display:inline-block; width:24px; height:24px; background-color:#ddd; overflow:hidden; font-family:inherit;}
+.btn span.ico img {max-width:100%;}
+.btn span.txt {display:inline-block; font-family:inherit; white-space:nowrap;}
+
+.btn.btn_sm {height:32px; padding:0 12px; border-width:1px;}
+.btn.btn_sm span.ico {width:20px; height:20px;}
+.btn.btn_sm span.txt {font-size:16px; line-height:19px; font-weight:400;}
+.btn.btn_sm.btn_line {border-color:#4A4A4A;}
+
+.btn.btn_md {height:40px; padding:0 16px; border-width:2px;}
+.btn.btn_md span.ico {width:20px; height:20px;}
+.btn.btn_md span.ico img {max-width:100%;}
+.btn.btn_md span.txt {font-size:20px; line-height:1.2em; font-weight:500;}
+
+.btn.btn_md.btn_line {border-color:#005EB8;}
+
+.btn_fill {border-color:#005EB8; background-color:#D1E4F6;}
+.btn_fill span.txt {color:#005EB8;}
+
+.btn_ico {display:inline-flex; justify-content:center; align-items:center; width:26px; min-width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; background-color:#fff; box-shadow:inset -3px -3px 6px rgba(0,0,0,0.16)}
+.btn_ico span.ico {display:inline-block; width:20px; height:20px;}
+.btn_ico span.ico img {width:20px; height:20px;}
+
+button {cursor:pointer;}
+</style>
+
+<div class="btn_group_ico">
+	<button type="button" class="btn_ico">
+		<span class="ico"><img src="../../images/ico_search.png" alt="검색"></span>
+	</button>
+	
+	<button type="button" class="btn_ico">
+		<span class="ico"><img src="../../images/ico_search_doc.png" alt="문서 검색"></span>
+	</button>
+
+	<button type="button" class="btn_ico">
+		<span class="ico"><img src="../../images/ico_cheque.png" alt="수표 검색"></span>
+	</button>
+</div>
+<!-- // btn_group_ico -->
+
+
+<div class="btn_group">
+
+	<button type="button" class="btn btn_sm">
+		<!-- <span class="ico">아이콘</span> -->
+		<span class="txt">텍스트</span>
+	</button>
+
+	<button type="button" class="btn btn_sm btn_line">
+		<span class="ico">아이콘</span>
+		<span class="txt">텍스트</span>
+	</button>
+
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">텍스트</span>
+	</button>
+
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">텍스트</span>
+	</button>
+
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">텍스트</span>
+	</button>
+</div>
+
+
+<div class="btn_group">
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">BPR CP 작성</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">고객확인</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">실행</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">전문 인쇄</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">신청서 인쇄</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">따라하기</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">초기화</span>
+	</button>
+	<button type="button" class="btn btn_md btn_fill">
+		<span class="txt">닫기</span>
+	</button>
+</div>
+<!-- // btn_group -->
+
+
+<div class="btn_group">
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">정정/취소</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">전문보류</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">송금수표처리</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">송금방식수출입</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">원화기준산출</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">현지통화기준산출</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">환율조회</span>
+	</button>
+	<button type="button" class="btn btn_md btn_line">
+		<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+		<span class="txt">국가별휴일조회</span>
+	</button>
+</div>
+
+
+<style>
+input[type='text'] {height:32px; padding:0 12px; border:1px solid #ddd; border-radius:6px; background-color:#fff;}
+input[type='text']:required {background:#FFF2B5;}
+label.ipt_chk {display:inline-flex; align-items:center; gap:0 4px; position:relative; user-select:none; cursor:pointer;}
+label.ipt_chk input[type='checkbox'] {position:absolute; width:0; height:0; opacity:0;}
+label.ipt_chk span.checkmark {display:inline-block; position:relative; width:26px; min-width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; box-shadow: inset 3px 3px 2px rgba(0,0,0,0.16); background:#fff url('../../images/ico_chk.png') no-repeat 50% -400% / 20px 20px;}
+label.ipt_chk span.checkmark::before {content:""; display:block; position:absolute; top:0; left:0; width:100%; height:100%; background-color:#fff; opacity:1; transition:all 0.04s ease-in-out; border-radius:4px; box-shadow: inset 3px 3px 2px rgba(0,0,0,0.16);}
+label.ipt_chk input[type='checkbox']:checked ~ span.checkmark {background-position:50% 50%;}
+label.ipt_chk input[type='checkbox']:checked ~ span.checkmark::before {opacity:0;}
+label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; font-family :'Pretendard'; white-space:nowrap;}
+</style>
+
+
+<div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<label class="ipt_chk">
+		<input type="checkbox">
+		<span class="checkmark"></span>
+		<span class="txt">EDI송신</span>
+	</label>
+
+
+
+	<label class="ipt_chk">
+		<input type="checkbox">
+		<span class="txt">권유직원</span>
+		<span class="checkmark"></span>
+	</label>
+
+
+
+	<label class="ipt_chk">
+		<input type="checkbox">
+		<span class="txt">조직자</span>
+		<span class="checkmark"></span>
+	</label>
+
+
+
+	<label class="ipt_chk">
+		<input type="checkbox">
+		<span class="checkmark"></span>
+		<span class="txt">송금인명 수표인자</span>
+	</label>
+</div>
+
+
+
+
+<style>
+.ipt_sel_wrap {display:inline-flex; align-items:center; position:relative;}
+.ipt_sel_wrap .ipt_sel {width:auto; width:203px; height:32px; border:1px solid #D3D3D3; border-radius:6px; background-color:#FFF1B5;}
+.ipt_sel_wrap button.btn_sel {position:absolute; top:50%; right:3px; width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; background-color:#fff; transform:translateY(-50%);}
+.sel_options {position:absolute; top:32px;}
+</style>
+<div class="ipt_sel_wrap">
+	<select name="" id="" class="ipt_sel">
+		<option value="1.개인">1.개인</option>
+		<option value="2.기업">2.기업</option>
+	</select>
+	<button class="btn_sel"><span class="ico"><img src="../../images/ico_arrow_down.png" alt="메뉴선택 아이콘"></span></button>
+	<ul class="sel_options">
+		<li>1.개인</li>
+		<li>2.기업</li>
+	</ul>
+</div>
+
+
+
+<style>
+/* custom-select */
+.custom-select {position:relative; width:auto; user-select:none; max-width:100%;}
+.custom-select select.custom-select_native {display:none;}
+.custom-select button.custom-select_trigger {position:relative; width:auto; width:100%; max-width:100%; height:32px;}
+.custom-select button.custom-select_trigger span {display:block;}
+.custom-select button.custom-select_trigger span.custom-select_label {display:flex; justify-content:flex-start; align-items:center; width:100%; height:32px; padding:0 12px; border:1px solid #D3D3D3; border-radius:6px; background-color:#fff; color:#000; font-size:16px; line-height:19px;}
+.custom-select button.custom-select_trigger span.custom-select_icon {display:inline-flex; justify-content:center; align-items:center; position:absolute; top:50%; right:3px; width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; background-color:#fff; transform:translateY(-50%); box-shadow:inset -3px -3px 6px rgba(0,0,0,0.16);}
+.custom-select button.custom-select_trigger span.custom-select_icon img {display:block; width:20px; height:20px;}
+.custom-select button.custom-select_trigger.required span.custom-select_label {background-color:#FFF2B5;}
+
+.custom-select ul.custom-select_options {display:none; position:absolute; top:34px; left:0; width:100%; max-height:50vh; border:1px solid #D3D3D3; border-radius:6px; background-color:#FFF1B5; overflow-y:auto;}
+.custom-select ul.custom-select_options li.custom-select_option {height:28px; padding:0 12px; background-color:#fff; font-size:14px; line-height:28px; cursor:pointer;}
+.custom-select ul.custom-select_options li.custom-select_option:hover {background-color:#005EB8; color:#fff;}
+.custom-select ul.custom-select_options.open {display:block; z-index:10;}
+.custom-select button.custom-select_trigger.active span.custom-select_icon img {transform:rotate(180deg);}
+/* // custom-select */
+</style>
+<!-- 첫 번째 셀렉트 -->
+<!-- <div class="custom-select">
+	<select class="custom-select_native" required>
+		<option value="1.개인">1.개인</option>
+		<option value="2.기업">2.기업</option>
+	</select>
+
+	<button type="button" class="custom-select_trigger">
+		<span class="custom-select_label">1.개인</span>
+		<span class="custom-select_icon">
+			<img src="../../images/ico_arrow_down.png" alt="메뉴선택 아이콘">
+		</span>
+	</button>
+
+	<ul class="custom-select_options">
+		<li class="custom-select_option" data-value="1.개인">1.개인</li>
+		<li class="custom-select_option" data-value="2.기업">2.기업</li>
+	</ul>
+</div> -->
+
+<!-- 두 번째 셀렉트 -->
+<div class="custom-select" style="width:200px;">
+	<select class="custom-select_native" required>
+		<option value="" disabled selected hidden>선택하세요</option>
+		<option value="asfasdfa">1asdfaefawf_A</option>
+		<option value="asfasdfb">1asdfaefawf_B</option>
+		<option value="asfasdfc">1asdfaefawf_C</option>
+	</select>
+
+	<!-- <button type="button" class="custom-select_trigger">
+		<span class="custom-select_label">Aasdfasdfsaf</span>
+		<span class="custom-select_icon">
+			<img src="../../images/ico_arrow_down.png" alt="메뉴선택 아이콘">
+		</span>
+	</button>
+
+	<ul class="custom-select_options">
+		<li class="custom-select_option" data-value="a">A</li>
+		<li class="custom-select_option" data-value="b">B</li>
+		<li class="custom-select_option" data-value="c">C</li>
+	</ul> -->
+</div>
+
+
+<!-- 두 번째 셀렉트 -->
+<div class="custom-select" style="width:200px;">
+	<select class="custom-select_native" required>
+		<option value="asfasdfa">asdfaefawf_A</option>
+		<option value="asfasdfb">asdfaefawf_B</option>
+		<option value="asfasdfc">asdfaefawf_C</option>
+	</select>
+
+	<!-- <button type="button" class="custom-select_trigger">
+		<span class="custom-select_label">Aasdfasdfsaf</span>
+		<span class="custom-select_icon">
+			<img src="../../images/ico_arrow_down.png" alt="메뉴선택 아이콘">
+		</span>
+	</button>
+
+	<ul class="custom-select_options">
+		<li class="custom-select_option" data-value="a">A</li>
+		<li class="custom-select_option" data-value="b">B</li>
+		<li class="custom-select_option" data-value="c">C</li>
+	</ul> -->
+</div>
+
+
+<table class="table_list">
+	<tr>
+		<th><strong>ㅇㅇㅇ</strong></th>
+		<th><strong>ㅇㅇㅇ</strong></th>
+		<th><strong>ㅇㅇㅇ</strong></th>
+		<th><strong>ㅇㅇㅇ</strong></th>
+		<th><strong>ㅇㅇㅇ</strong></th>
+		<th><strong>ㅇㅇㅇ</strong></th>
+		<th><strong>ㅇㅇㅇ</strong></th>
+		<th><strong>ㅇㅇㅇ</strong></th>
+		<th><strong>ㅇㅇㅇ</strong></th>
+		<th><strong>ㅇㅇㅇ</strong></th>
+	</tr>
+	<tr>
+		<td>ㅁㅁㅁㅁ</td>
+		<td>ㅁㅁㅁㅁ</td>
+		<td>ㅁㅁㅁㅁ</td>
+		<td>ㅁㅁㅁㅁ</td>
+		<td>ㅁㅁㅁㅁ</td>
+		<td>ㅁㅁㅁㅁ</td>
+		<td>ㅁㅁㅁㅁ</td>
+		<td>ㅁㅁㅁㅁ</td>
+		<td>ㅁㅁㅁㅁ</td>
+		<td>ㅁㅁㅁㅁ</td>
+	</tr>
+</table>
+<!-- // table_list -->
+
+
+
+<div class="pagination_wrap">
+	<div class="search_count">
+		<span class="txt">조회건수 :</span>
+		<span class="count">00</span>
+	</div>
+	<div class="more_list">
+		<button type="button" class="btn_next"><span>다음</span></button>
+	</div>
+</div>
+<!-- // pagination_wrap -->
+
+<script src="../../js/temp.js"></script>
+
+
+<script>
+
+
+/* 공지사항, 자주 묻는 질문 */
+let noticeWrap = document.querySelector(".notice_arcodian_wrap")
+if(noticeWrap) {
+	let listItems = document.querySelectorAll(".list .item");
+	listItems.forEach(function(item){
+		item.addEventListener("click", function(){
+			item.classList.toggle("active");
+		})
+	})
+}
+/* // 공지사항, 자주 묻는 질문 */
+
+
+function setSelectFn (){
+	const ipt_sel_wrap = document.querySelector(".ipt_sel_wrap");
+	btn_triger = ipt_sel_wrap.querySelector("button.btn_sel");
+	btn_triger.addEventListener("click", function(item){
+		ipt_sel_wrap.querySelector("select").addEventListener("change", function(){
+			console.log("asdfasdf")
+		})
+	})
+}
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

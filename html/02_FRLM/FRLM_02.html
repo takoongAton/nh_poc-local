@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>농협 해외송금 POC</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/nhpoc.css" />
+
+	<!-- font -->
+	<link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin>
+	</noscript>
+
+	<!-- font-family : 'Noto Sans KR' -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..900&display=swap" />
+
+	<!-- font-family : 'Pretendard' -->
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+
+<style>
+
+</style>
+</head>
+<body>
+
+	<div class="wrap">
+		<aside class="menu">
+			<div class="menu_tit"><strong>NH POC</strong></div>
+			<ul class="menu_list">
+				<li><button type="button"><span>계좌관리</span></button></li>
+				<li><button type="button"><span>자금이체(당발-송금은행)</span></button></li>
+				<li><button type="button"><span>자금이체(타발-수취은행)</span></button></li>
+				<li><button type="button" class="active"><span>유동성관리</span></button></li>
+			</ul>
+		</aside>
+
+		<section class="container">
+
+			<div class="page_tit_wrap">
+				<div class="page_tit">
+					<div class="tit">
+						<span class="ico"><img src="../../images/tit_icon_01.png" alt="아이콘"></span>
+						<strong class="tit">유동성관리 (수동)</strong>
+					</div>
+				</div>
+				<!-- // page_tit -->
+
+				<div class="btn_group">
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">실행</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">엑셀</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">인쇄</span>
+					</button>					
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">초기화</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">도움말</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">닫기</span>
+					</button>
+				</div>
+			</div>
+			<!-- // page_tit_wrap -->
+
+			<div class="content_group">
+
+				<div class="table_form_wrap">
+
+					<table class="form_table">
+						<colgroup>
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+						</colgroup>
+						<tr>
+							<th><span>거래구분</span></th>
+							<td>
+								<div class="">
+									<div class="custom-select">
+										<select class="custom-select_native" required>
+											<option value="1. 신규">1. 신규</option>
+											<option value="1. 신규">1. 신규</option>
+										</select>
+									</div>
+									<!-- // custom-select -->
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<td colspan="4"></td>
+						</tr>
+					</table>
+					<!-- // form_table -->
+
+				</div>
+				<!-- // table_form_wrap -->
+
+			</div>
+			<!-- // content_group -->
+
+			<div class="content_group">
+
+				<div class="tab_group">
+					<div class="left">
+						<div class="tab_wrap">
+							<button type="button" class="btn_tab"><span class="txt">거래내역</span></button>
+							<button type="button" class="btn_tab active"><span class="txt">거래화면</span></button>
+						</div>
+						<!-- // tab_wrap -->
+					</div>
+					<!-- // left -->
+				</div>
+				<!-- // tab_group -->
+			</div>
+			<!-- // content_group -->
+
+
+			<div class="content_group">
+				<table class="form_table">
+					<colgroup>
+						<col style="width:calc(100% / 6);" />
+						<col style="width:calc(100% / 3);" />
+						<col style="width:calc(100% / 6);" />
+						<col style="width:calc(100% / 3);" />
+					</colgroup>
+					<tr>
+						<th><span>REF NO</span></th>
+						<td>
+							<div class="custom_group">
+								<input type="text" />
+							</div>
+						</td>
+						<th><span>TRANSFER TYPE</span></th>
+						<td>
+							<div class="custom_group">
+								<div class="custom-select">
+									<select class="custom-select_native" required>
+										<option value="DEPO-PATIORE(ON)">DEPO-PATIORE(ON)</option>
+										<option value="PATIORE(ON)-DEPO">PATIORE(ON)-DEPO</option>
+									</select>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th><span>거래일자</span></th>
+						<td>
+							<div class="custom-input-date">
+								<input type="date" />
+								<button class="btn_triger btn_ico">
+									<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+								</button>
+							</div>
+							<!-- // custom-input-date -->
+						</td>
+						<th><span>결제일자</span></th>
+						<td>
+							<div class="custom-input-date">
+								<input type="date" />
+								<button class="btn_triger btn_ico">
+									<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+								</button>
+							</div>
+							<!-- // custom-input-date -->
+						</td>
+					</tr>
+					<tr>
+						<th><span>송금 금액</span></th>
+						<td colspan="3">
+							<div class="custom_group">
+								<div class="custom-select">
+									<select class="custom-select_native" required>
+										<option value="select_text1">select_text1</option>
+										<option value="select_text2">select_text2</option>
+										<option value="select_text3">select_text3</option>
+									</select>
+								</div>
+								<div class="set_ipt">
+									<input type="text" required />
+								</div>
+							</div>
+						</td>
+						<!-- <th><span>거래환율회차</span></th>
+						<td>
+							<input type="text">
+						</td> -->
+					</tr>
+					<tr>
+						<th><span>PAY DEPO</span></th>
+						<td colspan="3">
+							<div class="custom_group">
+								<div class="custom-select">
+									<select class="custom-select_native" required>
+										<option value="CHASUS33XXX JPMORGAN CHASE BANK, N.A">CHASUS33XXX JPMORGAN CHASE BANK, N.A</option>
+										<option value="CHASUS33XXX JPMORGAN CHASE BANK, N.A">CHASUS33XXX JPMORGAN CHASE BANK, N.A</option>
+										<option value="CHASUS33XXX JPMORGAN CHASE BANK, N.A">CHASUS33XXX JPMORGAN CHASE BANK, N.A</option>
+									</select>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th><span>RCY DEPO</span></th>
+						<td colspan="3">
+							<div class="custom_group">
+								<div class="custom-select">
+									<select class="custom-select_native" required>
+										<option value="CHASUS33XXX JPMORGAN CHASE BANK, N.A">CHASUS33XXX JPMORGAN CHASE BANK, N.A</option>
+										<option value="CHASUS33XXX JPMORGAN CHASE BANK, N.A">CHASUS33XXX JPMORGAN CHASE BANK, N.A</option>
+										<option value="CHASUS33XXX JPMORGAN CHASE BANK, N.A">CHASUS33XXX JPMORGAN CHASE BANK, N.A</option>
+									</select>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th><span>RELATED REF NO.</span></th>
+						<td colspan="3">
+							<div class="custom_group">
+								<div>
+									<input type="text" />
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- // content_group -->
+
+			
+			<div class="content_group">
+				<table class="form_table">
+					<colgroup>
+						<col style="width:calc(100% / 8);" />
+						<col style="width:calc(100% / 24);" />
+						<col style="width:calc(100% / 12);" />
+						<col style="width:calc(100% / 3);" />
+					</colgroup>
+					<tr>
+						<th rowspan="6"><span>ACCOUNT WITH INSTITUTION</span></th>
+						<td rowspan="6">:57</td>
+						<td>계좌번호 (ACCOUNT)</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+								(35)
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>BIC 코드</td>
+						<td>
+							<div class="custom_group">
+								<div>
+									<input type="text" name="" id="" value="CHAUS33XXX" />
+								</div>
+								<button type="button" class="btn_ico">
+									<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색"></span>
+								</button>
+								<div class="custom-input">
+									<input type="text" value="JPMORGAN CHASE BANK" />
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>은행명/주소1</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+								(4*35)
+							</div>
+						</td>
+					</tr>
+						<td>은행명/주소2</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>은행명/주소3</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>은행명/주소4</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!-- // form_table -->
+				 
+				
+				<table class="form_table" style="margin-top:10px;">
+					<colgroup>
+						<col style="width:calc(100% / 8);" />
+						<col style="width:calc(100% / 24);" />
+						<col style="width:calc(100% / 12);" />
+						<col style="width:calc(100% / 3);" />
+					</colgroup>
+					<tr>
+						<th rowspan="6"><span>ACCOUNT WITH INSTITUTION</span></th>
+						<td rowspan="6">:58</td>
+						<td>계좌번호 (ACCOUNT)</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+								(35)
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>BIC 코드</td>
+						<td>
+							<div class="custom_group">
+								<div>
+									<input type="text" name="" id="" value="" />
+								</div>
+								<button type="button" class="btn_ico">
+									<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색"></span>
+								</button>
+								<div class="custom-input">
+									<input type="text" value="" disabled />
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>은행명/주소1</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+								(4*35)
+							</div>
+						</td>
+					</tr>
+						<td>은행명/주소2</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>은행명/주소3</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>은행명/주소4</td>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input">
+									<input type="text">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!-- // form_table -->
+			</div>
+			<!-- // content_group -->
+
+		</section>
+		<!-- // container -->
+
+	</div>
+	<!-- // wrap -->
+
+
+
+
+
+<script src="../../js/temp.js"></script>
+
+
+</body>
+</html>

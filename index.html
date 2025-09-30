@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>농협_해외송금솔루션 POC</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+
+<style type="text/css">
+body {margin:0; padding:30px 20px 20px 20px; font-family:Tahoma, Sans-Serif; font-size:12px; color:#333; line-height:1;}
+h1, p, ul, th, td {margin:0; padding:0;}
+ul, li {list-style-type:none;}
+
+h1 {margin:0 0 10px 0; font-size:17px;}
+h1 > span {margin-left:10px; font-size:13px; font-weight:normal;}
+.quick *{float:left; vertical-align:middle;}
+.quick {position:fixed; right:0; top:0; padding:5px 10px; background-color:#ddd;}
+.quick p {font-weight:bold;}
+.quick li {margin:0 0 0 8px;}
+.quick li span {display:block; width:5px; padding:0 0 0 8px;}
+.link-guide {display:block; margin-bottom:10px; text-decoration:underline; font-size:13px;}
+a {color:#009DDF; text-decoration:underline;}
+a:hover {color:#009DDF; text-decoration:none;}
+a.active {color:red; font-weight:bold;}
+table {width:100%; border-collapse:collapse; border:1px solid #666;}
+tr.line1 {border-top:2px solid #666;}
+th, td {vertical-align:middle; padding:5px 0; font-size:13px;}
+th {padding:6px; font-size:12px; text-align:center; color:#fff; border:1px solid #666; background-color:var(--main-color); font-weight:normal;}
+td {padding:4px 4px 4px 10px; text-align:left; border:1px solid #eee; background-color:#fff; line-height:1.4;}
+td.chk {padding:4px 4px 4px 4px; text-align:center;}
+td p {margin:10px 0 5px 0;}
+tr:hover td{background-color:#eee;}
+.done {color:#ca0404;}
+.em {color:#ca0404;}
+.ing {color:#009DDF;}
+.notice {padding:3px 0 10px 0; text-align:right; color:#ff0303; line-height:1.4;}
+
+:root {
+	--main-color:#009DDF;
+}
+</style>
+	<script type="text/javascript" src="/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var $lists = $('.menulist td').addClass('dir');
+			$lists
+				.find('td a')
+				.each(function(index){
+					var links = $(this).text();
+					$(this).attr('href', links).attr('target','_blank');
+
+				})
+				.end();
+			
+			//선택한거 파일 확인
+			$('a').on('click', function(){
+				$('a').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+	</script>
+</head>
+<!-- html body -->
+<body>
+<h1>농협_해외송금솔루션 POC</h1>
+
+
+<table class="menulist">
+	<colgroup>
+		<col width="10%">
+		<col width="15%">
+		<col width="20%">
+		<col width="20%">
+		<col width="20%">
+		<col width="">
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="col">화면ID</th>
+			<th scope="col">Depth 1</th>
+			<th scope="col">Depth 2</th>
+			<th scope="col">Depth 3</th>
+			<th scope="col">파일명</th>
+			<th scope="col">비고</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- <tr>
+		<td colspan="9" class="chk done dir"><strong>0924 : 디자인 검수 요청</strong> 0926 : 디자인 검수 완료 <br> 1004 : 기획 변경 및 추가 수정완료</td>
+	</tr> -->
+<!-- 
+		<tr class="line1">
+			<td>GSSSSSS</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td><a target="_blank" href="./page/ㅇㅇㅇㅇ.html">ㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+-->
+
+		<tr class="line1">
+			<td></td>
+			<td>계좌관리</td>
+			<td>서비스소개</td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_FRAM/FRAM_01.html">FRAM_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="line1">
+			<td></td>
+			<td>유동성 관리</td>
+			<td>유동성관리 (수동)</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_FRLM/FRLM_01.html">FRLM_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_FRLM/FRLM_02.html">FRLM_02.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="line1">
+			<td></td>
+			<td>자금이체(당발-송금은행)</td>
+			<td>파티오르 송금 취결</td>
+			<td>취결정보</td>
+			<td><a target="_blank" href="./html/03_FRFT/FRFT_01.html">FRFT_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>계리입력</td>
+			<td><a target="_blank" href="./html/03_FRFT/FRFT_02.html">FRFT_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>파티오르 송금 추적 조회</td>
+			<td>송금내역</td>
+			<td><a target="_blank" href="./html/03_FRFT/FRFT_03.html">FRFT_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>진행상태</td>
+			<td><a target="_blank" href="./html/03_FRFT/FRFT_04.html">FRFT_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>자금이체(당발-송금은행)</td>
+			<td>파티오르 송금 추적 조회</td>
+			<td>진행상태</td>
+			<td><a target="_blank" href="./html/03_FRFT/FRFT_05.html">FRFT_05.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>파티오르 타발 송금 지급</td>
+			<td>지급정보</td>
+			<td><a target="_blank" href="./html/03_FRFT/FRFT_06.html">FRFT_06.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>계리입력</td>
+			<td><a target="_blank" href="./html/03_FRFT/FRFT_07.html">FRFT_07.html</a></td>
+			<td>-</td>
+		</tr>
+		
+		<!-- <tr>
+			<td>-</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td><a target="_blank" href="./ㅇㅇㅇㅇ/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr> -->
+		
+		<!-- <tr>
+			<td>화면아이디</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td><a target="_blank" href="./ㅇㅇㅇㅇ/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr> -->
+
+
+		
+
+
+
+		
+<!--
+		<tr class="line1">
+			<td>GSSSSSS</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td><a target="_blank" href="./page/ㅇㅇㅇㅇ.html">ㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+-->
+
+	</tbody>
+</table>
+</body>
+<!-- //html body -->
+</html>
