@@ -119,7 +119,7 @@
 							<th><span>조회구분</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-select">
+									<div class="custom-select w100">
 										<select class="custom-select_native" required>
 											<option value="2 진행상태조회">2 진행상태조회</option>
 										</select>
@@ -354,8 +354,8 @@
 											<option value="USD">USD</option>
 										</select>
 									</div>
-									<div class="custom-input-text">
-										<input type="text" />
+									<div class="custom-input-text w100">
+										<input type="text" value="500.00" class="tar" />
 									</div>
 								</div>
 								<!-- // custom_group -->
@@ -376,8 +376,8 @@
 							<th><span>미달러환산금액</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" />
+									<div class="custom-input-text w100">
+										<input type="text" value="500.00" class="tar" />
 									</div>
 								</div>
 								<!-- // custom_group -->
@@ -440,8 +440,8 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="37205 개인의 이전거래">37205 개인의 이전거래</option>
-											<option value="37205 개인의 이전거래">37205 개인의 이전거래</option>
+											<option value="37901 증여 및 기타">37901 증여 및 기타</option>
+											<option value="37901 증여 및 기타">37901 증여 및 기타</option>
 										</select>
 									</div>
 									<button class="btn_triger btn_ico">
@@ -449,31 +449,25 @@
 									</button>
 								</div>
 							</td>
-							<th><span>지정항목</span></th>
+							<th><span>송금종류</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-select">
-										<select class="custom-select_native">
-											<option value="01 거주자의 지급증빙">01 거주자의 지급증빙</option>
-											<option value="01 거주자의 지급증빙">01 거주자의 지급증빙</option>
-										</select>
-									</div>
-									<button class="btn_triger btn_ico">
-										<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색 아이콘"></span>
-									</button>
+									<div class="custom-input-text">
+									<input type="text" class="tar" value="500.00" />
+								</div>
 								</div>
 							</td>
 							<th><span>사유금액</span></th>
 							<td>
 								<div class="custom-input-text">
-									<input type="text" class="ipt-money" value="1,000.00" required />
+									<input type="text" class="tar" value="" />
 								</div>
 								<!-- // custom-input-text -->
 							</td>
 						</tr>
 
 						<tr>
-							<th><span>사후관리번호</span></th>
+							<th><span>사후관리코드</span></th>
 							<td colspan="5">
 								<div class="custom_group">
 									<div class="custom-select">
@@ -526,15 +520,13 @@
 					<table class="form_table">
 						<colgroup>
 							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 4);" />
+							<col style="width:calc(100% / 3);" />
 							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 3);" />
 						</colgroup>
 						<tr>
-							<th><span>수취인 실명번호</span></th>
-							<td colspan="5">
+							<th><span>실명번호</span></th>
+							<td>
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
@@ -550,6 +542,40 @@
 									</button>
 									<div class="custom-input-text">
 										<input type="text" />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<th><span>수취인 국가</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" value="United States 미국" />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+						</tr>
+
+						<tr>
+							<th><span>여권만기일</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-date">
+										<input type="date" />
+										<button class="btn_triger btn_ico">
+											<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+										</button>
+									</div>
+									<!-- // custom-input-date -->
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<th><span>연락처</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" value="" />
 									</div>
 								</div>
 								<!-- // custom_group -->
@@ -577,56 +603,23 @@
 							</td>
 						</tr>
 						<tr>
-							<th><span>수취인 국가</span></th>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" value="United States 미국" />
-									</div>
-								</div>
-								<!-- // custom_group -->
-							</td>
-							<th><span>주 (STATES)</span></th>
+							<th><span>주소(도시/기타)</span></th>
 							<td colspan="3">
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="AZ Arizona">AZ Arizona</option>
-											<option value="South Korea">South Korea</option>
+											<option value="대전광역시">대전광역시</option>
+											<option value="서울특별시">서울특별시</option>
 										</select>
 									</div>
 									<div class="custom-input-text">
-										<input type="text" required value="AZ" />
-									</div>
-								</div>
-							</td>
-						</tr>
-
-
-
-						<tr>
-							<th><span>지급도시(CITY)</span></th>
-							<td>
-								<div class="custom_group">
-									<div class="custom-select">
-										<select class="custom-select_native" required>
-											<option value="AZ Arizona">AZ Arizona</option>
-											<option value="South Korea">South Korea</option>
-										</select>
+										<input type="text" value="Daeejon-si" />
 									</div>
 									<div class="custom-input-text">
-										<input type="text" value="DDD" required />
+										<input type="text" value="MUNCHANG-RO, JUNG-GU" />
 									</div>
 								</div>
 								<!-- // custom_group -->
-							</td>
-							<th><span>주소</span></th>
-							<td colspan="3">
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" value="" />
-									</div>
-								</div>
 							</td>
 						</tr>
 					</table>
@@ -648,16 +641,10 @@
 								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
 								<strong class="tit">송금인 정보</strong>
 							</div>
-							<p class="txt">※ 송금인의 [이름]과 [성]은 반드시 CRM-63에 등록된 영문 [이름] 및 영문 [성]과 동일하게 입력하여야 합니다.</p>
 						</div>
 						<!-- // tit_wrap -->
 					</div>
 					<!-- // left -->
-
-					<div class="right">
-						<!-- <button type="button" class="btn btn_sm btn_line"><span>DEBIT 내역 대사</span></button> -->
-					</div>
-					<!-- // right -->
 				</div>
 				<!-- // divide_row -->
 
@@ -666,41 +653,43 @@
 					<table class="form_table">
 						<colgroup>
 							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 4);" />
+							<col style="width:calc(100% / 3);" />
 							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 3);" />
 						</colgroup>
 						<tr>
-							<th><span>성명 (참고)</span></th>
+							<th><span>실명번호</span></th>
 							<td>
 								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native" required>
+											<option value="개인">개인</option>
+											<option value="개인">개인</option>
+										</select>
+									</div>
 									<div class="custom-input-text">
-										<input type="text">
+										<input type="text" required />
+									</div>
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색 아이콘"></span>
+									</button>
+									<div class="custom-input-text">
+										<input type="text" />
 									</div>
 								</div>
 								<!-- // custom_group -->
 							</td>
-							<th><span>여권발행일</span></th>
+							<th><span>송금국가</span></th>
 							<td>
-								<div class="custom-input-date">
-									<input type="date" />
-									<button class="btn_triger btn_ico">
-										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
-									</button>
+								<div class="custom_group">
+									<div class="custom-select w100">
+										<select class="custom-select_native" required>
+											<option value="US United States 미국">US United States 미국</option>
+											<option value="US United States 미국">US United States 미국</option>
+										</select>
+									</div>
 								</div>
-								<!-- // custom-input-date -->
-							</td>
-							<th><span>여권만기일</span></th>
-							<td>
-								<div class="custom-input-date">
-									<input type="date" />
-									<button class="btn_triger btn_ico">
-										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
-									</button>
-								</div>
-								<!-- // custom-input-date -->
+								<!-- // custom_group -->
 							</td>
 						</tr>
 
@@ -709,7 +698,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" required />
+										<input type="text" value="YOUNGSU" required />
 									</div>
 								</div>
 								<!-- // custom_group -->
@@ -718,7 +707,7 @@
 							<td colspan="3">
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" required />
+										<input type="text" value="KIM" required />
 									</div>
 								</div>
 								<!-- // custom_group -->
@@ -738,14 +727,8 @@
 								</div>
 								<!-- // custom_group -->
 							</td>
-							<th><span>전화번호</span></th>
-							<td colspan="3">
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" required />
-									</div>
-								</div>
-							</td>
+							<th></th>
+							<td></td>
 						</tr>
 
 
@@ -754,15 +737,11 @@
 							<th><span>주소 (도시/기타)</span></th>
 							<td colspan="5">
 								<div class="custom_group">
-									<div class="custom-select">
-										<select class="custom-select_native" required>
-											<option value="시/군 선택">시/군 선택</option>
-											<option value="서울특별시">서울특별시</option>
-										</select>
-									</div>
 									<div class="custom-input-text">
 										<input type="text" />
-										<input type="text" required />
+									</div>
+									<div class="custom-input-text w80">
+										<input type="text" />
 									</div>
 								</div>
 								<!-- // custom_group -->

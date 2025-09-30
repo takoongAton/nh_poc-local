@@ -100,15 +100,15 @@
 								</div>
 								<!-- // custom-input-date -->
 							</td>
-							<th><span>송금 종류</span></th>
+							<th><span>차액확인 대사일</span></th>
 							<td>
-								<div class="custom-select">
-									<select class="custom-select_native" required>
-										<option value="1.취결">1.취결</option>
-										<option value="2.문구1">2.문구1</option>
-										<option value="3.문구2">3.문구2</option>
-									</select>
+								<div class="custom-input-date">
+									<input type="date" required />
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+									</button>
 								</div>
+								<!-- // custom-input-date -->
 							</td>
 							<!-- <th><span>REF-NO</span></th> -->
 							<td colspan="2">
@@ -121,9 +121,9 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="asfasdfa">asdfaefawf_A</option>
-											<option value="asfasdfb">asdfaefawf_B</option>
-											<option value="asfasdfc">asdfaefawf_C</option>
+											<option value="2 USD">2 USD</option>
+											<option value="2 USD">2 USD</option>
+											<option value="2 USD">2 USD</option>
 										</select>
 									</div>
 								</div>
@@ -155,11 +155,11 @@
 					<div class="right">
 						<div>
 							<button type="button" class="btn btn_sm btn_line">
-								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<!-- <span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span> -->
 								<span class="txt">DEPO 내역 대사</span>
 							</button>
 							<button type="button" class="btn btn_sm btn_line">
-								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<!-- <span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span> -->
 								<span class="txt">통화별 잔액대사</span>
 							</button>
 						</div>
@@ -175,13 +175,19 @@
 			<div class="content_group">
 				<div class="divide_row">
 					<div class="left">
-						<button type="button" class="btn_print"><span>ACTUAL 내역조회</span></button>
+						<button type="button" class="btn btn_sm btn_line">
+							<!-- <span class="ico">아이콘</span> -->
+							<span class="txt">ACTUAL 내역조회</span>
+						</button>
 						<p class="alert_txt">※ DEPO목록을 선택 후 버튼을 눌러주시기 바랍니다.</p>
 					</div>
 					<!-- // left -->
 
 					<div class="right">
-						<button type="button" class="btn_print"><span>DEBIT 내역 대사</span></button>
+						<button type="button" class="btn btn_sm btn_line">
+							<!-- <span class="ico">아이콘</span> -->
+							<span class="txt">DEBIT 내역 대사</span>
+						</button>
 					</div>
 					<!-- // right -->
 				</div>

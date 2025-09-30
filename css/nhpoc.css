@@ -136,7 +136,7 @@ label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; 
 /* // custom-input-radio */
 
 /* custom-input-text */
-.custom-input-text {display:flex; align-items:baseline; gap:0 4px; width:100%;}
+.custom-input-text {display:flex; align-items:baseline; gap:0 4px; max-width:100%;} 
 .custom-input-text button.btn_triger {}
 .custom-input-text button.btn_triger span.ico {display:inline-block; width:20px; height:20px;}
 .custom-input-text input[type='text'] {height:32px; padding:0 12px; border:1px solid #ddd; border-radius:6px; background-color:#fff; font-size:16px;}
@@ -163,19 +163,26 @@ label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; 
 .custom-select button.custom-select_trigger span.custom-select_icon img {display:block; width:20px; height:20px;}
 .custom-select button.custom-select_trigger.required span.custom-select_label {background-color:#FFF2B5;}
 
-.custom-select ul.custom-select_options {display:none; position:absolute; top:34px; left:0; width:100%; max-height:50vh; border:1px solid #D3D3D3; border-radius:6px; background-color:#FFF1B5; overflow-y:auto;}
+.custom-select ul.custom-select_options {display:none; position:absolute; top:100%; left:0; z-index:100; width:100%; max-height:50vh; border:1px solid #D3D3D3; border-radius:6px; background-color:#FFF1B5; overflow-y:auto;}
+.custom-select ul.custom-select_options.drop-up {top:auto; bottom:100%;}
 .custom-select ul.custom-select_options li.custom-select_option {height:28px; padding:0 12px; background-color:#fff; font-size:14px; line-height:28px; cursor:pointer; text-align:left;}
 .custom-select ul.custom-select_options li.custom-select_option:hover {background-color:#005EB8; color:#fff;}
 .custom-select ul.custom-select_options.open {display:block; z-index:10;}
 .custom-select button.custom-select_trigger.active span.custom-select_icon img {transform:rotate(180deg);}
 /* // custom-select */
 
+/* 강제 100% */
+.w50 {width:50% !important}
+.w60 {width:60% !important}
+.w80 {width:80% !important}
+.w100 {width:100% !important}
 
+.tar {text-align:right;}
 
 
 /* 버튼 좌우 구분 */
 .divide_row {display:flex; justify-content:space-between; align-items:center;}
-.divide_row .left {display:flex; align-items:center;}
+.divide_row .left {display:flex; align-items:center; gap:8px;}
 .btn_print {width:auto;}
 /* // 버튼 좌우 구분 */
 

@@ -25,6 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
       triggerBtn.classList.remove('required');
     }
 
+    // ✅ w100 여부에 따라 triggerBtn 클래스 추가/삭제
+    if (customSelect.classList.contains('w100')) {
+      triggerBtn.closest(".custom-select").classList.add('w100');
+    } else {
+      triggerBtn.closest(".custom-select").classList.remove('w100');
+    }
+    // if (nativeSelect.classList.contains('w100')) {
+    //   triggerBtn.closest(".custom-select").classList.add('w100');
+    // } else {
+    //   triggerBtn.closest(".custom-select").classList.remove('w100');
+    // }
+
     // ✅ 옵션 목록 동적 생성
     const optionsBox = document.createElement('ul');
     optionsBox.className = 'custom-select_options';
@@ -49,8 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = optionsBox.classList.contains('open');
       closeAllSelects();
       if (!isOpen) {
+        // 먼저 열어보기 (위치 계산을 위해)
         optionsBox.classList.add('open');
         triggerBtn.classList.add('active');
+
+        // 위치 계산
+        const triggerRect = triggerBtn.getBoundingClientRect();
+        const optionsRect = optionsBox.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        // 아래 공간 부족하면 위로 열기
+        if (triggerRect.bottom + optionsRect.height > viewportHeight) {
+          optionsBox.classList.add('drop-up');
+        } else {
+          optionsBox.classList.remove('drop-up');
+        }
       }
     });
 
@@ -113,3 +138,19 @@ document.querySelectorAll(".custom-input-date .btn_triger").forEach(btn => {
 	});
 });
 /* // input date 아이콘 클릭시 달력 나오게 */
+
+
+
+
+
+/* 여러 개의 input[type=date]에 모두 오늘 날짜를 기본값으로 세팅 */
+const today = new Date();
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth() + 1).padStart(2, '0');
+const dd = String(today.getDate()).padStart(2, '0');
+const formatted = `${yyyy}-${mm}-${dd}`;
+
+document.querySelectorAll("input[type='date']").forEach(input => {
+  input.value = formatted;
+});
+/* // 여러 개의 input[type=date]에 모두 오늘 날짜를 기본값으로 세팅 */
