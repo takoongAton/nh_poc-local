@@ -242,119 +242,99 @@
 				<!-- // divide_row -->
 
 
-<style>
-.test123 {display:flex; justify-content:space-between; gap:0 40px; padding:20px 0 30px;}
-.test123 div.con_box {display:flex; flex-direction:column; gap:16px 0; position:relative; width:100%;}
-.test123 div.con_box div.tit {padding:10px 5px; background-color:#ddd; border-radius:20px; text-align:center;}
-.test123 div.con_box p.name {display:flex; justify-content:center; align-items:center; padding:10px;}
-.test123 div.con_box .con {flex:1; position:relative; border:1px solid #ddd; border-radius:8px; overflow:hidden;}
-.test123 div.con_box div.test {display:flex; flex-direction:column;}
-.test123 div.con_box div.test.active {background-color:#f7f7f7;}
-.test123 div.con_box div.test dl {display:flex; font-size:14px;}
-.test123 div.con_box div.test dl:first-of-type ~ dl {border-top:1px solid #ddd;}
-.test123 div.con_box div.test dl dt {display:flex; align-items:center; width:100px; min-width:100px; padding:14px; border-right:1px solid #ddd;}
-.test123 div.con_box div.test dl dd {flex:1; padding:10px; text-align:left;}
-.test123 div.con_box div.test dl dd .money_wrap {display:flex; border:1px solid #ddd;}
-.test123 div.con_box div.test dl dd .money_wrap span {padding:5px;}
-.test123 div.con_box div.test dl dd .money_wrap span.currency {border-right:1px solid #ddd;}
-.test123 div.con_box div.test dl dd .money_wrap span.money {text-align: right;}
-.test123 div.arrow {display:flex; justify-content: center; align-items: center; position:relative; width:50px; min-width:50px;}
-.test123 div.con_box .con div.guide {display:flex; justify-content:center; align-items:center; position:absolute; top:20px; right:20px; bottom:20px; left:20px; background-color:rgba(0,0,0,0.4); color:#fff; border-radius:12px;}
-.test123 div.con_box .con div.guide span {font-size:20px; font-weight:bold; text-shadow:0 0 2px rgba(0,0,0,0.5);;}
-</style>
-								<div class="test123">
-									<div class="con_box">
-										<div class="tit">송금인</div>
-										<div class="con">
-											<p class="name">YANG JIN MO</p>
-											<div class="guide"><span>송금인명</span></div>
-										</div>
-									</div>
+				<div class="transfers_step_wrap">
+					<div class="con_box">
+						<div class="tit">송금인</div>
+						<div class="con">
+							<p class="name">YANG JIN MO</p>
+							<div class="guide"><span>송금인명</span></div>
+						</div>
+					</div>
 
-									<div class="con_box">
-										<div class="tit">송금은행</div>
-										<div class="con">
-											<div class="test">
-												<dl>
-													<dt><strong>은행BIC</strong></dt>
-													<dd></dd>
-												</dl>
-												<dl>
-													<dt><strong>은행명</strong></dt>
-													<dd></dd>
-												</dl>
-												<dl>
-													<dt><strong>송금금액</strong></dt>
-													<dd>
-														<div class="money_wrap">
-															<span class="currency">USD</span>
-															<span class="money"></span>
-														</div>
-													</dd>
-												</dl>
-												<dl>
-													<dt><strong>처리일시</strong></dt>
-													<dd></dd>
-												</dl>
-												<dl>
-													<dt><strong>국가</strong></dt>
-													<dd></dd>
-												</dl>
-											</div>
-											<div class="guide"><span>송금은행 정보</span></div>
+					<div class="con_box">
+						<div class="tit">송금은행</div>
+						<div class="con">
+							<div class="test">
+								<dl>
+									<dt><strong>은행BIC</strong></dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt><strong>은행명</strong></dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt><strong>송금금액</strong></dt>
+									<dd>
+										<div class="money_wrap">
+											<span class="currency">USD</span>
+											<span class="money"></span>
 										</div>
-									</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><strong>처리일시</strong></dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt><strong>국가</strong></dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<div class="guide"><span>송금은행 정보</span></div>
+						</div>
+					</div>
 
-									<div class="con_box">
-										<div class="tit">파티오르정산</div>
-										<div class="con">
-											<p class="name">완료/대기/오류</p>
-										</div>
-									</div>
+					<div class="con_box">
+						<div class="tit">파티오르정산</div>
+						<div class="con">
+							<p class="name">완료/대기/오류</p>
+						</div>
+					</div>
 
-									
-									<div class="con_box">
-										<div class="tit">수신은행</div>
-										<div class="con">
-											<div class="test active">
-												<dl>
-													<dt><strong>은행BIC</strong></dt>
-													<dd>NACFKRSEXXX</dd>
-												</dl>
-												<dl>
-													<dt><strong>은행명</strong></dt>
-													<dd>NONGHYUP BANK (FORWERLY</dd>
-												</dl>
-												<dl>
-													<dt><strong>송금금액</strong></dt>
-													<dd>
-														<div class="money_wrap">
-															<span class="currency">USD</span>
-															<span class="money">301,495.22</span>
-														</div>
-													</dd>
-												</dl>
-												<dl>
-													<dt><strong>처리일시</strong></dt>
-													<dd>2025-09-01 11:14:58</dd>
-												</dl>
-												<dl>
-													<dt><strong>국가</strong></dt>
-													<dd></dd>
-												</dl>
-											</div>
+					
+					<div class="con_box">
+						<div class="tit">수신은행</div>
+						<div class="con">
+							<div class="test active">
+								<dl>
+									<dt><strong>은행BIC</strong></dt>
+									<dd>NACFKRSEXXX</dd>
+								</dl>
+								<dl>
+									<dt><strong>은행명</strong></dt>
+									<dd>NONGHYUP BANK (FORWERLY</dd>
+								</dl>
+								<dl>
+									<dt><strong>송금금액</strong></dt>
+									<dd>
+										<div class="money_wrap">
+											<span class="currency">USD</span>
+											<span class="money">301,495.22</span>
 										</div>
-									</div>
-									
-									<div class="con_box">
-										<div class="tit">수취인</div>
-										<div class="con">
-											<p class="name">HUITAE YANG</p>
-											<div class="guide"><span>수취인명</span></div>
-										</div>
-									</div>
-								</div>
-								<!-- // test123 -->
+									</dd>
+								</dl>
+								<dl>
+									<dt><strong>처리일시</strong></dt>
+									<dd>2025-09-01 11:14:58</dd>
+								</dl>
+								<dl>
+									<dt><strong>국가</strong></dt>
+									<dd></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					
+					<div class="con_box">
+						<div class="tit">수취인</div>
+						<div class="con">
+							<p class="name">HUITAE YANG</p>
+							<div class="guide"><span>수취인명</span></div>
+						</div>
+					</div>
+				</div>
+				<!-- // transfers_step_wrap -->
 
 				<div class="table_list_wrap" style="display:none;">
 

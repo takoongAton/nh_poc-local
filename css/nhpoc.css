@@ -302,3 +302,27 @@ button {cursor:pointer;}
 .layer_footer .btn_group button.btn_next {padding:10px 30px; background-color:#005EB8; border-radius:6px;}
 .layer_footer .btn_group button.btn_next span {color:#fff;}
 /* // modal popup */
+
+
+
+
+/* 송금 추적 단계 */
+.transfers_step_wrap {display:flex; justify-content:space-between; gap:0 40px; padding:20px 0 30px;}
+.transfers_step_wrap div.con_box {display:flex; flex-direction:column; gap:16px 0; position:relative; width:100%;}
+.transfers_step_wrap div.con_box div.tit {padding:10px 5px; background-color:#ddd; border-radius:20px; text-align:center;}
+.transfers_step_wrap div.con_box p.name {display:flex; justify-content:center; align-items:center; padding:10px;}
+.transfers_step_wrap div.con_box .con {flex:1; position:relative; border:1px solid #ddd; border-radius:8px; overflow:hidden;}
+.transfers_step_wrap div.con_box div.test {display:flex; flex-direction:column;}
+.transfers_step_wrap div.con_box div.test.active {background-color:#f7f7f7;}
+.transfers_step_wrap div.con_box div.test dl {display:flex; font-size:14px;}
+.transfers_step_wrap div.con_box div.test dl:first-of-type ~ dl {border-top:1px solid #ddd;}
+.transfers_step_wrap div.con_box div.test dl dt {display:flex; align-items:center; width:100px; min-width:100px; padding:14px; border-right:1px solid #ddd;}
+.transfers_step_wrap div.con_box div.test dl dd {flex:1; padding:10px; text-align:left;}
+.transfers_step_wrap div.con_box div.test dl dd .money_wrap {display:flex; border:1px solid #ddd;}
+.transfers_step_wrap div.con_box div.test dl dd .money_wrap span {padding:5px;}
+.transfers_step_wrap div.con_box div.test dl dd .money_wrap span.currency {border-right:1px solid #ddd;}
+.transfers_step_wrap div.con_box div.test dl dd .money_wrap span.money {text-align: right;}
+.transfers_step_wrap div.arrow {display:flex; justify-content: center; align-items: center; position:relative; width:50px; min-width:50px;}
+.transfers_step_wrap div.con_box .con div.guide {display:flex; justify-content:center; align-items:center; position:absolute; top:20px; right:20px; bottom:20px; left:20px; background-color:rgba(0,0,0,0.4); color:#fff; border-radius:12px;}
+.transfers_step_wrap div.con_box .con div.guide span {font-size:20px; font-weight:bold; text-shadow:0 0 2px rgba(0,0,0,0.5);;}
+/* // 송금 추적 단계 */
