@@ -49,9 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
       li.className = 'custom-select_option';
       li.setAttribute('data-value', option.value);
       li.textContent = option.textContent;
-      if (option.disabled) {
-        li.classList.add('disabled');
-      }
       optionsBox.appendChild(li);
     });
 
@@ -85,14 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ✅ 옵션 선택
-    optionsBox.querySelectorAll('.custom-select_option').forEach(optionEl => {
-      optionEl.addEventListener('click', () => {
-        if (optionEl.classList.contains('disabled')) return; // 선택 불가
-        if (nativeSelect.disabled) return; // 전체 select 가 disabled 면 불가
+    optionsBox.querySelectorAll('.custom-select_option').forEach(option => {
+      option.addEventListener('click', () => {
+        if (nativeSelect.disabled) return; // disabled 시 선택 불가
+        const value = option.getAttribute('data-value');
 
-        const value = optionEl.getAttribute('data-value');
+        // native <select> 값 설정
         nativeSelect.value = value;
-        labelSpan.textContent = optionEl.textContent;
+
+        // 라벨 변경
+        labelSpan.textContent = option.textContent;
+
+        // 닫기
         optionsBox.classList.remove('open');
       });
     });

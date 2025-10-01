@@ -36,7 +36,7 @@
 			<div class="menu_tit"><strong>NH POC</strong></div>
 			<ul class="menu_list">
 				<li><button type="button"><span>계좌관리</span></button></li>
-				<li><button type="button"><span>유동성관리</span></button></li>
+				<li><button type="button"><span>유동성 관리</span></button></li>
 				<li><button type="button" class="active"><span>자금이체(당발-송금은행)</span></button></li>
 				<li><button type="button"><span>자금이체(타발-수취은행)</span></button></li>
 				<li><button type="button"><span>송금 추적 조회</span></button></li>
@@ -100,10 +100,12 @@
 
 					<table class="form_table">
 						<colgroup>
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 3);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
+							<col class="col-2" />
+							<col class="col-3" />
+							<col class="col-1" />
+							<col class="col-2" />
+							<col class="col-2" />
+							<col class="col-2" />
 						</colgroup>
 						<tr>
 							<th><span>거래 구분</span></th>
@@ -120,55 +122,38 @@
 								</div>
 								<!-- // custom_group -->
 							</td>
+							<th><span>송금종류</span></th>
+							<td>
+								<div class="custom_group">
+									01 파티오르 송금
+								</div>
+							</td>
 							<th><span>REF-NO</span></th>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" disabled >
+										<input type="text" disabled />
 									</div>
 								</div>
 							</td>
 						</tr>
 						<tr>
 							<th><span>송금인 실명번호</span></th>
-							<td>
+							<td colspan="5">
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="개인">개인</option>
-											<option value="개인">개인</option>
-											<option value="개인">개인</option>
+											<option value="1 개인">1 개인</option>
+											<option selected value="2 법인">2 법인</option>
 										</select>
 									</div>
-									<div class="custom-input-rrn required">
-										<div>
-											<input type="text" maxlength="6" />
-										</div>
-										<span>-</span>
-										<div>
-											<input type="text" maxlength="7" />
-										</div>
-									</div>
-									<button class="btn_triger btn_ico">
-										<span class="ico"><img src="../../images/ico_search.png" alt="검색 아이콘"></span>
-									</button>
-									<div class="custom-input-txt">
+									<div class="custom-input-text">
+										<input type="text" required />
+										<button class="btn_triger btn_ico">
+											<span class="ico"><img src="../../images/ico_search.png" alt="검색 아이콘"></span>
+										</button>
 										<input type="text" />
 									</div>
-								</div>
-							</td>
-							<th><span>환율변동회차</span></th>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" value="최종환율회차" />
-									</div>
-									<button class="btn_ico">
-										<span class="ico"><img src="../../images/ico_arrow_col.png" alt="검색 아이콘"></span>
-									</button>
-									<button class="btn_ico">
-										<span class="ico"><img src="../../images/ico_arrow_row.png" alt="검색 아이콘"></span>
-									</button>
 								</div>
 							</td>
 						</tr>
@@ -191,50 +176,30 @@
 								</div>
 								<!-- // custom_group -->
 							</td>
-							<th><span>수취 국가</span></th>
-							<td>
-								<div class="custom_group">
-									<div class="custom-select">
-										<select class="custom-select_native" required>
-											<option value="United States">United States</option>
-											<option value="South Korea">South Korea</option>
-										</select>
-									</div>
-									<button class="btn_triger btn_ico">
-										<span class="ico"><img src="../../images/ico_search.png" alt="검색 아이콘"></span>
-									</button>
-								</div>
-							</td>
-							<!-- <th>
-								<div class="custom_group">
-									<label class="ipt_chk">
-										<input type="checkbox">
-										<span class="txt">권유직원</span>
-										<span class="checkmark"></span>
-									</label>
-									/
-									<label class="ipt_chk">
-										<input type="checkbox">
-										<span class="txt">조직자</span>
-										<span class="checkmark"></span>
-									</label>
-								</div>
-							</th>
+							<th><span>USD 금액</span></th>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" value="" required />
 										<input type="text" value="" />
-										<button class="btn_triger btn_ico">
-											<span class="ico"><img src="../../images/ico_search.png" alt="검색 아이콘"></span>
-										</button>
 									</div>
 								</div>
-							</td> -->
+								<!-- // custom_group -->
+							</td>
+							<th><span>거래환율회차</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" value="89" />
+									</div>
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_arrow_row.png" alt="검색 아이콘"></span>
+									</button>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<th><span>중계은행 수수료</span></th>
-							<td colspan="3">
+							<td colspan="5">
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
@@ -260,7 +225,7 @@
 			<div class="content_group">
 				<div class="divide_row">
 					<div class="left" style="flex:1">
-						<p class="alert_txt">취소가 불가한 거래이니 수수료 및 송금 내용을 다시 한번 확인하신 후 거래하세요.</p>
+						<!-- <p class="alert_txt">취소가 불가한 거래이니 수수료 및 송금 내용을 다시 한번 확인하신 후 거래하세요.</p> -->
 					</div>
 					<!-- // left -->
 
@@ -343,15 +308,15 @@
 
 					<table class="table_list">
 						<colgroup>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
+							<col />
+							<col />
+							<col />
+							<col />
+							<col class="col-1" />
+							<col />
+							<col class="col-1" />
+							<col />
+							<col />
 						</colgroup>
 						<tr>
 							<th><span>수수료명</span></th>
@@ -365,10 +330,10 @@
 							<th><span>비고</span></th>
 						</tr>
 						<tr>
-							<td class="tit tal">당발수수료</td>
+							<td class="tit tal">송금수수료</td>
 							<td>
 								<div class="custom_group">
-									<div class="custom-select">
+									<div class="custom-select w100">
 										<select class="custom-select_native" required>
 											<option value="00 자동계산">00 자동계산</option>
 											<option value="00 자동계산">00 자동계산</option>
@@ -403,7 +368,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="25,000" />
+										<input type="text" class="tar" value="25,000" />
 									</div>
 								</div>
 							</td>
@@ -419,7 +384,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0" />
+										<input type="text" class="tar" value="0" />
 									</div>
 								</div>
 							</td>
@@ -435,7 +400,7 @@
 							<td class="tit tal">중계은행수수료</td>
 							<td>
 								<div class="custom_group">
-									<div class="custom-select">
+									<div class="custom-select w100">
 										<select class="custom-select_native" required>
 											<option value="00 자동계산">00 자동계산</option>
 											<option value="00 자동계산">00 자동계산</option>
@@ -470,7 +435,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0" />
+										<input type="text" class="tar" value="25,920" />
 									</div>
 								</div>
 							</td>
@@ -486,7 +451,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0" />
+										<input type="text" class="tar" value="0" />
 									</div>
 								</div>
 							</td>
@@ -502,7 +467,7 @@
 							<td class="tit tal">전신료</td>
 							<td>
 								<div class="custom_group">
-									<div class="custom-select">
+									<div class="custom-select w100">
 										<select class="custom-select_native" required>
 											<option value="00 자동계산">00 자동계산</option>
 											<option value="00 자동계산">00 자동계산</option>
@@ -537,7 +502,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="8,000" />
+										<input type="text" class="tar" value="8,000" />
 									</div>
 								</div>
 							</td>
@@ -553,7 +518,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0" />
+										<input type="text" class="tar" value="0" />
 									</div>
 								</div>
 							</td>
@@ -570,7 +535,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="33,000" />
+										<input type="text" class="tar" value="58,920" />
 									</div>
 								</div>
 							</td>
@@ -578,17 +543,11 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0" />
+										<input type="text" class="tar" value="18.00" />
 									</div>
 								</div>
 							</td>
-							<td>
-								<!-- <div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" />
-									</div>
-								</div> -->
-							</td>
+							<td></td>
 						</tr>
 					</table>
 					<!-- // form_table -->
@@ -627,19 +586,19 @@
 
 					<table class="table_list">
 						<colgroup>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
+							<col class="col-2">
+							<col class="col-2">
+							<col class="col-2">
+							<col class="col-2">
+							<col class="col-2">
+							<col class="col-2">
 						</colgroup>
 						<tr>
 							<td class="tit tal">외화 합계</td>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,026.25" />
+										<input type="text" class="tar" value="1,026.25" />
 									</div>
 								</div>
 							</td>
@@ -647,7 +606,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-select">
-										<select class="custom-select_native" required>
+										<select class="custom-select_native">
 											<option value="0 일반환율적용">0 일반환율적용</option>
 											<option value="0 일반환율적용">0 일반환율적용</option>
 											<option value="0 일반환율적용">0 일반환율적용</option>
@@ -659,7 +618,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,463,489" />
+										<input type="text" class="tar" value="1,463,489" />
 									</div>
 								</div>
 							</td>
@@ -670,7 +629,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0.00" />
+										<input type="text" class="tar" value="0.00" />
 									</div>
 								</div>
 							</td>
@@ -680,7 +639,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,463,489" />
+										<input type="text" class="tar" value="1,463,489" />
 									</div>
 								</div>
 							</td>
@@ -690,7 +649,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0.00" />
+										<input type="text" class="tar" value="0.00" />
 									</div>
 								</div>
 							</td>
@@ -698,7 +657,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,414.00" />
+										<input type="text" class="tar" value="1,414.00" />
 									</div>
 								</div>
 							</td>
@@ -706,7 +665,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0" />
+										<input type="text" class="tar" value="0" />
 									</div>
 								</div>
 							</td>
@@ -716,7 +675,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,026.25" />
+										<input type="text" class="tar" value="1,026.25" />
 									</div>
 								</div>
 							</td>
@@ -724,7 +683,7 @@
 							<td colspan="3">
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,414.00" />
+										<input type="text" class="tar" value="1,414.00" />
 									</div>
 								</div>
 							</td>
@@ -739,26 +698,33 @@
 			<div class="content_group">
 				<div class="table_list_wrap">
 					<table class="table_list">
+						<colgroup>
+							<col />
+							<col class="col-2" />
+							<col class="col-2" />
+							<col class="col-2" />
+							<col class="col-2" />
+						</colgroup>
 						<tr>
-							<th colspan="4"><span></span></th>
+							<th><span></span></th>
 							<th><span>원화연동금액</span></th>
 							<th><span>원화연동계좌</span></th>
 							<th><span>계좌고객명</span></th>
 							<th><span>비밀번호</span></th>
 						</tr>
 						<tr>
-							<td colspan="4"></td>
+							<td></td>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" />
+										<input type="text" class="tar" />
 									</div>
 								</div>
 							</td>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" />
+										<input type="text" />
 									</div>
 									<button type="button" class="btn_ico">
 										<span class="ico"><img src="../../images/ico_search_doc.png" alt="문서 검색"></span>
@@ -768,14 +734,14 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" />
+										<input type="text" />
 									</div>
 								</div>
 							</td>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" />
+										<input type="text" />
 									</div>
 								</div>
 							</td>

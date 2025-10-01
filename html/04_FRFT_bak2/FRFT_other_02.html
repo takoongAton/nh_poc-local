@@ -59,15 +59,13 @@
 						<span class="txt">실행</span>
 					</button>
 					<button type="button" class="btn btn_md btn_fill">
-						<span class="txt">출력(거래후)</span>
-					</button>
-					<button type="button" class="btn btn_md btn_fill">
 						<span class="txt">초기화</span>
 					</button>
 					<button type="button" class="btn btn_md btn_fill">
 						<span class="txt">닫기</span>
 					</button>
 				</div>
+				<!-- // btn_group -->
 			</div>
 			<!-- // page_tit_wrap -->
 
@@ -91,7 +89,7 @@
 								<div class="custom_group">
 									<div class="custom-select w100">
 										<select class="custom-select_native" required>
-											<option value="2 진행상태조회">2 진행상태조회</option>
+											<option value="1 지급">1 지급</option>
 										</select>
 									</div>
 									<!-- // custom-select -->
@@ -133,10 +131,7 @@
 									<div class="custom-input-text">
 										<input type="text" value="최종환율회차" />
 										<button class="btn_triger btn_ico">
-											<span class="ico"><img src="../../images/ico_search.png" alt="검색 아이콘"></span>
-										</button>
-										<button class="btn_triger btn_ico">
-											<span class="ico"><img src="../../images/ico_search.png" alt="검색 아이콘"></span>
+											<span class="ico"><img src="../../images/ico_arrow_row.png" alt="좌우 화살표 아이콘"></span>
 										</button>
 									</div>
 								</div>
@@ -147,39 +142,13 @@
 
 						<tr>
 							<th><span>REF-NO</span></th>
-							<td colspan="3">
+							<td colspan="5">
 								<div class="custom_group">
 									<div class="custom-input-text">
 										<input type="text" required value="R1000415W2500028" />
 									</div>
 								</div>
 								<!-- // custom_group -->
-							</td>
-							<th>
-								<div class="custom_group">
-									<label class="ipt_chk">
-										<input type="checkbox" checked>
-										<span class="txt">권유직원</span>
-										<span class="checkmark"></span>
-									</label>
-									/ 
-									<label class="ipt_chk">
-										<input type="checkbox">
-										<span class="txt">조직자</span>
-										<span class="checkmark"></span>
-									</label>
-								</div>
-							</th>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" value="" />
-										<input type="text" value="" />
-										<button class="btn_triger btn_ico">
-											<span class="ico"><img src="../../images/ico_search.png" alt="검색 아이콘"></span>
-										</button>
-									</div>
-								</div>
 							</td>
 						</tr>
 					</table>
@@ -199,7 +168,7 @@
 				<div class="tab_group">
 					<div class="left">
 						<div class="tab_wrap">
-							<button type="button" class="btn_tab"><span class="txt">취결정보</span></button>
+							<button type="button" class="btn_tab"><span class="txt">지급정보</span></button>
 							<button type="button" class="btn_tab active"><span class="txt">계리입력</span></button>
 						</div>
 						<!-- // tab_wrap -->
@@ -317,7 +286,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="10,000" />
+										<input type="text" class="ipt-money" value="" />
 									</div>
 								</div>
 							</td>
@@ -333,7 +302,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="7.20" />
+										<input type="text" class="ipt-money" value="" />
 									</div>
 								</div>
 							</td>
@@ -388,7 +357,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="25,124" />
+										<input type="text" class="ipt-money" value="" />
 									</div>
 								</div>
 							</td>
@@ -404,7 +373,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="18.00" />
+										<input type="text" class="ipt-money" value="" />
 									</div>
 								</div>
 							</td>
@@ -458,7 +427,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="8,000" />
+										<input type="text" class="ipt-money" value="" />
 									</div>
 								</div>
 							</td>
@@ -473,7 +442,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="5.76" />
+										<input type="text" class="ipt-money" value="" />
 									</div>
 								</div>
 							</td>
@@ -491,7 +460,8 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="선택">선택</option>
+											<option value="원금차감">원금차감</option>
+											<option value="원금별">원금별</option>
 										</select>
 									</div>
 									<div>영수증출력여부</div>
@@ -515,7 +485,13 @@
 									</div>
 								</div>
 							</td>
-							<td></td>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+								</div>
+							</td>
 							<td>
 								<div class="custom_group">
 									<div class="custom-select">
@@ -527,8 +503,13 @@
 									</div>
 								</div>
 							</td>
-							<td></td>
-							<td></td>
+							<td colspan="2">
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+								</div>
+							</td>
 						</tr>
 					</table>
 					<!-- // form_table -->
@@ -547,7 +528,7 @@
 						<div class="tit_wrap">
 							<div class="tit">
 								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
-								<strong class="tit">고객정산</strong>
+								<strong class="tit">고객 정산</strong>
 							</div>
 							<!-- <p class="txt">※ [외화대체] 금액 입력 주의!</p> -->
 						</div>
@@ -586,8 +567,8 @@
 							<td class="tit tal">환율 적용</td>
 							<td>
 								<div class="custom_group">
-									<div class="custom-select">
-										<select class="custom-select_native" required>
+									<div class="custom-select w100">
+										<select class="custom-select_native">
 											<option value="선택">선택</option>
 										</select>
 									</div>
@@ -673,7 +654,17 @@
 					<!-- // form_table -->
 				</div>
 				<!-- // table_form_wrap -->
-				<p class="txt" style="padding:10px; font-size:14px;">* 본 외화대체 지급 거래에 대해 정정이 불가함을 확인하였습니다. (외화대체 거래 시 선택 필수)</p>
+				 
+				<div style="margin-top:10px;">
+					<div class="custom-input-checkbox">
+						<label>
+							<input type="checkbox" name="" id="" />
+							<span class="checkmark"></span>
+							<span class="txt">본 외화대체 지급 거래에 대해 정정이 불가함을 확인하였습니다. (외화대체 거래 시 선택 필수)</span>
+						</label>
+					</div>
+				 </div>
+				
 			</div>
 			<!-- // content_group -->
 
@@ -684,6 +675,73 @@
 	</div>
 	<!-- // wrap -->
 
+
+	
+	<div class="layer modal" style="display:none;">
+		<div class="dim"></div>
+		<div class="layer_inner">
+			
+			<div class="layer_content">
+				<div class="layer_header">
+					<div class="tit">필터링 REF-NO 선택</div>
+				</div>
+				<!-- // layer_header -->
+				<div class="layer_body">
+					<table>
+						<tr>
+							<th>REF-NO</th>
+							<th>선택</th>
+						</tr>
+						<tr>
+							<td>FL1234RI1234567</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- // layer_body -->
+
+				<div class="layer_footer">
+					<div class="btn_group">
+						<!-- <div><button type="button" class="cancel"><span>취소</span></button></div> -->
+						<div><button type="button" class="btn_next"><span>확인</span></button></div>
+					</div>
+				</div>
+				<!-- // layer_footer -->
+			</div>
+			<!-- // layer_content -->
+			
+			<div class="close"><button type="button" class="btn_close"><span>닫기</span></button></div>
+		</div>
+	</div>
 
 
 <script src="../../js/temp.js"></script>

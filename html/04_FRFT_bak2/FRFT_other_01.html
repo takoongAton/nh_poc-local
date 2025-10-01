@@ -49,7 +49,7 @@
 				<div class="page_tit">
 					<div class="tit">
 						<span class="ico"><img src="../../images/tit_icon_01.png" alt="아이콘"></span>
-						<strong class="tit">파티오르 타발 송금 지급</strong>
+						<strong class="tit">티오르 타발 송금 지급</strong>
 					</div>
 				</div>
 				<!-- // page_tit -->
@@ -71,17 +71,48 @@
 
 
 			<div class="content_group">
+				<div class="divide_row">
+					<div class="left">
+						<div class="tit_wrap">
+							<div class="tit">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<strong class="tit">조회 조건</strong>
+							</div>
+							<!-- <p class="txt">설명텍스트</p> -->
+						</div>
+						<!-- // tit_wrap -->
+					</div>
+					<!-- // left -->
+
+					<!-- <div class="right">
+						<button type="button" class="btn_print">
+							<span class="ico"></span>
+							<span class="txt">고객확인</span>
+						</button>
+						<button type="button" class="btn_print">
+							<span class="ico"></span>
+							<span class="txt">신청서 재인쇄</span>
+						</button>
+					</div> -->
+					<!-- // right -->
+				</div>
+				<!-- // divide_row -->
+			</div>
+
+
+
+			<div class="content_group">
 
 				<div class="table_form_wrap">
 
 					<table class="form_table">
 						<colgroup>
-							<col class="col-2" />
-							<col class="col-2" />
-							<col class="col-2" />
-							<col class="col-2" />
-							<col class="col-2" />
-							<col class="col-2" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
 						</colgroup>
 						<tr>
 							<th><span>거래구분</span></th>
@@ -99,7 +130,7 @@
 							<th><span>거래일자</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-date w100">
+									<div class="custom-input-date">
 										<input type="date" />
 										<button class="btn_triger btn_ico">
 											<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
@@ -112,7 +143,7 @@
 							<th><span>기산일자</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-date w100">
+									<div class="custom-input-date">
 										<input type="date" />
 										<button class="btn_triger btn_ico">
 											<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
@@ -250,10 +281,10 @@
 
 					<table class="form_table">
 						<colgroup>
-							<col class="col-2" />
-							<col class="col-4" />
-							<col class="col-2" />
-							<col class="col-4" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 3);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 3);" />
 						</colgroup>
 						<tr>
 							<th><span>송금은행 BIC</span></th>
@@ -344,25 +375,18 @@
 
 					<table class="form_table">
 						<colgroup>
-							<!-- <col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
 							<col style="width:calc(100% / 4);" />
 							<col style="width:calc(100% / 6);" />
 							<col style="width:calc(100% / 6);" />
 							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" /> -->
-							
-							<col class="col-2" />
-							<col class="col-2" />
-							<col class="col-2" />
-							<col class="col-2" />
-							<col class="col-2" />
-							<col class="col-2" />							
+							<col style="width:calc(100% / 6);" />
 						</colgroup>
 						<tr>
 							<th><span>사유 코드</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-select w100">
+									<div class="custom-select">
 										<select class="custom-select_native" required>
 											<option value="사유코드 선택">사유코드 선택</option>
 											<option value="사유코드 선택">사유코드 선택</option>
@@ -418,6 +442,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<div class="content_group">
 
 				<div class="divide_row">
@@ -440,13 +483,13 @@
 
 					<table class="form_table">
 						<colgroup>
-							<col class="col-1" />
-							<col class="col-2" />
-							<col class="col-3" />
-							<col class="col-1" />
-							<col class="col-2" />
-							<col class="col-1" />
-							<col class="col-2" />
+							<!-- <col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 3);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" /> -->
 						</colgroup>
 						<tr>
 							<th rowspan="4"><span>수취인</span></th>
@@ -456,7 +499,7 @@
 									<div class="custom-select">
 										<select class="custom-select_native" required>
 											<option value="개인">개인</option>
-											<option value="법인" selected>법인</option>
+											<option value="개인">개인</option>
 										</select>
 									</div>
 									<div class="custom-input-text">

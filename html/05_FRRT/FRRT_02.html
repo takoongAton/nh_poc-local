@@ -36,7 +36,7 @@
 			<div class="menu_tit"><strong>NH POC</strong></div>
 			<ul class="menu_list">
 				<li><button type="button"><span>계좌관리</span></button></li>
-				<li><button type="button"><span>유동성관리</span></button></li>
+				<li><button type="button"><span>유동성 관리</span></button></li>
 				<li><button type="button"><span>자금이체(당발-송금은행)</span></button></li>
 				<li><button type="button"><span>자금이체(타발-수취은행)</span></button></li>
 				<li><button type="button" class="active"><span>송금 추적 조회</span></button></li>
@@ -70,6 +70,7 @@
 			<!-- // page_tit_wrap -->
 
 			<div class="content_group">
+
 				<div class="divide_row">
 					<div class="left">
 						<div class="tit_wrap">
@@ -96,18 +97,15 @@
 					<!-- // right -->
 				</div>
 				<!-- // divide_row -->
-			</div>
-
-			<div class="content_group">
 
 				<div class="table_form_wrap">
 
 					<table class="form_table">
 						<colgroup>
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 3);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 3);" />
+							<col class="col-2" />
+							<col class="col-4" />
+							<col class="col-2" />
+							<col class="col-4" />
 						</colgroup>
 						<tr>
 							<th><span>조회구분</span></th>
@@ -241,69 +239,69 @@
 				</div>
 				<!-- // divide_row -->
 
-								<div class="transfers_step_wrap">
-									<div class="con_box">
-										<div class="tit">송금인</div>
-										<div class="con">
-											<p class="name">YANG JIN MO</p>
-											<div class="guide"><span>송금인명</span></div>
-										</div>
-									</div>
+				<div class="transfers_step_wrap">
+					<div class="con_box">
+						<div class="tit">송금인</div>
+						<div class="con">
+							<p class="name">YANG JIN MO</p>
+							<div class="guide"><span>송금인명</span></div>
+						</div>
+					</div>
 
-									<div class="con_box">
-										<div class="tit">송금은행</div>
-										<div class="con">
-											<div class="test active">
-												<dl>
-													<dt><strong>은행BIC</strong></dt>
-													<dd>NACFKRSEXXX</dd>
-												</dl>
-												<dl>
-													<dt><strong>은행명</strong></dt>
-													<dd>NONGHYUP BANK (FORWERLY</dd>
-												</dl>
-												<dl>
-													<dt><strong>송금금액</strong></dt>
-													<dd>
-														<div class="money_wrap">
-															<span class="currency">USD</span>
-															<span class="money">301,495.22</span>
-														</div>
-													</dd>
-												</dl>
-												<dl>
-													<dt><strong>처리일시</strong></dt>
-													<dd>2025-09-01 11:14:58</dd>
-												</dl>
-												<dl>
-													<dt><strong>국가</strong></dt>
-													<dd></dd>
-												</dl>
-											</div>
+					<div class="con_box">
+						<div class="tit">송금은행</div>
+						<div class="con">
+							<div class="test active">
+								<dl>
+									<dt><strong>은행BIC</strong></dt>
+									<dd>NACFKRSEXXX</dd>
+								</dl>
+								<dl>
+									<dt><strong>은행명</strong></dt>
+									<dd>NONGHYUP BANK (FORWERLY</dd>
+								</dl>
+								<dl>
+									<dt><strong>송금금액</strong></dt>
+									<dd>
+										<div class="money_wrap">
+											<span class="currency">USD</span>
+											<span class="money">301,495.22</span>
 										</div>
-									</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><strong>처리일시</strong></dt>
+									<dd>2025-09-01 11:14:58</dd>
+								</dl>
+								<dl>
+									<dt><strong>국가</strong></dt>
+									<dd></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
 
-									<div class="con_box">
-										<div class="tit">파티오르정산</div>
-										<div class="con">
-											<p class="name">완료/대기/오류</p>
-										</div>
-									</div>
+					<div class="con_box">
+						<div class="tit">파티오르정산</div>
+						<div class="con">
+							<p class="name">완료/대기/오류</p>
+						</div>
+					</div>
 
-									
-									<div class="con_box">
-										<div class="tit">수신은행</div>
-										<div class="con">
-											<div class="test">
-												<dl>
-													<dt><strong>은행BIC</strong></dt>
-													<dd></dd>
-												</dl>
-												<dl>
-													<dt><strong>은행명</strong></dt>
-													<dd></dd>
-												</dl>
-												<dl>
+					
+					<div class="con_box">
+						<div class="tit">수신은행</div>
+						<div class="con">
+							<div class="test">
+								<dl>
+									<dt><strong>은행BIC</strong></dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt><strong>은행명</strong></dt>
+									<dd></dd>
+								</dl>
+								<dl>
 									<dt><strong>송금금액</strong></dt>
 									<dd>
 										<div class="money_wrap">
@@ -324,7 +322,7 @@
 							<div class="guide"><span>수취은행 정보</span></div>
 						</div>
 					</div>
-					
+	
 					<div class="con_box">
 						<div class="tit">수취인</div>
 						<div class="con">
@@ -406,6 +404,14 @@
 			<div class="content_group">
 				<div class="table_list_wrap">
 					<table class="table_list">
+						<colgroup>
+							<col class="col-2">
+							<col class="col-2">
+							<col>
+							<col class="col-1">
+							<col class="col-2">
+							<col class="col-2">
+						</colgroup>
 						<tr>
 							<th><strong>업무구분</strong></th>
 							<th><strong>은행구분</strong></th>

@@ -36,7 +36,7 @@
 			<div class="menu_tit"><strong>NH POC</strong></div>
 			<ul class="menu_list">
 				<li><button type="button"><span>계좌관리</span></button></li>
-				<li><button type="button"><span>유동성관리</span></button></li>
+				<li><button type="button"><span>유동성 관리</span></button></li>
 				<li><button type="button"><span>자금이체(당발-송금은행)</span></button></li>
 				<li><button type="button" class="active"><span>자금이체(타발-수취은행)</span></button></li>
 				<li><button type="button"><span>송금 추적 조회</span></button></li>
@@ -76,12 +76,12 @@
 
 					<table class="form_table">
 						<colgroup>
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
+							<col class="col-2" />
+							<col class="col-2" />
+							<col class="col-2" />
+							<col class="col-2" />
+							<col class="col-2" />
+							<col class="col-2" />
 						</colgroup>
 						<tr>
 							<th><span>거래구분</span></th>
@@ -89,7 +89,7 @@
 								<div class="custom_group">
 									<div class="custom-select w100">
 										<select class="custom-select_native" required>
-											<option value="2 진행상태조회">2 진행상태조회</option>
+											<option value="1 지급">1 지급</option>
 										</select>
 									</div>
 									<!-- // custom-select -->
@@ -160,6 +160,37 @@
 			</div>
 			<!-- // content_group -->
 
+			<div class="content_group">
+				<div class="divide_row">
+					<div class="left" style="flex:1">
+						<!-- <p class="alert_txt">취소가 불가한 거래이니 수수료 및 송금 내용을 다시 한번 확인하신 후 거래하세요.</p> -->
+					</div>
+					<!-- // left -->
+
+					<div class="right">
+						<div class="filter_wrap">
+							<div class="search">
+								<div class="tit">필터링 REF-NO</div>
+								<div class="input">
+									<input type="text">
+								</div>
+							</div>
+							<button class="btn_triger btn_ico">
+								<span class="ico"><img src="../../images/ico_search.png" alt="검색 아이콘"></span>
+							</button>
+							<button class="btn btn_sm btn_line">
+								<span class="txt">WJ콜센터 안내</span>
+							</button>
+						</div>
+						<!-- // filter_wrap -->
+					</div>
+					<!-- // right -->
+				</div>
+				<!-- // divide_row -->
+			</div>
+			<!-- // content_group -->
+
+
 
 			
 
@@ -176,22 +207,16 @@
 					<!-- // left -->
 
 					<div class="right">
-						<div class="filter_wrap">
-							<div class="search">
-								<div class="tit">필터링 REF-NO</div>
-								<div class="input">
-									<input type="text" />
-								</div>
-							</div>
-							<button class="btn_triger btn_ico">
-								<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색 아이콘"></span>
+						<div>
+							<button type="button" class="btn btn_sm btn_fill">
+								<!-- <span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span> -->
+								<span class="txt">수수료계산</span>
 							</button>
-
-							<button class="btn btn_sm btn_line">
-								<span class="txt">WJ콜센터 안내</span>
+							<button type="button" class="btn btn_sm btn_line">
+								<!-- <span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span> -->
+								<span class="txt">수수료변경</span>
 							</button>
 						</div>
-						<!-- // filter_wrap -->
 					</div>
 					<!-- // right -->
 				</div>
@@ -226,15 +251,15 @@
 
 					<table class="table_list">
 						<colgroup>
-							<col style="width:calc(100% / 10);">
-							<col>
-							<col style="width:calc(100% / 10);">
-							<col style="width:calc(100% / 10);">
-							<col style="width:calc(100% / 12);">
-							<col style="width:calc(100% / 10);">
-							<col style="width:calc(100% / 12);">
-							<col style="width:calc(100% / 10);">
-							<col style="width:calc(100% / 10);">
+							<col class="col-2" />
+							<col  />
+							<col class="col-1" />
+							<col class="col-1" />
+							<col class="col-1" />
+							<col class="col-1" />
+							<col class="col-1" />
+							<col class="col-1" />
+							<col class="col-1" />
 						</colgroup>
 						<tr>
 							<th><span>수수료명</span></th>
@@ -548,12 +573,12 @@
 
 					<table class="table_list">
 						<colgroup>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
+							<col class="col-2">
+							<col class="col-2">
+							<col class="col-2">
+							<col class="col-2">
+							<col class="col-2">
+							<col class="col-2">
 						</colgroup>
 						<tr>
 							<td class="tit tal">외화 합계</td>
@@ -654,7 +679,17 @@
 					<!-- // form_table -->
 				</div>
 				<!-- // table_form_wrap -->
-				<p class="txt" style="padding:10px; font-size:14px;">* 본 외화대체 지급 거래에 대해 정정이 불가함을 확인하였습니다. (외화대체 거래 시 선택 필수)</p>
+				 
+				<div style="margin-top:10px;">
+					<div class="custom-input-checkbox">
+						<label>
+							<input type="checkbox" name="" id="" />
+							<span class="checkmark"></span>
+							<span class="txt">본 외화대체 지급 거래에 대해 정정이 불가함을 확인하였습니다. (외화대체 거래 시 선택 필수)</span>
+						</label>
+					</div>
+				 </div>
+				
 			</div>
 			<!-- // content_group -->
 
