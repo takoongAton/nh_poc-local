@@ -239,7 +239,7 @@
 						<div class="tit_wrap">
 							<div class="tit">
 								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
-								<strong class="tit">지급정보</strong>
+								<strong class="tit">은행/ 금액정보</strong>
 							</div>
 						</div>
 						<!-- // tit_wrap -->
@@ -263,35 +263,34 @@
 							<col style="width:calc(100% / 3);" />
 						</colgroup>
 						<tr>
-							<th><span>영업점</span></th>
+							<th><span>송금은행 BIC</span></th>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" value="000415" />
+										<input type="text" value="" />
 									</div>
 									<div class="custom-input-text">
-										<input type="text" value="대전영업부" />
+										<input type="text" value="" />
 									</div>
-									<button class="btn_triger btn_ico">
-										<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색 아이콘"></span>
-									</button>
 								</div>
 								<!-- // custom_group -->
 							</td>
-							<th><span>송금종류</span></th>
+							<th><span>결제은행 BIC</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-select">
-										<select class="custom-select_native">
-											<option value="파티오르">파티오르</option>
-										</select>
+									<div class="custom-input-text">
+										<input type="text" value="" />
+									</div>
+									<div class="custom-input-text">
+										<input type="text" value="" />
 									</div>
 								</div>
+								<!-- // custom_group -->
 							</td>
 						</tr>
 
 						<tr>
-							<th><span>외화금액</span></th>
+							<th><span>송금금액</span></th>
 							<td>
 								<div class="custom_group">
 									<div class="custom-select">
@@ -301,35 +300,19 @@
 										</select>
 									</div>
 									<div class="custom-input-text w100">
-										<input type="text" value="500.00" class="tar" />
+										<input type="text" value="500.00" required class="tar" />
 									</div>
 								</div>
 								<!-- // custom_group -->
 							</td>
-							<th><span>원장상태</span></th>
-							<td>
-								<div class="custom_group">
-									<div class="custom-select">
-										<select class="custom-select_native">
-											<option value="미지급">미지급</option>
-											<option value="지급">지급</option>
-										</select>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th><span>미달러환산금액</span></th>
+							<th><span>미달러화 환산금액</span></th>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-text w100">
-										<input type="text" value="500.00" class="tar" />
+										<input type="text" class="tar" />
 									</div>
 								</div>
-								<!-- // custom_group -->
 							</td>
-							<th></th>
-							<td></td>
 						</tr>
 					</table>
 					<!-- // form_table -->
@@ -341,11 +324,6 @@
 			<!-- // content_group -->
 
 
-			
-
-
-			
-
 
 			<div class="content_group">
 
@@ -354,7 +332,7 @@
 						<div class="tit_wrap">
 							<div class="tit">
 								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
-								<strong class="tit">무역외사유정보</strong>
+								<strong class="tit">무역외 사유정보</strong>
 							</div>
 							<!-- <p class="txt">→ 외국인은 반드시 사유코드 35101 또는 35102를 선택하세요!</p> -->
 						</div>
@@ -386,8 +364,8 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="37901 증여 및 기타">37901 증여 및 기타</option>
-											<option value="37901 증여 및 기타">37901 증여 및 기타</option>
+											<option value="사유코드 선택">사유코드 선택</option>
+											<option value="사유코드 선택">사유코드 선택</option>
 										</select>
 									</div>
 									<button class="btn_triger btn_ico">
@@ -395,18 +373,18 @@
 									</button>
 								</div>
 							</td>
-							<th><span>송금종류</span></th>
+							<th><span>지정항목</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-text">
-									<input type="text" class="tar" />
-								</div>
+									<div class="custom-input-text w100">
+										<input type="text" class="tar" />
+									</div>
 								</div>
 							</td>
 							<th><span>사유금액</span></th>
 							<td>
 								<div class="custom-input-text">
-									<input type="text" class="tar" value="500.00" />
+									<input type="text" class="tar" value="500.00" required />
 								</div>
 								<!-- // custom-input-text -->
 							</td>
@@ -418,7 +396,7 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native">
-											<option value="" disabled selected hidden>사후관리번호 선택</option>
+											<option value="" disabled selected hidden>&nbsp;</option>
 											<option value="37205">37205</option>
 											<option value="37205">37205</option>
 										</select>
@@ -437,6 +415,262 @@
 				 
 			</div>
 			<!-- // content_group -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="content_group">
+
+				<div class="divide_row">
+					<div class="left">
+						<div class="tit_wrap">
+							<div class="tit">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<strong class="tit">의뢰인/ 사유정보</strong>
+							</div>
+							<p class="txt">* 수취인 실명번호 입력 후 [Enter]입력 또는 돋보기 버튼을 클릭하세요. (수취인 국적 자동입력)</p>
+						</div>
+						<!-- // tit_wrap -->
+					</div>
+					<!-- // left -->
+
+				</div>
+				<!-- // divide_row -->
+
+				<div class="table_form_wrap">
+
+					<table class="form_table">
+						<colgroup>
+							<!-- <col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 3);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" /> -->
+						</colgroup>
+						<tr>
+							<th rowspan="4"><span>수취인</span></th>
+							<td class="tit">CRM등록 성명</td>
+							<td colspan="5">
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native" required>
+											<option value="개인">개인</option>
+											<option value="개인">개인</option>
+										</select>
+									</div>
+									<div class="custom-input-text">
+										<input type="text" required />
+									</div>
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색 아이콘"></span>
+									</button>
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+									<button class="btn btn_sm btn_line"><span>외환개인특성신규</span></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="tit">전문상 성명</td>
+							<td colspan="5">
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+									<p class="alert_txt">* 수취인과 대상 계좌 예금주명 일치 여부를 확인하세요!</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="tit">주소</td>
+							<td colspan="5">
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="tit">계좌번호</td>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" required />
+									</div>
+								</div>
+							</td>
+							<td class="tit">국적</td>
+							<td>
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native" required>
+											<option value="국적 선택">국적 선택</option>
+											<option value="국적 선택">국적 선택</option>
+										</select>
+									</div>
+								</div>
+							</td>
+							<td class="tit">거주자 구분</td>
+							<td>
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native" required>
+											<option value="거주자 구분 선택">거주자 구분 선택</option>
+											<option value="거주자 구분 선택">거주자 구분 선택</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+
+
+						<tr>
+							<th rowspan="3"><span>의뢰인</span></th>
+							<td class="tit">성명</td>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+								</div>
+							</td>
+							<td class="tit">송금국가</td>
+							<td colspan="3">
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native">
+											<option value="선택">선택</option>
+											<option value="선택">선택</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="tit">주소</td>
+							<td colspan="5">
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+								</div>
+							</td>
+						</tr>
+
+
+						
+						<tr>
+							<td class="tit">거래주체성격</td>
+							<td>
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native">
+											<option value="거래주체성격 선택">거래주체성격 선택</option>
+											<option value="거래주체성격 선택">거래주체성격 선택</option>
+										</select>
+									</div>
+								</div>
+							</td>
+							<td class="tit">국적</td>
+							<td>
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native">
+											<option value="국적 선택">국적 선택</option>
+											<option value="국적 선택">국적 선택</option>
+										</select>
+									</div>
+								</div>
+							</td>
+							<td class="tit">거주자 구분</td>
+							<td>
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native">
+											<option value="거주자 구분 선택">거주자 구분 선택</option>
+											<option value="거주자 구분 선택">거주자 구분 선택</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+
+						
+					</table>
+					<!-- // form_table -->
+
+				</div>
+				<!-- // table_form_wrap -->
+				 
+			</div>
+			<!-- // content_group -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 			<div class="content_group">

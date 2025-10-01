@@ -50,6 +50,7 @@ table.form_table td {padding:6px; border:1px solid #ddd; background-color:#fff; 
 table.form_table .tac {text-align:center;}
 table.form_table tr td:last-of-type {border-right:none;}
 table.form_table tr > td:first-child {border-left:none;}
+table.form_table tr td.tit {background-color:#f9f9f9;}
 /* // 기본 입력폼 테이블 */
 
 
