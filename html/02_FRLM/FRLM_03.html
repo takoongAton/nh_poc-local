@@ -137,7 +137,9 @@
 						<th><span>REF NO</span></th>
 						<td>
 							<div class="custom_group">
-								<input type="text" />
+								<div class="custom-input-text">
+									<input type="text" />
+								</div>
 							</div>
 						</td>
 						<th><span>TRANSFER TYPE</span></th>
@@ -145,7 +147,7 @@
 							<div class="custom_group">
 								<div class="custom-select">
 									<select class="custom-select_native">
-										<option value="DEPO(OFF) -> PARTIOR(ON)">PO(OFF) -> PARTIOR(ON)</option>
+										<option value="DEPO(OFF) -> PARTIOR(ON)">DEPO(OFF) -> PARTIOR(ON)</option>
 										<option value="PARTIOR(ON) -> DEPO(OFF)">PARTIOR(ON) -> DEPO(OFF)</option>
 									</select>
 								</div>
@@ -167,13 +169,15 @@
 						</td>
 						<th><span>결제일</span></th>
 						<td>
-							<div class="custom-input-date">
-								<input type="date" />
-								<button class="btn_triger btn_ico">
-									<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
-								</button>
-							</div>
-							<!-- // custom-input-date -->
+							<div class="custom_group">
+								<div class="custom-input-date">
+									<input type="date" />
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+									</button>
+								</div>
+								<!-- // custom-input-date -->
+							 </div>
 						</td>
 					</tr>
 					<tr>
