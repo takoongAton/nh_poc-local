@@ -25,17 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
       triggerBtn.classList.remove('required');
     }
 
-    // ✅ w100 여부에 따라 triggerBtn 클래스 추가/삭제
+    // ✅ w100 여부
     if (customSelect.classList.contains('w100')) {
       triggerBtn.closest(".custom-select").classList.add('w100');
     } else {
       triggerBtn.closest(".custom-select").classList.remove('w100');
     }
-    // if (nativeSelect.classList.contains('w100')) {
-    //   triggerBtn.closest(".custom-select").classList.add('w100');
-    // } else {
-    //   triggerBtn.closest(".custom-select").classList.remove('w100');
-    // }
+
+    // ✅ disabled 여부 → trigger 비활성화
+    if (nativeSelect.disabled) {
+      triggerBtn.classList.add('disabled');
+      triggerBtn.disabled = true; // HTML 속성도 함께
+    }
 
     // ✅ 옵션 목록 동적 생성
     const optionsBox = document.createElement('ul');
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ✅ 토글 열기/닫기
     triggerBtn.addEventListener('click', (e) => {
+      if (nativeSelect.disabled) return; // disabled 시 동작 안 함
       e.stopPropagation();
       const isOpen = optionsBox.classList.contains('open');
       closeAllSelects();
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ✅ 옵션 선택
     optionsBox.querySelectorAll('.custom-select_option').forEach(option => {
       option.addEventListener('click', () => {
+        if (nativeSelect.disabled) return; // disabled 시 선택 불가
         const value = option.getAttribute('data-value');
 
         // native <select> 값 설정

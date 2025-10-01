@@ -167,15 +167,16 @@ label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; 
 
 
 /* custom-select */
-.custom-select {position:relative; width:auto; user-select:none; max-width:100%;}
+.custom-select {position:relative; width:auto; user-select:none; max-width:100%; line-height:0;}
 .custom-select select.custom-select_native {display:none;}
 .custom-select button.custom-select_trigger {position:relative; width:auto; width:100%; min-width:100px; max-width:100%; height:32px;}
+.custom-select button.custom-select_trigger:disabled {background:none !important;}
 .custom-select button.custom-select_trigger span {display:block; text-decoration:none;}
 .custom-select button.custom-select_trigger span.custom-select_label {display:flex; justify-content:flex-start; align-items:center; width:100%; height:32px; padding:0 36px 0 12px; border:1px solid #D3D3D3; border-radius:6px; background-color:#fff; color:#000; font-size:16px; line-height:19px; white-space:nowrap;}
 .custom-select button.custom-select_trigger span.custom-select_icon {display:inline-flex; justify-content:center; align-items:center; position:absolute; top:50%; right:3px; width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; background-color:#fff; transform:translateY(-50%); box-shadow:inset -3px -3px 6px rgba(0,0,0,0.16);}
 .custom-select button.custom-select_trigger span.custom-select_icon img {display:block; width:20px; height:20px;}
 .custom-select button.custom-select_trigger.required span.custom-select_label {background-color:#FFF2B5;}
-.custom-select button.custom-select_trigger.disabled {background-color:#f5f5f5; color:#999; cursor:not-allowed; opacity:0.6;}
+.custom-select button.custom-select_trigger:disabled span.custom-select_label {background-color:#eee;}
 
 .custom-select ul.custom-select_options {display:none; position:absolute; top:100%; left:0; z-index:100; width:100%; max-height:50vh; border:1px solid #D3D3D3; border-radius:6px; background-color:#FFF1B5; overflow-y:auto;}
 .custom-select ul.custom-select_options.drop-up {top:auto; bottom:100%;}
