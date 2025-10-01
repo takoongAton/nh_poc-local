@@ -74,6 +74,8 @@ table.table_list tr td.tal {text-align:left;}
 table.table_list tr td.tar {text-align:right;}
 table.table_list tr td.tit {background-color:#f9f9f9;}
 table.table_list tr.active td {background-color:#f9f9f9;}
+table.table_list td.our {background-color:#fbe5d6;}
+table.table_list td.other {background-color:#fff5d9;}
 /* // 리스트형 테이블 */
 
 
@@ -148,7 +150,7 @@ label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; 
 /* // custom-input-text */
 
 /* custom-input-date */
-.custom-input-date {display:flex; align-items:baseline; gap:0 4px; width:100%;}
+.custom-input-date {display:flex; align-items:baseline; gap:0 4px;}
 .custom-input-date button.btn_triger {}
 .custom-input-date button.btn_triger span.ico {display:inline-block; width:20px; height:20px;}
 .custom-input-date input[type='date'] {height:32px; padding:0 12px; border:1px solid #ddd; border-radius:6px; background-color:#fff; font-size:16px;}
