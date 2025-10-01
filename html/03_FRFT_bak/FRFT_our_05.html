@@ -36,9 +36,10 @@
 			<div class="menu_tit"><strong>NH POC</strong></div>
 			<ul class="menu_list">
 				<li><button type="button"><span>계좌관리</span></button></li>
+				<li><button type="button"><span>유동성관리</span></button></li>
 				<li><button type="button" class="active"><span>자금이체(당발-송금은행)</span></button></li>
 				<li><button type="button"><span>자금이체(타발-수취은행)</span></button></li>
-				<li><button type="button"><span>유동성관리</span></button></li>
+				<li><button type="button"><span>송금 추적 조회</span></button></li>
 			</ul>
 		</aside>
 
@@ -122,7 +123,7 @@
 								<div class="custom_group">
 									<div class="custom-select w100">
 										<select class="custom-select_native" required>
-											<option value="01 11취결">1101 취결</option>
+											<option value="01 취결">01 취결</option>
 											<option value="02 조회">02 조회</option>
 											<option value="03 변경">03 변경</option>
 										</select>
@@ -135,7 +136,7 @@
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-date">
-										<input type="date" required />
+										<input type="date" />
 										<button class="btn_triger btn_ico">
 											<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
 										</button>
@@ -143,7 +144,7 @@
 									<!-- // custom-input-date -->
 
 									<div class="custom-input-date">
-										<input type="date" required />
+										<input type="date" />
 										<button class="btn_triger btn_ico">
 											<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
 										</button>
@@ -164,11 +165,9 @@
 							<th><span>REF NO</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom_group">
 									<div class="custom-input-text w100">
 										<input type="text" value="RI000001T2504223" />
 									</div>
-								</div>
 								</div>
 							</td>
 						</tr>
@@ -251,9 +250,6 @@
 							<col>
 							<col>
 							<col>
-							<col>
-							<col>
-							<col>
 						</colgroup>
 						<tr>
 							<th><span>순번</span></th>
@@ -263,27 +259,19 @@
 							<th><span>최종상태</span></th>
 							<th><span>거래일자</span></th>
 							<th><span>송금통화</span></th>
-							<th><span>송금금액</span></th>
-							<th><span>지급통화</span></th>
-							<th><span>지급금액</span></th>
-							<th><span>최종처리일시</span></th>
 						</tr>
 						<tr>
 							<td>1</td>
 							<td>7c8d63cb-fdbd-4e71-8b8f-c8b1dd11a065</td>
 							<td>RO000001T2504872</td>
-							<td>CHASUS33XXX</td>
-							<td>ACSP  진행중</td>
+							<td>NACFKRSEXXX</td>
+							<td>ACSC 거래완료</td>
 							<td>2025-09-25</td>
 							<td>USD</td>
-							<td class="tar">720,000.00</td>
-							<td>-</td>
-							<td class="tar">0.00</td>
-							<td>2025-09-25 14:13:31</td>
 						</tr>
 
 						<tr>
-							<td colspan="11">
+							<td colspan="7">
 <style>
 table.table_list td {word-break:break-all;}
 .test123 {display:flex; justify-content:space-between; padding:20px 0 30px;}
@@ -316,41 +304,7 @@ table.table_list td {word-break:break-all;}
 									</div>
 
 									<div class="arrow">&gt;</div>
-
-									<div class="con_box">
-										<div class="tit">송금은행</div>
-										<div class="con">
-											<div class="test active">
-												<dl>
-													<dt><strong>은행BIC</strong></dt>
-													<dd>NACFKRSEXXX</dd>
-												</dl>
-												<dl>
-													<dt><strong>은행명</strong></dt>
-													<dd>NONGHYUP BANK (FORWERLY)NONGHYUP BANK (FORWERLY)</dd>
-												</dl>
-												<dl>
-													<dt><strong>송금금액</strong></dt>
-													<dd>
-														<div class="money_wrap">
-															<span class="currency">USD</span>
-															<span class="money">301,495.22</span>
-														</div>
-													</dd>
-												</dl>
-												<dl>
-													<dt><strong>처리일시</strong></dt>
-													<dd>2025-09-01 11:14:58</dd>
-												</dl>
-												<dl>
-													<dt><strong>국가</strong></dt>
-													<dd></dd>
-												</dl>
-											</div>
-										</div>
-									</div>
-
-									<div class="arrow">&gt;</div>
+									
 									<div class="con_box">
 										<div class="tit">수신은행</div>
 										<div class="con">
@@ -382,10 +336,47 @@ table.table_list td {word-break:break-all;}
 												</dl>
 											</div>
 
-											<div class="guide"><span>수취은행 정보</span></div>
+											<div class="guide"><span>송금은행 정보</span></div>
 										</div>
 									</div>
+									
 									<div class="arrow">&gt;</div>
+
+									<div class="con_box">
+										<div class="tit">송금은행</div>
+										<div class="con">
+											<div class="test active">
+												<dl>
+													<dt><strong>은행BIC</strong></dt>
+													<dd>NACFKRSEXXX</dd>
+												</dl>
+												<dl>
+													<dt><strong>은행명</strong></dt>
+													<dd>NONGHYUP BANK (FORWERLY</dd>
+												</dl>
+												<dl>
+													<dt><strong>송금금액</strong></dt>
+													<dd>
+														<div class="money_wrap">
+															<span class="currency">USD</span>
+															<span class="money">301,495.22</span>
+														</div>
+													</dd>
+												</dl>
+												<dl>
+													<dt><strong>처리일시</strong></dt>
+													<dd>2025-09-01 11:14:58</dd>
+												</dl>
+												<dl>
+													<dt><strong>국가</strong></dt>
+													<dd></dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+
+									<div class="arrow">&gt;</div>
+									
 									<div class="con_box">
 										<div class="tit">수취인</div>
 										<div class="con">
@@ -404,13 +395,9 @@ table.table_list td {word-break:break-all;}
 							<td>7c8d63cb-fdbd-4e71-8b8f-c8b1dd11a065</td>
 							<td>RO000001T2504872</td>
 							<td>CHASUS33XXX</td>
-							<td>ACSP  진행중</td>
+							<td>ACSP 진행중</td>
 							<td>2025-09-25</td>
 							<td>USD</td>
-							<td class="tar">720,000.00</td>
-							<td>-</td>
-							<td class="tar">0.00</td>
-							<td>2025-09-25 14:13:31</td>
 						</tr>
 					</table>
 					<!-- // form_table -->

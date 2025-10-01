@@ -96,8 +96,8 @@
 								<div class="">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="1. 신규">1. 신규</option>
-											<option value="1. 신규">1. 신규</option>
+											<option value="2 조회">2 조회</option>
+											<option value="2 조회">2 조회</option>
 										</select>
 									</div>
 									<!-- // custom-select -->
@@ -120,9 +120,9 @@
 				<div class="tab_group">
 					<div class="left">
 						<div class="tab_wrap">
-							<button type="button" class="btn_tab active"><span class="txt">거래실행</span></button>
+							<button type="button" class="btn_tab"><span class="txt">거래실행</span></button>
 							<button type="button" class="btn_tab"><span class="txt">거래조회</span></button>
-							<button type="button" class="btn_tab"><span class="txt">원장</span></button>
+							<button type="button" class="btn_tab active"><span class="txt">원장</span></button>
 						</div>
 						<!-- // tab_wrap -->
 					</div>
@@ -152,20 +152,20 @@
 						<td>
 							<div class="custom_group">
 								<div class="custom-select">
-									<select class="custom-select_native" required>
-										<option value="01 DEPO(OFF) -> PARTIOR(ON)">01 DEPO(OFF) -> PARTIOR(ON)</option>
-										<option value="02 PARTIOR(ON) -> DEPO(OFF)">02 PARTIOR(ON) -> DEPO(OFF)</option>
+									<select class="custom-select_native">
+										<option value="DEPO(OFF) -> PARTIOR(ON)">PO(OFF) -> PARTIOR(ON)</option>
+										<option value="PARTIOR(ON) -> DEPO(OFF)">PARTIOR(ON) -> DEPO(OFF)</option>
 									</select>
 								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
-						<th><span>거래일자</span></th>
+						<th><span>거래일</span></th>
 						<td>
 							<div class="custom_group">
 								<div class="custom-input-date">
-									<input type="date" required />
+									<input type="date" />
 									<button class="btn_triger btn_ico">
 										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
 									</button>							
@@ -173,7 +173,7 @@
 								<!-- // custom-input-date -->
 							</div>
 						</td>
-						<th><span>결제일자</span></th>
+						<th><span>결제일</span></th>
 						<td>
 							<div class="custom-input-date">
 								<input type="date" />
@@ -185,18 +185,18 @@
 						</td>
 					</tr>
 					<tr>
-						<th><span>송금 금액</span></th>
+						<th><span>기준 금액</span></th>
 						<td colspan="3">
 							<div class="custom_group">
 								<div class="custom-select">
-									<select class="custom-select_native" required>
-										<option value="select_text1">select_text1</option>
-										<option value="select_text2">select_text2</option>
-										<option value="select_text3">select_text3</option>
+									<select class="custom-select_native">
+										<option value="USD">USD</option>
+										<option value="USD">USD</option>
+										<option value="USD">USD</option>
 									</select>
 								</div>
 								<div class="custom-input-text">
-									<input type="text" required />
+									<input type="text" class="tar" value="100,000,000.00" />
 								</div>
 							</div>
 						</td>
@@ -210,7 +210,7 @@
 						<td colspan="3">
 							<div class="custom_group">
 								<div class="custom-input-text w50">
-									<input type="text" value="CHASUS33XXX JPMORGAN CHASE BANK, N.A" required />
+									<input type="text" value="CHASUS33XXX JPMORGAN CHASE BANK, N.A" />
 								</div>
 							</div>
 						</td>
@@ -220,22 +220,108 @@
 						<td colspan="3">
 							<div class="custom_group">
 								<div class="custom-input-text w50">
-									<input type="text" value="CHASUS33XXX JPMORGAN CHASE BANK, N.A" required />
+									<input type="text" value="CHASUS33XXX JPMORGAN CHASE BANK, N.A" />
 								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
-						<th><span>RELATED REF NO.</span></th>
-						<td colspan="3">
+						<th><span>자금이체전문번호</span></th>
+						<td>
 							<div class="custom_group">
 								<div class="custom-input-text">
-									<input type="text" value="NONREF" required />
+									<input type="text" value="20250929FN000013" />
+								</div>
+							</div>
+						</td>
+						<th><span>RELATED REF NO.</span></th>
+						<td>
+							<div class="custom_group">
+								<div class="custom-input-text">
+									<input type="text" value="NONREF" />
 								</div>
 							</div>
 						</td>
 					</tr>
 				</table>
+			</div>
+			<!-- // content_group -->
+
+
+			<div class="content_group">
+
+				<div class="divide_row">
+					<div class="left">
+						<div class="tit_wrap">
+							<div class="tit">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<strong class="tit">파티오르 상태 조회</strong>
+							</div>
+							<!-- <p class="txt">텍스트</p> -->
+						</div>
+						<!-- // tit_wrap -->
+					</div>
+					<!-- // left -->
+
+					<div class="right">
+						<!-- <button type="button" class="btn btn_sm btn_line"><span>DEBIT 내역 대사</span></button> -->
+					</div>
+					<!-- // right -->
+				</div>
+				<!-- // divide_row -->
+
+				<div class="table_list_wrap">
+
+					<table class="table_list">
+						<colgroup>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<tr>
+							<th><span>업무구분</span></th>
+							<th><span>은행구분</span></th>
+							<th><span>BIC</span></th>
+							<th><span>상태</span></th>
+							<th><span>처리일시</span></th>
+							<th><span>종합</span></th>
+							<th><span>비고</span></th>
+						</tr>
+						<tr>
+							<td>PAY DEPO</td>
+							<td>DEPO(OFF)</td>
+							<td>CHASUS33XXX</td>
+							<td>Y/N</td>
+							<td>2025-09-29 08:01:00</td>
+							<td>대기/완료/거절/오류</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>RCY DEPO</td>
+							<td>PARTIOR(ON)</td>
+							<td>KOEXKRSEXXX</td>
+							<td>Y/N</td>
+							<td>2025-09-29 08:01:00</td>
+							<td>대기/완료/거절/오류</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+					<!-- // table_list -->
+				</div>
+				<!-- // table_list_wrap -->
 			</div>
 			<!-- // content_group -->
 

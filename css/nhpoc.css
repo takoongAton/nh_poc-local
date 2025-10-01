@@ -142,6 +142,8 @@ label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; 
 .custom-input-text button.btn_triger span.ico {display:inline-block; width:20px; height:20px;}
 .custom-input-text input[type='text'] {height:32px; padding:0 12px; border:1px solid #ddd; border-radius:6px; background-color:#fff; font-size:16px;}
 .custom-input-text input[type='text']:required {background-color:#FFF2B5;}
+.custom-input-text input[type='text']:disabled,
+.custom-input-text input[type='text']:read-only {background-color:#eee;}
 .custom-input-text input[type='text'].ipt-money {text-align:right;}
 /* // custom-input-text */
 
@@ -156,7 +158,8 @@ label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; 
 /* 주민번호용 입력 창 */
 .custom-input-rrn {display:inline-flex; align-items: center; border:1px solid #ddd; border-radius:6px; background-color:#fff;}
 .custom-input-rrn input[type='text'],
-.custom-input-rrn input[type='password']  {width:120px; border:0 none; background-color:transparent; text-align:center;}
+.custom-input-rrn input[type='password']  {width:100px; border:0 none; background-color:transparent; text-align:center;}
+.custom-input-rrn.required {background-color:#FFF2B5;}
 /* 주민번호용 입력 창 */
 
 

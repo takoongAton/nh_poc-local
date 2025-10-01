@@ -36,9 +36,10 @@
 			<div class="menu_tit"><strong>NH POC</strong></div>
 			<ul class="menu_list">
 				<li><button type="button"><span>계좌관리</span></button></li>
+				<li><button type="button"><span>유동성관리</span></button></li>
 				<li><button type="button" class="active"><span>자금이체(당발-송금은행)</span></button></li>
 				<li><button type="button"><span>자금이체(타발-수취은행)</span></button></li>
-				<li><button type="button"><span>유동성관리</span></button></li>
+				<li><button type="button"><span>송금 추적 조회</span></button></li>
 			</ul>
 		</aside>
 
@@ -102,11 +103,11 @@
 					<table class="form_table">
 						<colgroup>
 							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 3);" />
+							<col style="width:calc(100% / 12);" />
 							<col style="width:calc(100% / 6);" />
 							<col style="width:calc(100% / 6);" />
 							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 6);" />
-							<col style="width:calc(100% / 5);" />
 						</colgroup>
 						<tr>
 							<th><span>거래 구분</span></th>
@@ -114,7 +115,7 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="01 취결">01 취결</option>
+											<option value="1.취결">1.취결</option>
 											<option value="02 조회">02 조회</option>
 											<option value="03 변경">03 변경</option>
 										</select>
@@ -211,7 +212,7 @@
 										<span class="txt">권유직원</span>
 										<span class="checkmark"></span>
 									</label>
-									/
+									/ 
 									<label class="ipt_chk">
 										<input type="checkbox">
 										<span class="txt">조직자</span>
@@ -289,8 +290,8 @@
 				<div class="tab_group">
 					<div class="left">
 						<div class="tab_wrap">
-							<button type="button" class="btn_tab"><span class="txt">취결정보</span></button>
-							<button type="button" class="btn_tab active"><span class="txt">계리입력</span></button>
+							<button type="button" class="btn_tab active"><span class="txt">취결정보</span></button>
+							<button type="button" class="btn_tab"><span class="txt">계리입력</span></button>
 							<button type="button" class="btn_tab"><span class="txt">취결내역조회</span></button>
 						</div>
 						<!-- // tab_wrap -->
@@ -324,9 +325,9 @@
 						<div class="tit_wrap">
 							<div class="tit">
 								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
-								<strong class="tit">수취인 정보</strong>
+								<strong class="tit">송금인 정보</strong>
 							</div>
-							<p class="txt">※ 수취인 주소 15자 이상 입력 必 (최대한 정확하게) / 국가명, 주(state)명, 도시(city)명 포함하여 입력해 줄 것</p>
+							<p class="txt">※ 송금인의 [이름]과 [성]은 반드시 CRM-63에 등록된 영문 [이름] 및 영문 [성]과 동일하게 입력하여야 합니다.</p>
 						</div>
 						<!-- // tit_wrap -->
 					</div>
@@ -339,265 +340,123 @@
 				</div>
 				<!-- // divide_row -->
 
-				<div class="table_list_wrap">
+				<div class="table_form_wrap">
 
-					<table class="table_list">
+					<table class="form_table">
 						<colgroup>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 4);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
 						</colgroup>
 						<tr>
-							<th><span>수수료명</span></th>
-							<th><span>산출방법</span></th>
-							<th><span>요율/금액</span></th>
-							<th><span>적용요율</span></th>
-							<th><span>ALL</span></th>
-							<th><span>원화수수료</span></th>
-							<th><span>ALL</span></th>
-							<th><span>외화수수료</span></th>
-							<th><span>비고</span></th>
+							<th><span>성명 (참고)</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text w100">
+										<input type="text">
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<th><span>여권발행일</span></th>
+							<td>
+								<div class="custom-input-date">
+									<input type="date" />
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+									</button>
+								</div>
+								<!-- // custom-input-date -->
+							</td>
+							<th><span>여권만기일</span></th>
+							<td>
+								<div class="custom-input-date">
+									<input type="date" />
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+									</button>
+								</div>
+								<!-- // custom-input-date -->
+							</td>
+						</tr>
+
+						<tr>
+							<th><span>성명 (이름)</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text w100">
+										<input type="text" required />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<th><span>성명 (성)</span></th>
+							<td colspan="3">
+								<div class="custom_group">
+									<div class="custom-input-text w100">
+										<input type="text" required />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
 						</tr>
 						<tr>
-							<td class="tit tal">송금수수료</td>
+							<th><span>우편번호</span></th>
 							<td>
+								<div class="custom_group">
+									<div class="custom-input-text">
+										<input type="text" required />
+										<button class="btn_triger btn_ico">
+											<span class="ico"><img src="../../images/ico_search.png" alt="검색 아이콘"></span>
+										</button>
+										<input type="text" />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<th><span>전화번호</span></th>
+							<td colspan="3">
+								<div class="custom_group">
+									<div class="custom-input-text w100">
+										<input type="text" required />
+									</div>
+								</div>
+							</td>
+						</tr>
+
+
+
+						<tr>
+							<th><span>주소 (도시/기타)</span></th>
+							<td colspan="5">
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="00 자동계산">00 자동계산</option>
-											<option value="00 자동계산">00 자동계산</option>
-											<option value="00 자동계산">00 자동계산</option>
+											<option value="시/군 선택">시/군 선택</option>
+											<option value="서울특별시">서울특별시</option>
 										</select>
 									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" />
+										<input type="text" required />
+									</div>
+									<div class="custom-input-text w80">
+										<input type="text" placeholder="CRM(05-630) 상의 영문 주소이며, 순서를 올바르게 입력해 주세요. (예. 중구 통일로 120 -> TONG IL-RO JOONG-GU)" />
 									</div>
 								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom-input-radio">
-									<label>
-										<input type="radio" name="name01" />
-										<span class="checkmark"></span>
-										<!-- <span class="txt">텍스트</span> -->
-									</label>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="10,000" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom-input-radio">
-									<label>
-										<input type="radio" name="name01" />
-										<span class="checkmark"></span>
-										<!-- <span class="txt">텍스트</span> -->
-									</label>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="7.20" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="tar" />
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="tit tal">중계은행수수료</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-select">
-										<select class="custom-select_native" required>
-											<option value="00 자동계산">00 자동계산</option>
-											<option value="00 자동계산">00 자동계산</option>
-											<option value="00 자동계산">00 자동계산</option>
-										</select>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom-input-radio">
-									<label>
-										<input type="radio" name="name01" />
-										<span class="checkmark"></span>
-										<!-- <span class="txt">텍스트</span> -->
-									</label>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="25,124" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom-input-radio">
-									<label>
-										<input type="radio" name="name01" />
-										<span class="checkmark"></span>
-										<!-- <span class="txt">텍스트</span> -->
-									</label>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="18.00" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="tar" />
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="tit tal">전신료</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-select">
-										<select class="custom-select_native" required>
-											<option value="00 자동계산">00 자동계산</option>
-											<option value="00 자동계산">00 자동계산</option>
-											<option value="00 자동계산">00 자동계산</option>
-										</select>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom-input-radio">
-									<label>
-										<input type="radio" name="name01" />
-										<span class="checkmark"></span>
-										<!-- <span class="txt">텍스트</span> -->
-									</label>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="8,000" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom-input-radio">
-									<label>
-										<input type="radio" name="name01" />
-										<span class="checkmark"></span>
-										<!-- <span class="txt">텍스트</span> -->
-									</label>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="5.76" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" />
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="5" class="tit tal">수수료 합계</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="43,214" />
-									</div>
-								</div>
-							</td>
-							<td></td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0.00" />
-									</div>
-								</div>
-							</td>
-							<td>
-								<!-- <div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" />
-									</div>
-								</div> -->
+								<!-- // custom_group -->
 							</td>
 						</tr>
 					</table>
 					<!-- // form_table -->
+
 				</div>
 				<!-- // table_form_wrap -->
+				 
 			</div>
 			<!-- // content_group -->
-
-
 
 
 			<div class="content_group">
@@ -607,207 +466,238 @@
 						<div class="tit_wrap">
 							<div class="tit">
 								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
-								<strong class="tit">고객정산</strong>
+								<strong class="tit">수취인 정보</strong>
 							</div>
-							<p class="txt">※ [외화대체] 금액 입력 주의!</p>
+							<!-- <p class="txt">ㅇㅇㅇ</p> -->
 						</div>
 						<!-- // tit_wrap -->
 					</div>
 					<!-- // left -->
 
 					<div class="right">
-						<button type="button" class="btn btn_sm btn_line"><span class="txt">[0301] 수신지급</span></button>
-						<button type="button" class="btn btn_sm btn_line"><span class="txt">대리인정보입력</span></button>
+						<!-- <button type="button" class="btn btn_sm btn_line"><span>DEBIT 내역 대사</span></button> -->
 					</div>
 					<!-- // right -->
 				</div>
 				<!-- // divide_row -->
 
-				<div class="table_list_wrap">
+				<div class="table_form_wrap">
 
-					<table class="table_list">
+					<table class="form_table">
 						<colgroup>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 4);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
 						</colgroup>
 						<tr>
-							<td class="tit tal">외화 합계</td>
+							<th><span>수취인 실명번호</span></th>
+							<td colspan="5">
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native" required>
+											<option value="개인">개인</option>
+											<option value="개인">개인</option>
+										</select>
+									</div>
+
+									<div class="custom-input-rrn">
+										<div><input type="text" maxlength="6" /></div>
+										<span>-</span>
+										<div><input type="text" maxlength="7" /></div>
+									</div>
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색 아이콘"></span>
+									</button>
+									<div class="custom-input-text">
+										<input type="text" />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+						</tr>
+
+						<tr>
+							<th><span>성명 (이름)</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,026.25" />
+									<div class="custom-input-text w100">
+										<input type="text" required />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<th><span>성명 (성)</span></th>
+							<td colspan="3">
+								<div class="custom_group">
+									<div class="custom-input-text w100">
+										<input type="text" required />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+						</tr>
+						<tr>
+							<th><span>수취인 국가</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text w100">
+										<input type="text" value="United States 미국" />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<th><span>주 (STATES)</span></th>
+							<td colspan="3">
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native" required>
+											<option value="AZ Arizona">AZ Arizona</option>
+											<option value="South Korea">South Korea</option>
+										</select>
+									</div>
+									<div class="custom-input-text w100">
+										<input type="text" required value="AZ" />
 									</div>
 								</div>
 							</td>
-							<td class="tit tal">환율 적용</td>
+						</tr>
+
+
+
+						<tr>
+							<th><span>지급도시(CITY)</span></th>
 							<td>
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="0 일반환율적용">0 일반환율적용</option>
-											<option value="0 일반환율적용">0 일반환율적용</option>
-											<option value="0 일반환율적용">0 일반환율적용</option>
+											<option value="AZ Arizona">AZ Arizona</option>
+											<option value="South Korea">South Korea</option>
 										</select>
 									</div>
-								</div>
-							</td>
-							<td class="tit tal">원화 합계</td>
-							<td>
-								<div class="custom_group">
 									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,463,489" />
+										<input type="text" value="DDD" required />
 									</div>
 								</div>
+								<!-- // custom_group -->
 							</td>
-						</tr>
-
-						<tr>
-							<td class="tit tal">외화 대체</td>
-							<td>
+							<th><span>주소</span></th>
+							<td colspan="3">
 								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0.00" />
-									</div>
-								</div>
-							</td>
-							<td class="tit tal"></td>
-							<td></td>
-							<td class="tit tal">대체</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,463,489" />
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="tit tal">외국 통화</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0.00" />
-									</div>
-								</div>
-							</td>
-							<td class="tit tal">정상 환율</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,414.00" />
-									</div>
-								</div>
-							</td>
-							<td class="tit tal">현금</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0" />
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="tit tal">POSITION</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,026.25" />
-									</div>
-								</div>
-							</td>
-							<td class="tit tal">적용 환율</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="1,414.00" />
-									</div>
-								</div>
-							</td>
-							<td class="tit tal">타점 (31)</td>
-							<td>
-								<div class="custom_group">
-									<button type="button" class="btn btn_sm btn_line">
-										<span class="txt">실타점</span>
-									</button>
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" value="0" />
+									<div class="custom-input-text w100">
+										<input type="text" value="" />
 									</div>
 								</div>
 							</td>
 						</tr>
 					</table>
 					<!-- // form_table -->
+
 				</div>
 				<!-- // table_form_wrap -->
+				 
 			</div>
 			<!-- // content_group -->
 
+
 			<div class="content_group">
-				<div class="table_list_wrap">
-					<table class="table_list">
+
+				<div class="divide_row">
+					<div class="left">
+						<div class="tit_wrap">
+							<div class="tit">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<strong class="tit">무역외사유정보</strong>
+							</div>
+							<p class="txt">→ 외국인은 반드시 사유코드 35101 또는 35102를 선택하세요!</p>
+						</div>
+						<!-- // tit_wrap -->
+					</div>
+					<!-- // left -->
+
+					<div class="right">
+						<!-- <button type="button" class="btn btn_sm btn_line"><span>DEBIT 내역 대사</span></button> -->
+					</div>
+					<!-- // right -->
+				</div>
+				<!-- // divide_row -->
+
+				<div class="table_form_wrap">
+
+					<table class="form_table">
+						<colgroup>
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 4);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 6);" />
+						</colgroup>
 						<tr>
-							<th colspan="4"><span></span></th>
-							<th><span>원화연동금액</span></th>
-							<th><span>원화연동계좌</span></th>
-							<th><span>계좌고객명</span></th>
-							<th><span>비밀번호</span></th>
-						</tr>
-						<tr>
-							<td colspan="4"></td>
+							<th><span>사유 코드</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" />
+									<div class="custom-select">
+										<select class="custom-select_native" required>
+											<option value="37205 개인의 이전거래">37205 개인의 이전거래</option>
+											<option value="37205 개인의 이전거래">37205 개인의 이전거래</option>
+										</select>
 									</div>
-								</div>
-							</td>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" />
-									</div>
-									<button type="button" class="btn_ico">
-										<span class="ico"><img src="../../images/ico_search_doc.png" alt="문서 검색"></span>
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색 아이콘"></span>
 									</button>
 								</div>
 							</td>
+							<th><span>지정항목</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" />
+									<div class="custom-select">
+										<select class="custom-select_native">
+											<option value="01 거주자의 지급증빙">01 거주자의 지급증빙</option>
+											<option value="01 거주자의 지급증빙">01 거주자의 지급증빙</option>
+										</select>
 									</div>
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색 아이콘"></span>
+									</button>
 								</div>
 							</td>
+							<th><span>사유금액</span></th>
 							<td>
+								<div class="custom-input-text">
+									<input type="text" class="ipt-money" value="1,000.00" required />
+								</div>
+								<!-- // custom-input-text -->
+							</td>
+						</tr>
+
+						<tr>
+							<th><span>사후관리번호</span></th>
+							<td colspan="5">
 								<div class="custom_group">
-									<div class="custom-input-text">
-										<input type="text" class="ipt-money" />
+									<div class="custom-select">
+										<select class="custom-select_native">
+											<option value="" disabled selected hidden>사후관리번호 선택</option>
+											<option value="37205">37205</option>
+											<option value="37205">37205</option>
+										</select>
 									</div>
+									<button class="btn_triger btn_ico">
+										<span class="ico"><img src="../../images/ico_search_doc.png" alt="검색 아이콘"></span>
+									</button>
 								</div>
 							</td>
 						</tr>
 					</table>
-
-					<div class="custom_group" style="justify-content: flex-end; padding:10px;">
-						※
-						<button type="button" class="btn_ico">
-							<span class="ico"><img src="../../images/ico_search_doc.png" alt="문서 검색"></span>
-						</button>
-						[클릭] -> 연동계좌 기록사항 입력 가능합니다. (미입력 시 ‘업무명’ 으로 기록됩니다.)
-
-					</div>
+					<!-- // form_table -->
 
 				</div>
+				<!-- // table_form_wrap -->
+				 
 			</div>
 			<!-- // content_group -->
-
-			
-			
 
 		</section>
 		<!-- // container -->

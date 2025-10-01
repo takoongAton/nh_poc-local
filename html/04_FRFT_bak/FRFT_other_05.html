@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>농협 해외송금 POC</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/nhpoc.css" />
+
+	<!-- font -->
+	<link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin>
+	</noscript>
+
+	<!-- font-family : 'Noto Sans KR' -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..900&display=swap" />
+
+	<!-- font-family : 'Pretendard' -->
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+
+<style>
+
+</style>
+</head>
+<body>
+
+	<div class="wrap">
+		<aside class="menu">
+			<div class="menu_tit"><strong>NH POC</strong></div>
+			<ul class="menu_list">
+				<li><button type="button"><span>계좌관리</span></button></li>
+				<li><button type="button"><span>유동성관리</span></button></li>
+				<li><button type="button"><span>자금이체(당발-송금은행)</span></button></li>
+				<li><button type="button" class="active"><span>자금이체(타발-수취은행)</span></button></li>
+				<li><button type="button"><span>송금 추적 조회</span></button></li>
+			</ul>
+		</aside>
+
+		<section class="container">
+
+			<div class="page_tit_wrap">
+				<div class="page_tit">
+					<div class="tit">
+						<span class="ico"><img src="../../images/tit_icon_01.png" alt="아이콘"></span>
+						<strong class="tit">파티오르 송금 추적 조회</strong>
+					</div>
+				</div>
+				<!-- // page_tit -->
+
+				<div class="btn_group">
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">실행</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">엑셀</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">인쇄</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">초기화</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">도움말</span>
+					</button>
+					<button type="button" class="btn btn_md btn_fill">
+						<span class="txt">닫기</span>
+					</button>
+				</div>
+			</div>
+			<!-- // page_tit_wrap -->
+
+			<div class="content_group">
+				<div class="divide_row">
+					<div class="left">
+						<div class="tit_wrap">
+							<div class="tit">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<strong class="tit">조회 조건</strong>
+							</div>
+							<!-- <p class="txt">설명텍스트</p> -->
+						</div>
+						<!-- // tit_wrap -->
+					</div>
+					<!-- // left -->
+
+					<!-- <div class="right">
+						<button type="button" class="btn_print">
+							<span class="ico"></span>
+							<span class="txt">고객확인</span>
+						</button>
+						<button type="button" class="btn_print">
+							<span class="ico"></span>
+							<span class="txt">신청서 재인쇄</span>
+						</button>
+					</div> -->
+					<!-- // right -->
+				</div>
+				<!-- // divide_row -->
+			</div>
+
+			<div class="content_group">
+
+				<div class="table_form_wrap">
+
+					<table class="form_table">
+						<colgroup>
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 3);" />
+							<col style="width:calc(100% / 6);" />
+							<col style="width:calc(100% / 3);" />
+						</colgroup>
+						<tr>
+							<th><span>조회구분</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-select w100">
+										<select class="custom-select_native" required>
+											<option value="01 취결">01 취결</option>
+											<option value="02 조회">02 조회</option>
+											<option value="03 변경">03 변경</option>
+										</select>
+									</div>
+									<!-- // custom-select -->
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<th><span>송금일자</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-date">
+										<input type="date" />
+										<button class="btn_triger btn_ico">
+											<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+										</button>
+									</div>
+									<!-- // custom-input-date -->
+
+									<div class="custom-input-date">
+										<input type="date" />
+										<button class="btn_triger btn_ico">
+											<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
+										</button>
+									</div>
+									<!-- // custom-input-date -->
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th><span>파티오르 고유번호</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text w100">
+										<input type="text" required />
+									</div>
+								</div>
+							</td>
+							<th><span>REF NO</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text w100">
+										<input type="text" value="RI000001T2504223" />
+									</div>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<th><span>송금 금액</span></th>
+							<td colspan="3">
+								<div class="custom_group">
+									<div class="custom-select">
+										<select class="custom-select_native" required>
+											<option value="USD">USD</option>
+											<option value="USD">USD</option>
+										</select>
+									</div>
+									<div class="custom-input-text">
+										<input type="text" placeholder="0.00" />
+										~
+										<input type="text" placeholder="999,999,999,999,999" />
+									</div>
+								</div>
+								<!-- // custom_group -->
+							</td>
+							
+						</tr>
+					</table>
+					<!-- // form_table -->
+
+				</div>
+				<!-- // table_form_wrap -->
+
+			</div>
+			<!-- // content_group -->
+
+
+			<div class="content_group">
+
+				<div class="tab_group">
+					<div class="left">
+						<div class="tab_wrap">
+							<button type="button" class="btn_tab"><span class="txt">송금내역</span></button>
+							<button type="button" class="btn_tab active"><span class="txt">진행상태</span></button>
+						</div>
+						<!-- // tab_wrap -->
+					</div>
+					<!-- // left -->
+				</div>
+				<!-- // tab_group -->
+			</div>
+			<!-- // content_group -->
+
+
+			<div class="content_group">
+
+				<div class="divide_row">
+					<div class="left">
+						<div class="tit_wrap">
+							<div class="tit">
+								<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
+								<strong class="tit">조회 결과</strong>
+							</div>
+							<!-- <p class="txt">텍스트</p> -->
+						</div>
+						<!-- // tit_wrap -->
+					</div>
+					<!-- // left -->
+
+					<div class="right">
+						<!-- <button type="button" class="btn btn_sm btn_line"><span>DEBIT 내역 대사</span></button> -->
+					</div>
+					<!-- // right -->
+				</div>
+				<!-- // divide_row -->
+
+				<div class="table_list_wrap">
+
+					<table class="table_list">
+						<colgroup>
+							<col style="width:calc(100% / 24);">
+							<col style="width:calc(100% / 6);">
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<tr>
+							<th><span>순번</span></th>
+							<th><span>파티오르 고유번호</span></th>
+							<th><span>REF NO</span></th>
+							<th><span>최종처리은행</span></th>
+							<th><span>최종상태</span></th>
+							<th><span>거래일자</span></th>
+							<th><span>송금통화</span></th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>7c8d63cb-fdbd-4e71-8b8f-c8b1dd11a065</td>
+							<td>RO000001T2504872</td>
+							<td>NACFKRSEXXX</td>
+							<td>ACSC 거래완료</td>
+							<td>2025-09-25</td>
+							<td>USD</td>
+						</tr>
+
+						<tr>
+							<td colspan="7">
+<style>
+table.table_list td {word-break:break-all;}
+.test123 {display:flex; justify-content:space-between; padding:20px 0 30px;}
+.test123 div.con_box {display:flex; flex-direction:column; gap:16px 0; position:relative; width:100%;}
+.test123 div.con_box div.tit {padding:10px 5px; background-color:#ddd; border-radius:20px;}
+.test123 div.con_box p.name {display:flex; justify-content:center; align-items:center; padding:10px;}
+.test123 div.con_box .con {flex:1; position:relative; border:1px solid #ddd; border-radius:8px; overflow:hidden;}
+.test123 div.con_box div.test {display:flex; flex-direction:column;}
+.test123 div.con_box div.test.active {background-color:#f7f7f7;}
+.test123 div.con_box div.test dl {display:flex; font-size:14px;}
+.test123 div.con_box div.test dl:first-of-type ~ dl {border-top:1px solid #ddd;}
+.test123 div.con_box div.test dl dt {display:flex; align-items:center; width:100px; min-width:100px; padding:14px; border-right:1px solid #ddd;}
+.test123 div.con_box div.test dl dd {flex:1; padding:10px; text-align:left;}
+.test123 div.con_box div.test dl dd .money_wrap {display:flex; border:1px solid #ddd;}
+.test123 div.con_box div.test dl dd .money_wrap span {padding:5px;}
+.test123 div.con_box div.test dl dd .money_wrap span.currency {border-right:1px solid #ddd;}
+.test123 div.con_box div.test dl dd .money_wrap span.money {text-align: right;}
+.test123 div.arrow {display:flex; justify-content: center; align-items: center; position:relative; width:50px; min-width:50px;}
+
+.test123 div.con_box .con div.guide {display:flex; justify-content:center; align-items:center; position:absolute; top:20px; right:20px; bottom:20px; left:20px; background-color:rgba(0,0,0,0.4); color:#fff; border-radius:12px;}
+.test123 div.con_box .con div.guide span {font-size:20px; font-weight:bold; text-shadow:0 0 2px rgba(0,0,0,0.5);;}
+</style>
+								<div class="test123">
+									<div class="con_box">
+										<div class="tit">송금인</div>
+										<div class="con">
+											<p class="name">YANG JIN MO</p>
+											<div class="guide"><span>송금인명</span></div>
+										</div>
+									</div>
+
+									<div class="arrow">&gt;</div>
+									
+									<div class="con_box">
+										<div class="tit">수신은행</div>
+										<div class="con">
+											<div class="test">
+												<dl>
+													<dt><strong>은행BIC</strong></dt>
+													<dd></dd>
+												</dl>
+												<dl>
+													<dt><strong>은행명</strong></dt>
+													<dd></dd>
+												</dl>
+												<dl>
+													<dt><strong>송금금액</strong></dt>
+													<dd>
+														<div class="money_wrap">
+															<span class="currency"></span>
+															<span class="money">0.00</span>
+														</div>
+													</dd>
+												</dl>
+												<dl>
+													<dt><strong>처리일시</strong></dt>
+													<dd></dd>
+												</dl>
+												<dl>
+													<dt><strong>국가</strong></dt>
+													<dd></dd>
+												</dl>
+											</div>
+
+											<div class="guide"><span>송금은행 정보</span></div>
+										</div>
+									</div>
+									
+									<div class="arrow">&gt;</div>
+
+									<div class="con_box">
+										<div class="tit">송금은행</div>
+										<div class="con">
+											<div class="test active">
+												<dl>
+													<dt><strong>은행BIC</strong></dt>
+													<dd>NACFKRSEXXX</dd>
+												</dl>
+												<dl>
+													<dt><strong>은행명</strong></dt>
+													<dd>NONGHYUP BANK (FORWERLY</dd>
+												</dl>
+												<dl>
+													<dt><strong>송금금액</strong></dt>
+													<dd>
+														<div class="money_wrap">
+															<span class="currency">USD</span>
+															<span class="money">301,495.22</span>
+														</div>
+													</dd>
+												</dl>
+												<dl>
+													<dt><strong>처리일시</strong></dt>
+													<dd>2025-09-01 11:14:58</dd>
+												</dl>
+												<dl>
+													<dt><strong>국가</strong></dt>
+													<dd></dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+
+									<div class="arrow">&gt;</div>
+									
+									<div class="con_box">
+										<div class="tit">수취인</div>
+										<div class="con">
+											<p class="name">HUITAE YANG</p>
+											<div class="guide"><span>수취인명</span></div>
+										</div>
+									</div>
+								</div>
+								<!-- // test123 -->
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>2</td>
+							<td>7c8d63cb-fdbd-4e71-8b8f-c8b1dd11a065</td>
+							<td>RO000001T2504872</td>
+							<td>CHASUS33XXX</td>
+							<td>ACSP 진행중</td>
+							<td>2025-09-25</td>
+							<td>USD</td>
+						</tr>
+					</table>
+					<!-- // form_table -->
+				</div>
+				<!-- // table_form_wrap -->
+			</div>
+			<!-- // content_group -->
+
+			<div class="content_group">
+				<div class="table_list_wrap">
+					<table class="table_list">
+						<tr>
+							<th><strong>업무구분</strong></th>
+							<th><strong>은행구분</strong></th>
+							<th><strong>BIC</strong></th>
+							<th><strong>상태</strong></th>
+							<th><strong>처리일시</strong></th>
+							<th><strong>종합</strong></th>
+						</tr>
+						<tr>
+							<td rowspan="3" class="tit">사전검증</td>
+							<td>송금은행</td>
+							<td>NACFKRSEXXX</td>
+							<td>Y/N</td>
+							<td>xxxx-xx-xx xx:xx:xx</td>
+							<td rowspan="3">승인/진행중/오류/거절</td>
+						</tr>
+						<tr>
+							<td>결제은행</td>
+							<td>CHASUS33XXX</td>
+							<td>Y/N</td>
+							<td>xxxx-xx-xx xx:xx:xx</td>
+						</tr>
+						<tr>
+							<td>수취은행</td>
+							<td>CHASUS33XXX</td>
+							<td>Y/N</td>
+							<td>xxxx-xx-xx xx:xx:xx</td>
+						</tr>
+						<tr>
+							<td class="tit">송금은행 지급</td>
+							<td>송금은행</td>
+							<td>NACFKRSEXXX</td>
+							<td>Y/N</td>
+							<td>xxxx-xx-xx xx:xx:xx</td>
+							<td>완료/대기/오류</td>
+						</tr>
+						<tr>
+							<td class="tit">온체인 정산<br />(송금은행→수취은행)</td>
+							<td>파티오르</td>
+							<td></td>
+							<td>Y/N</td>
+							<td>xxxx-xx-xx xx:xx:xx</td>
+							<td>완료/대기/오류</td>
+						</tr>
+						<tr>
+							<td class="tit">수취은행 수취</td>
+							<td>수취은행</td>
+							<td>CHASUS33XXX</td>
+							<td>Y/N</td>
+							<td>xxxx-xx-xx xx:xx:xx</td>
+							<td>완료/대기/오류</td>
+						</tr>
+						<tr>
+							<td class="tit">수취인 지급</td>
+							<td></td>
+							<td>CHASUS33XXX</td>
+							<td>Y/N</td>
+							<td>xxxx-xx-xx xx:xx:xx</td>
+							<td>완료/대기/오류</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+		</section>
+		<!-- // container -->
+
+	</div>
+	<!-- // wrap -->
+
+
+
+<script src="../../js/temp.js"></script>
+
+
+
+
+</body>
+</html>
