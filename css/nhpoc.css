@@ -121,14 +121,13 @@ label.ipt_chk span.txt {display:inline-block; font-size:16px; line-height:19px; 
 
 
 /* custom-input-checkbox */
-/* .custom-input-checkbox {display:inline-flex; justify-content:center; line-height:1em;}
+.custom-input-checkbox {display:inline-flex; justify-content:center; line-height:1em;}
 .custom-input-checkbox label {display:inline-flex; align-items:center; gap:0 4px; position:relative; user-select:none; cursor:pointer;}
 .custom-input-checkbox label input[type='checkbox'] {position:absolute; width:0; height:0; opacity:0;}
-.custom-input-checkbox label input[type='checkbox'] ~ span.checkmark {display:inline-flex; justify-content:center; align-items:center; position:relative; width:26px; min-width:26px; height:26px; border:1px solid #4A4A4A; border-radius:100%; box-shadow: inset 3px 3px 2px rgba(0,0,0,0.16); background:#fff url('../images/ico_chk.png') no-repeat 50% -400% / 20px 20px;}
-.custom-input-checkbox label input[type='checkbox']:checked + span.checkmark::before {content:""; display:inline-block; position:absolute; top:50%; left:50%; width:50%; height:50%; border-radius:100%; background-color:#005EB8; transform:translate(-50%,-50%);}
-.custom-input-checkbox label input[type='checkbox'] ~ span.txt {display:inline-block; font-size:16px; line-height:19px; font-family :'Pretendard'; white-space:nowrap;} */
+.custom-input-checkbox label input[type='checkbox'] ~ span.checkmark {display:inline-block; position:relative; width:26px; min-width:26px; height:26px; border:1px solid #4A4A4A; border-radius:4px; box-shadow: inset 3px 3px 2px rgba(0,0,0,0.16); background:#fff url('../images/ico_chk.png') no-repeat 50% -400% / 20px 20px;}
+.custom-input-checkbox label input[type='checkbox']:checked ~ span.checkmark {background:#fff url('../images/ico_chk.png') no-repeat 50% 50% / 20px 20px;}
+.custom-input-checkbox label input[type='checkbox'] ~ span.txt {display:inline-block; font-size:16px; line-height:19px; font-family :'Pretendard'; white-space:nowrap;}
 /* // custom-input-checkbox */
-
 
 /* custom-input-radio */
 .custom-input-radio {display:inline-flex; justify-content:center; line-height:1em;}
