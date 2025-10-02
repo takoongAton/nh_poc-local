@@ -210,11 +210,7 @@ input[type="radio"] {
 
 button.disabled,
 button.false,
-button[disabled] {
-	background: #a7a7a7 !important;
-	border-color:#a7a7a7 !important;
-	color:#fff !important;
-} 
+button[disabled] {background: #a7a7a7; border-color:#a7a7a7; color:#fff;} 
 
 
 input::-webkit-input-placeholder {line-height:normal;}
