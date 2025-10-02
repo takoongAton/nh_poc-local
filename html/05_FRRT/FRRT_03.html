@@ -69,7 +69,6 @@
 			</div>
 			<!-- // page_tit_wrap -->
 
-
 			<div class="content_group">
 
 				<div class="content_tit_wrap">
@@ -98,22 +97,22 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native w100" required>
-											<option value="2 타발 (수취은행)">2 타발 (수취은행)</option>
-											<option value="2 타발 (수취은행)">2 타발 (수취은행)</option>
+											<option value="1 당발 (송금은행)">1 당발 (송금은행)</option>
+											<option value="2 타발 (수취은행)" selected>2 타발 (수취은행) </option>
 										</select>
 									</div>
 									<!-- // custom-select -->
 									 <div class="custom-select">
 										<select class="custom-select_native w100" required>
-											<option value="2 진행상태 조회">2 진행상태 조회</option>
-											<option value="2 진행상태 조회">2 진행상태 조회</option>
+											<option value="1 자금이체 내역조회" selected>1 자금이체 내역조회</option>
+											<option value="2 진행상태조회 선택">2 진행상태조회 선택</option>
 										</select>
 									</div>
 									<!-- // custom-select -->
 								</div>
 								<!-- // custom_group -->
 							</td>
-							<th><span>송금일자</span></th>
+							<th><span>자금이체 기간</span></th>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-date">
@@ -186,24 +185,7 @@
 
 
 			<div class="content_group">
-
-				<div class="content_tit_wrap">
-					<div class="tit_tools">
-						<div class="tit_tab_wrap">
-							<button type="button" class="btn_tab"><span class="txt">자금이체 내역조회</span></button>
-							<button type="button" class="btn_tab active"><span class="txt">진행상태 조회</span></button>
-						</div>
-						<!-- // tit_tab_wrap -->
-					</div>
-					<!-- // tit_tab_wrap -->
-				</div>
-				<!-- // content_tit_wrap -->
-			</div>
-			<!-- // content_group -->
-
-
-			<div class="content_group">
-
+				
 				<div class="content_tit_wrap">
 					<div class="tit_wrap">
 						<div class="tit">
@@ -212,162 +194,56 @@
 						</div>
 					</div>
 					<!-- // tit_wrap -->
+
+					<div class="tit_tools">
+						<div class="tit_tab_wrap">
+							<button type="button" class="btn_tab active"><span class="txt">자금이체 내역조회</span></button>
+							<button type="button" class="btn_tab"><span class="txt">진행상태 조회</span></button>
+						</div>
+						<!-- // tit_tab_wrap -->
+					</div>
+					<!-- // tit_tab_wrap -->
 				</div>
 				<!-- // content_tit_wrap -->
 
-				<div class="transfers_step_wrap">
-					<div class="con_box">
-						<div class="tit">송금인</div>
-						<div class="con">
-							<p class="name">YANG JIN MO</p>
-							<div class="guide"><span>송금인명</span></div>
-						</div>
-					</div>
+			</div>
+			<!-- // content_group -->
 
-					<div class="con_box">
-						<div class="tit">송금은행</div>
-						<div class="con">
-							<div class="test">
-								<dl>
-									<dt><strong>은행BIC</strong></dt>
-									<dd></dd>
-								</dl>
-								<dl>
-									<dt><strong>은행명</strong></dt>
-									<dd></dd>
-								</dl>
-								<dl>
-									<dt><strong>송금금액</strong></dt>
-									<dd>
-										<div class="money_wrap">
-											<span class="currency">USD</span>
-											<span class="money"></span>
-										</div>
-									</dd>
-								</dl>
-								<dl>
-									<dt><strong>처리일시</strong></dt>
-									<dd></dd>
-								</dl>
-								<dl>
-									<dt><strong>국가</strong></dt>
-									<dd></dd>
-								</dl>
-							</div>
-							<div class="guide"><span>송금은행 정보</span></div>
-						</div>
-					</div>
 
-					<div class="con_box">
-						<div class="tit">파티오르정산</div>
-						<div class="con">
-							<p class="name">완료/대기/오류</p>
-						</div>
-					</div>
-
-					
-					<div class="con_box">
-						<div class="tit">수신은행</div>
-						<div class="con">
-							<div class="test active">
-								<dl>
-									<dt><strong>은행BIC</strong></dt>
-									<dd>NACFKRSEXXX</dd>
-								</dl>
-								<dl>
-									<dt><strong>은행명</strong></dt>
-									<dd>NONGHYUP BANK (FORWERLY</dd>
-								</dl>
-								<dl>
-									<dt><strong>송금금액</strong></dt>
-									<dd>
-										<div class="money_wrap">
-											<span class="currency">USD</span>
-											<span class="money">301,495.22</span>
-										</div>
-									</dd>
-								</dl>
-								<dl>
-									<dt><strong>처리일시</strong></dt>
-									<dd>2025-09-01 11:14:58</dd>
-								</dl>
-								<dl>
-									<dt><strong>국가</strong></dt>
-									<dd></dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-					
-					<div class="con_box">
-						<div class="tit">수취인</div>
-						<div class="con">
-							<p class="name">HUITAE YANG</p>
-							<div class="guide"><span>수취인명</span></div>
-						</div>
-					</div>
-				</div>
-				<!-- // transfers_step_wrap -->
-
-				<div class="table_list_wrap" style="display:none;">
+			<div class="content_group">
+				
+				<div class="table_list_wrap">
 
 					<table class="table_list">
 						<colgroup>
-							<col style="width:calc(100% / 24);">
-							<col style="width:calc(100% / 6);">
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
-							<col>
+							<col class="col-1" />
+							<col />
+							<col />
+							<col />
+							<col class="col-1" />
+							<col />
+							<col class="col-1" />
+							<col class="col-1" />
 						</colgroup>
 						<tr>
 							<th><span>순번</span></th>
-							<th><span>파티오르 고유번호</span></th>
+							<th><span>참조번호</span></th>
 							<th><span>REF NO</span></th>
-							<th><span>최종처리은행</span></th>
-							<th><span>최종상태</span></th>
-							<th><span>거래일자</span></th>
-							<th><span>송금통화</span></th>
-							<th><span>송금금액</span></th>
-							<th><span>지급통화</span></th>
-							<th><span>지급금액</span></th>
-							<th><span>최종처리일시</span></th>
+							<th><span>이체 일자</span></th>
+							<th><span>통화코드</span></th>
+							<th><span>이체 금액</span></th>
+							<th><span>진행단계</span></th>
+							<th><span>진행상태</span></th>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td>7c8d63cb-fdbd-4e71-8b8f-c8b1dd11a065</td>
+							<td></td>
 							<td>RO000001T2504872</td>
-							<td>CHASUS33XXX</td>
-							<td>ACSP  진행중</td>
-							<td>2025-09-25</td>
+							<td>2025-09-22</td>
 							<td>USD</td>
 							<td class="tar">720,000.00</td>
 							<td>-</td>
-							<td class="tar">0.00</td>
-							<td>2025-09-25 14:13:31</td>
-						</tr>
-
-						<tr>
-							<td colspan="11">
-
-							</td>
-						</tr>
-
-
-						<tr>
-							<td>2</td>
-							<td>7c8d63cb-fdbd-4e71-8b8f-c8b1dd11a065</td>
-							<td>RO000001T2504872</td>
-							<td>CHASUS33XXX</td>
-							<td>ACSP  진행중</td>
-							<td>2025-09-25</td>
-							<td>USD</td>
-							<td class="tar">720,000.00</td>
 							<td>-</td>
-							<td class="tar">0.00</td>
-							<td>2025-09-25 14:13:31</td>
 						</tr>
 					</table>
 					<!-- // form_table -->
@@ -375,81 +251,6 @@
 				<!-- // table_form_wrap -->
 			</div>
 			<!-- // content_group -->
-
-			<div class="content_group">
-				<div class="table_list_wrap">
-					<table class="table_list">
-						<colgroup>
-							<col class="col-2">
-							<col class="col-2">
-							<col>
-							<col class="col-1">
-							<col class="col-2">
-							<col class="col-2">
-						</colgroup>
-						<tr>
-							<th><strong>업무구분</strong></th>
-							<th><strong>은행구분</strong></th>
-							<th><strong>BIC</strong></th>
-							<th><strong>상태</strong></th>
-							<th><strong>처리일시</strong></th>
-							<th><strong>종합</strong></th>
-						</tr>
-						<tr>
-							<td rowspan="3" class="tit">사전검증</td>
-							<td>송금은행</td>
-							<td>NACFKRSEXXX</td>
-							<td>Y/N</td>
-							<td>xxxx-xx-xx xx:xx:xx</td>
-							<td rowspan="3">승인/진행중/오류/거절</td>
-						</tr>
-						<tr>
-							<td>결제은행</td>
-							<td>CHASUS33XXX</td>
-							<td>Y/N</td>
-							<td>xxxx-xx-xx xx:xx:xx</td>
-						</tr>
-						<tr>
-							<td>수취은행</td>
-							<td>CHASUS33XXX</td>
-							<td>Y/N</td>
-							<td>xxxx-xx-xx xx:xx:xx</td>
-						</tr>
-						<tr>
-							<td class="tit">송금은행 지급</td>
-							<td>송금은행</td>
-							<td>NACFKRSEXXX</td>
-							<td>Y/N</td>
-							<td>xxxx-xx-xx xx:xx:xx</td>
-							<td>완료/대기/오류</td>
-						</tr>
-						<tr>
-							<td class="tit">온체인 정산<br />(송금은행→수취은행)</td>
-							<td>파티오르</td>
-							<td></td>
-							<td>Y/N</td>
-							<td>xxxx-xx-xx xx:xx:xx</td>
-							<td>완료/대기/오류</td>
-						</tr>
-						<tr>
-							<td class="tit">수취은행 수취</td>
-							<td>수취은행</td>
-							<td>CHASUS33XXX</td>
-							<td>Y/N</td>
-							<td>xxxx-xx-xx xx:xx:xx</td>
-							<td>완료/대기/오류</td>
-						</tr>
-						<tr>
-							<td class="tit">수취인 지급</td>
-							<td></td>
-							<td>CHASUS33XXX</td>
-							<td>Y/N</td>
-							<td>xxxx-xx-xx xx:xx:xx</td>
-							<td>완료/대기/오류</td>
-						</tr>
-					</table>
-				</div>
-			</div>
 
 		</section>
 		<!-- // container -->

@@ -69,6 +69,7 @@
 			</div>
 			<!-- // page_tit_wrap -->
 
+
 			<div class="content_group">
 
 				<div class="content_tit_wrap">
@@ -81,7 +82,6 @@
 					<!-- // tit_wrap -->
 				</div>
 				<!-- // content_tit_wrap -->
-
 
 				<div class="table_form_wrap">
 
@@ -98,8 +98,8 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native w100" required>
-											<option value="1 당발 (송금은행)" selected>1 당발 (송금은행)</option>
-											<option value="2 타발 (수취은행) ">2 타발 (수취은행) </option>
+											<option value="1 당발 (송금은행)">1 당발 (송금은행)</option>
+											<option value="2 타발 (수취은행)" selected>2 타발 (수취은행) </option>
 										</select>
 									</div>
 									<!-- // custom-select -->
@@ -186,9 +186,7 @@
 
 
 			<div class="content_group">
-
 				<div class="content_tit_wrap">
-					 
 					<div class="tit_wrap">
 						<div class="tit">
 							<span class="ico"><img src="../../images/btn_ico_temp.png" alt="문서 아이콘"></span>
@@ -225,7 +223,59 @@
 					<div class="con_box">
 						<div class="tit">송금은행</div>
 						<div class="con">
-							<div class="test active">
+							<div class="test">
+								<dl>
+									<dt><strong>은행BIC</strong></dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt><strong>은행명</strong></dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt><strong>송금금액</strong></dt>
+									<dd>
+										<div class="money_wrap">
+											<span class="currency">USD</span>
+											<span class="money"></span>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><strong>처리일시</strong></dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt><strong>국가</strong></dt>
+									<dd>
+										<div class="custom_group">
+											<div class="custom-select w100">
+												<select class="custom-select_native">
+													<option value="&nbsp;" selected>&nbsp;</option>
+												</select>
+											</div>
+											<!-- // custom-select -->
+										</div>
+										<!-- // custom_group -->
+									</dd>
+								</dl>
+							</div>
+							<div class="guide"><span>송금은행 정보</span></div>
+						</div>
+					</div>
+
+					<div class="con_box">
+						<div class="tit">파티오르정산</div>
+						<div class="con">
+							<p class="name">완료/대기/오류</p>
+						</div>
+					</div>
+
+					
+					<div class="con_box">
+						<div class="tit">수신은행</div>
+						<div class="con">
+							<div class="test">
 								<dl>
 									<dt><strong>은행BIC</strong></dt>
 									<dd>NACFKRSEXXX</dd>
@@ -252,57 +302,6 @@
 									<dd>
 										<div class="custom_group">
 											<div class="custom-select w100">
-												<select class="custom-select_native" disabled>
-													<option value="KR 한국" selected>KR 한국</option>
-												</select>
-											</div>
-											<!-- // custom-select -->
-										</div>
-										<!-- // custom_group -->
-									</dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-
-					<div class="con_box">
-						<div class="tit">파티오르정산</div>
-						<div class="con">
-							<p class="name">완료/대기/오류</p>
-						</div>
-					</div>
-
-					
-					<div class="con_box">
-						<div class="tit">수신은행</div>
-						<div class="con">
-							<div class="test">
-								<dl>
-									<dt><strong>은행BIC</strong></dt>
-									<dd></dd>
-								</dl>
-								<dl>
-									<dt><strong>은행명</strong></dt>
-									<dd></dd>
-								</dl>
-								<dl>
-									<dt><strong>송금금액</strong></dt>
-									<dd>
-										<div class="money_wrap">
-											<span class="currency"></span>
-											<span class="money">0.00</span>
-										</div>
-									</dd>
-								</dl>
-								<dl>
-									<dt><strong>처리일시</strong></dt>
-									<dd></dd>
-								</dl>
-								<dl>
-									<dt><strong>국가</strong></dt>
-									<dd>
-										<div class="custom_group">
-											<div class="custom-select w100">
 												<select class="custom-select_native">
 													<option value="&nbsp;" selected>&nbsp;</option>
 												</select>
@@ -313,10 +312,9 @@
 									</dd>
 								</dl>
 							</div>
-							<div class="guide"><span>수취은행 정보</span></div>
 						</div>
 					</div>
-	
+					
 					<div class="con_box">
 						<div class="tit">수취인</div>
 						<div class="con">
@@ -327,7 +325,6 @@
 				</div>
 				<!-- // transfers_step_wrap -->
 
-				
 				<div class="table_list_wrap" style="display:none;">
 
 					<table class="table_list">
