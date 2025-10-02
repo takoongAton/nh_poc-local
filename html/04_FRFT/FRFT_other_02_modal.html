@@ -89,7 +89,8 @@
 								<div class="custom_group">
 									<div class="custom-select w100">
 										<select class="custom-select_native" required>
-											<option value="1 지급">1 지급</option>
+											<option value="1 지급" selected>1 지급</option>
+											<option value="2 원장 조회">2 원장 조회</option>
 										</select>
 									</div>
 									<!-- // custom-select -->
@@ -99,7 +100,7 @@
 							<th><span>거래일자</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-date">
+									<div class="custom-input-date w100">
 										<input type="date" />
 										<button class="btn_triger btn_ico">
 											<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
@@ -112,7 +113,7 @@
 							<th><span>가산일자</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-date">
+									<div class="custom-input-date w100">
 										<input type="date" />
 										<button class="btn_triger btn_ico">
 											<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
@@ -128,7 +129,7 @@
 							<th><span>환율변동회차</span></th>
 							<td>
 								<div class="custom_group">
-									<div class="custom-input-text">
+									<div class="custom-input-text w100">
 										<input type="text" value="최종환율회차" />
 										<button class="btn_triger btn_ico">
 											<span class="ico"><img src="../../images/ico_arrow_row.png" alt="좌우 화살표 아이콘"></span>
@@ -257,8 +258,6 @@
 									<div class="custom-select w100">
 										<select class="custom-select_native" required>
 											<option value="00 자동계산">00 자동계산</option>
-											<option value="00 자동계산">00 자동계산</option>
-											<option value="00 자동계산">00 자동계산</option>
 										</select>
 									</div>
 								</div>
@@ -280,7 +279,7 @@
 							<td>
 								<div class="custom-input-radio">
 									<label>
-										<input type="radio" name="name01" />
+										<input type="radio" name="name01_01" checked disabled />
 										<span class="checkmark"></span>
 										<!-- <span class="txt">텍스트</span> -->
 									</label>
@@ -296,7 +295,7 @@
 							<td>
 								<div class="custom-input-radio">
 									<label>
-										<input type="radio" name="name01" />
+										<input type="radio" name="name01_02" disabled />
 										<span class="checkmark"></span>
 										<!-- <span class="txt">텍스트</span> -->
 									</label>
@@ -324,8 +323,6 @@
 									<div class="custom-select">
 										<select class="custom-select_native">
 											<option value="선택">선택</option>
-											<option value="선택">선택</option>
-											<option value="선택">선택</option>
 										</select>
 									</div>
 									<div class="custom-input-text">
@@ -351,7 +348,7 @@
 							<td>
 								<div class="custom-input-radio">
 									<label>
-										<input type="radio" name="name01" />
+										<input type="radio" name="name02_01" checked disabled />
 										<span class="checkmark"></span>
 										<!-- <span class="txt">텍스트</span> -->
 									</label>
@@ -367,7 +364,7 @@
 							<td>
 								<div class="custom-input-radio">
 									<label>
-										<input type="radio" name="name01" />
+										<input type="radio" name="name02_02" disabled />
 										<span class="checkmark"></span>
 										<!-- <span class="txt">텍스트</span> -->
 									</label>
@@ -421,7 +418,7 @@
 							<td>
 								<div class="custom-input-radio">
 									<label>
-										<input type="radio" name="name01" />
+										<input type="radio" name="name03_01" checked disabled />
 										<span class="checkmark"></span>
 										<!-- <span class="txt">텍스트</span> -->
 									</label>
@@ -437,7 +434,7 @@
 							<td>
 								<div class="custom-input-radio">
 									<label>
-										<input type="radio" />
+										<input type="radio" name="name03_02" disabled />
 										<span class="checkmark"></span>
 									</label>
 								</div>
@@ -463,15 +460,15 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native" required>
-											<option value="원금차감">원금차감</option>
-											<option value="원금별">원금별</option>
+											<option value="원금차감" selected>원금차감</option>
+											<option value="원금별도">원금별도</option>
 										</select>
 									</div>
 									<div>영수증출력여부</div>
 									<div class="custom-select">
 										<select class="custom-select_native">
-											<option value="출력">출력</option>
-											<option value="미출력">미출력</option>
+											<option value="1 출력">1 출력</option>
+											<option value="2 미출력">2 미출력</option>
 										</select>
 									</div>
 								</div>
@@ -481,8 +478,6 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native">
-											<option value="선택">선택</option>
-											<option value="선택">선택</option>
 											<option value="선택">선택</option>
 										</select>
 									</div>
@@ -499,8 +494,6 @@
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native">
-											<option value="선택">선택</option>
-											<option value="선택">선택</option>
 											<option value="선택">선택</option>
 										</select>
 									</div>
@@ -567,7 +560,12 @@
 								<div class="custom_group">
 									<div class="custom-select w100">
 										<select class="custom-select_native">
-											<option value="선택">선택</option>
+											<option value="선택" disabled selected hidden>선택</option>
+											<option value="일반환율적용">일반환율적용</option>
+											<option value="우대리스트조회" disabled>우대리스트조회</option>
+											<option value="우대율직접입력" disabled>우대율직접입력</option>
+											<option value="소액예약환율" disabled>소액예약환율</option>
+											<option value="최대우대율자동적용" disabled>최대우대율자동적용</option>
 										</select>
 									</div>
 								</div>
@@ -685,12 +683,115 @@
 				<!-- // layer_header -->
 				<div class="layer_body">
 					<table>
-						<tr>
-							<th>REF-NO</th>
-							<th>선택</th>
-						</tr>
+						<thead>
+							<tr>
+								<th>REF-NO</th>
+								<th>선택</th>
+							</tr>
+						</thead>
 						<tr>
 							<td>FL1234RI1234567</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>FL1111111111199</td>
+							<td>
+								<div class="custom-input-radio">
+									<label>
+										<input type="radio" name="name01" id="" />
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>FL1111111111199</td>
 							<td>
 								<div class="custom-input-radio">
 									<label>
@@ -744,7 +845,18 @@
 <script src="../../js/temp.js"></script>
 
 
-
+<script>
+/* 확인용 레이어 닫기(임시) */
+let layers = document.querySelectorAll(".layer");
+layers.forEach(function(item){
+	item.querySelectorAll("button").forEach(function(e){
+		e.addEventListener("click", function(){
+			item.closest(".layer").style.display = "none";
+		})
+	})
+})
+/* // 확인용 레이어 닫기(임시) */
+</script>
 
 </body>
 </html>

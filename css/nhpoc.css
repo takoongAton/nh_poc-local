@@ -291,15 +291,20 @@ button {cursor:pointer;}
 /* modal popup */
 .layer.modal {}
 .layer.modal div.dim {position:fixed; top:0; right:0; bottom:0; left:0; background-color:rgba(0,0,0,0.3);}
-.layer.modal .layer_inner {position:fixed; top:50%; left:50%; width:400px; padding:30px; border-radius:4px; background-color:#fff; transform:translate(-50%,-50%); box-shadow:0 1px 3px rgba(0,0,0,0.16); z-index:2;}
+.layer.modal .layer_inner {position:fixed; top:50%; left:50%; width:600px; max-width:600px; padding:30px; border-radius:4px; background-color:#fff; transform:translate(-50%,-50%); box-shadow:0 1px 3px rgba(0,0,0,0.16); z-index:2;}
 .layer_content {display:flex; flex-direction:column; gap:20px; width:100%;}
 .layer.modal .layer_inner div.tit {font-weight:bold;}
+
+.layer_body {max-height:360px; overflow-y:auto;}
 .layer.modal .layer_inner table {width:100%;}
 .layer.modal .layer_inner table th,
 .layer.modal .layer_inner table td {padding:10px; border:1px solid #ddd;}
 .layer.modal .layer_inner table th {background-color:#f7f7f7;}
 .layer.modal .layer_inner table td {background-color:#fff; text-align:center;}
 .layer.modal .layer_inner .close {position:absolute; top:30px; right:30px; width:40px;}
+
+/* .layer_body table thead {position:sticky; top:0; left:0; z-index:1;} */
+
 .layer.modal .layer_inner .close button.btn_close {}
 .layer.modal .layer_inner .close button.btn_close span {color:transparent;}
 .layer.modal .layer_inner .close button.btn_close::before,
