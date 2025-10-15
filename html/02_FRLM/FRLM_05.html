@@ -49,7 +49,7 @@
 				<div class="page_tit">
 					<div class="tit">
 						<span class="ico"><img src="../../images/tit_icon_01.png" alt="아이콘"></span>
-						<strong class="tit">유동성 관리 (수동)</strong>
+						<strong class="tit">유동성 관리 (자동)</strong>
 					</div>
 				</div>
 				<!-- // page_tit -->
@@ -110,7 +110,6 @@
 						<div class="tit_tab_wrap">
 							<button type="button" class="btn_tab "><span class="txt">거래실행</span></button>
 							<button type="button" class="btn_tab active"><span class="txt">거래조회</span></button>
-							<button type="button" class="btn_tab"><span class="txt">상세원장</span></button>
 						</div>
 						<!-- // tit_tab_wrap -->
 					</div>
@@ -138,43 +137,21 @@
 				<table class="form_table">
 					<colgroup>
 						<col class="col-2" />
-						<col class="col-4" />
-						<col class="col-2" />
-						<col class="col-4" />
+						<col class="col-10" />
 					</colgroup>
 					<tr>
-						<th><span>조회일자</span></th>
-						<td>
-							<div class="custom_group">
-								<div class="custom-input-date">
-									<input type="date" required />
-									<button class="btn_triger btn_ico">
-										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
-									</button>							
-								</div>
-								<!-- // custom-input-date -->
-								<span>-</span>
-								<div class="custom-input-date">
-									<input type="date" required />
-									<button class="btn_triger btn_ico">
-										<span class="ico"><img src="../../images/ico_calender.png" alt="날짜 선택 아이콘"></span>
-									</button>							
-								</div>
-								<!-- // custom-input-date -->
-							</div>
-						</td>
 						<th><span>TRANSFER TYPE</span></th>
 						<td>
 							<div class="custom_group">
 								<div class="custom-select">
 									<select class="custom-select_native" required>
-										<option value="DEPO(OFF) -> DEPO(ON)">DEPO(OFF) -> DEPO(ON)</option>
-										<option value="DEPO(ON) -> DEPO(OFF)">DEPO(ON) -> DEPO(OFF)</option>
+										<option value="DEPO(OFF) -> DEPO(ON)" selected>DEPO(OFF) -> DEPO(ON)</option>
+										<!-- <option value="DEPO(ON) -> DEPO(OFF)">DEPO(ON) -> DEPO(OFF)</option>
 										<option value="DEPO-DEPO" disabled>DEPO-DEPO</option>
 										<option value="DEPO-KEB" disabled>DEPO-KEB</option>
 										<option value="KEB-KEB" disabled>KEB-KEB</option>
 										<option value="DEPO-BOK" disabled>DEPO-BOK</option>
-										<option value="BOK-KEB" disabled>BOK-KEB</option>
+										<option value="BOK-KEB" disabled>BOK-KEB</option> -->
 									</select>
 								</div>
 							</div>
@@ -182,7 +159,7 @@
 					</tr>
 					<tr>
 						<th><span>DEPO CODE</span></th>
-						<td colspan="3">
+						<td>
 							<div class="custom_group">
 								<div class="custom-input-text">
 									<input type="text" value="CHASUS30MCY" required />					
