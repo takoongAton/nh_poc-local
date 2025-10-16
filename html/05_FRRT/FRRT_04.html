@@ -93,27 +93,35 @@
 							<col class="col-4" />
 						</colgroup>
 						<tr>
-							<th><span>조회구분</span></th>
+							<th><span>송금구분</span></th>
 							<td>
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native w100" required>
-											<option value="1 당발 (송금은행)">1 당발 (송금은행)</option>
-											<option value="2 타발 (수취은행)" selected>2 타발 (수취은행) </option>
+											<option value="당발송금">당발송금</option>
+											<option value="타발송금" selected>타발송금 </option>
 										</select>
 									</div>
-									<!-- // custom-select -->
+								</div>
+								<!-- // custom_group -->
+							</td>
+							<th><span>조회구분</span></th>
+							<td>
+								<div class="custom_group">
 									 <div class="custom-select">
 										<select class="custom-select_native w100" required>
-											<option value="1 송금내역조회">1 송금내역조회</option>
-											<option value="2 진행상태조회 선택" selected>2 진행상태조회 선택</option>
+											<option value="송금내역조회">송금내역조회</option>
+											<option value="진행상태조회" selected>진행상태조회</option>
 										</select>
 									</div>
 									<!-- // custom-select -->
 								</div>
 								<!-- // custom_group -->
 							</td>
-							<th><span>대상기간 </span></th>
+						</tr>
+
+						<tr>
+							<th><span>대상기간</span></th>
 							<td>
 								<div class="custom_group">
 									<div class="custom-input-date">
@@ -131,16 +139,6 @@
 										</button>
 									</div>
 									<!-- // custom-input-date -->
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th><span>파티오르 고유번호</span></th>
-							<td>
-								<div class="custom_group">
-									<div class="custom-input-text w100">
-										<input type="text" />
-									</div>
 								</div>
 							</td>
 							<th><span>REF NO</span></th>
@@ -148,7 +146,7 @@
 								<div class="custom_group">
 									<div class="custom_group">
 									<div class="custom-input-text w100">
-										<input type="text" value="RI000001T2504223" />
+										<input type="text" value="" />
 									</div>
 								</div>
 								</div>
@@ -156,11 +154,12 @@
 						</tr>
 
 						<tr>
-							<th><span>송금 금액</span></th>
-							<td colspan="3">
+							<th><span>송금금액</span></th>
+							<td>
 								<div class="custom_group">
 									<div class="custom-select">
 										<select class="custom-select_native">
+											<option value="&nbsp;&nbsp;&nbsp;" disabled selected hidden>&nbsp;&nbsp;&nbsp;</option>
 											<option value="USD">USD</option>
 											<option value="USD">USD</option>
 										</select>
@@ -173,7 +172,14 @@
 								</div>
 								<!-- // custom_group -->
 							</td>
-							
+							<th><span>파티오르 참조번호</span></th>
+							<td>
+								<div class="custom_group">
+									<div class="custom-input-text w100">
+										<input type="text" />
+									</div>
+								</div>
+							</td>
 						</tr>
 					</table>
 					<!-- // form_table -->
