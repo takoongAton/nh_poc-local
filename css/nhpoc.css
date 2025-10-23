@@ -9,8 +9,9 @@ body {height:100%; padding:0 !important;}
 
 /* 메뉴 */
 aside.menu {border-right:1px solid #D3D3D3;}
-aside.menu .menu_tit {padding:24px 24px 22px 24px; border-bottom:4px solid #00B140;  background-color:#005EB8;}
-aside.menu .menu_tit strong {display:inline-block; color:#fff; font-size:28px; line-height:33px; font-weight:bold;}
+aside.menu .menu_tit {padding:14px 24px 14px 24px; border-bottom:4px solid #00B140;  background-color:#005EB8; line-height:1em;}
+aside.menu .menu_tit strong {display:inline-block; color:#fff; line-height:inherit;}
+aside.menu .menu_tit strong img {display:block; width:240px; height:auto; line-height:1em;}
 aside.menu .menu_list li button {position:relative; height:54px; padding:15px 24px; text-align:left;}
 aside.menu .menu_list li button span {position:relative; padding-left:28px; color:#9A9A9A; font-size:20px; font-weight:500; font-family:'Pretendard';}
 aside.menu .menu_list li button.active {background-color:#fff;}
